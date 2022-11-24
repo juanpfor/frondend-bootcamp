@@ -1,1 +1,61 @@
-<p>registrar-zonas works!</p>
+<!--BODY-->
+<div class="container">
+
+  <!--Encabezado-->
+  <div class="header">
+
+      <div class="animals-title">
+          <h1>Gestor Zonas</h1>
+      </div>
+      <!--Contenedor buscar-->
+      <div class="inputWithIcon">
+          <input class="form-control" type="search" placeholder="Buscar">
+          <i class="bi bi-search"></i>
+      </div>
+
+      <!--Boton Agregar-->
+      <div class="add">
+          <!-- Boton: Agregar -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+      Agregar
+    </button>
+      </div>
+  </div>
+
+<!--Tabla-->
+<div class="user-table">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col" class="id">Id</th>
+        <th scope="col">Region</th>
+        <th scope="col">Municipios</th>
+        <th scope="col" class="action">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <th input type="checkbox"></th>
+        <td></td>
+        <td>
+        </td>
+
+        <td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+              aria-expanded="false">
+              Opciones
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item edit" href="#">Editar</a>
+              <a class="dropdown-item ver" href="#">Ver</a>
+              <a class="dropdown-item delete" href="#">Eliminar</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+</div>
