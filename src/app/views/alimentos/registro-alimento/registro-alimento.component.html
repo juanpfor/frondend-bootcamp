@@ -2,88 +2,119 @@
     <h4 class="nombrefase text-center py-2">Registro De Alimentos</h4>
     <div class="page-header">
   
-      <form>
+      <form [formGroup]="form" (ngSubmit)="submit()">
         <div class="row mt-3 px-md-3">
-  
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <!-- name -->
-            <label class="h6 titulos">No. requerimiento:</label>
-            <br>
-            <input  id="NoRequerimiento" type="text"
-              class="form-control w--md-75">
-          </div>
           <!-- job -->
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Nombre del Alimento</label><br>
-            <input  id="nameFase" type="text" class="form-control w--md-75">
+            <input  id="nameFase" type="text" class="form-control w--md-75"
+            formControlName="nombre_alimento"
+            >
+            <div *ngIf="f['nombre_alimento'].errors" class="alert alert-danger">
+              <div *ngIf="f['nombre_alimento'].errors['required']">*Name is required.</div>
           </div>
-  
-  
-  
+          </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Materia Seca %:</label> <br>
-            <input  id="porcentajeMS" type="text" class="form-control w--md-75">
+            <input   id="porcentajeMS" type="number" class="form-control w--md-75"
+            formControlName="materia_seca"
+            >
+            <div *ngIf="f['materia_seca'].errors" class="alert alert-danger">
+              <div *ngIf="f['materia_seca'].errors['required']">*Name is required.</div>
+          </div>
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">EM AVES Kg:</label><br>
-            <input  id="emaves" type="text" class="form-control w--md-75">
-  
+            <input  id="emaves" type="number" class="form-control w--md-75"
+            formControlName="e_m_aves"
+            >
+            <div *ngIf="f['e_m_aves'].errors" class="alert alert-danger">
+              <div *ngIf="f['e_m_aves'].errors['required']">*Name is required.</div>
+          </div>
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">EM Cerdos Kg:</label><br>
-            <input  id="emceerdos" type="text" class="form-control w--md-75">
+            <input  id="emceerdos" type="number" class="form-control w--md-75"
+            formControlName="e_m_cerdos"
+            >
+            <div *ngIf="f['e_m_cerdos'].errors" class="alert alert-danger">
+              <div *ngIf="f['e_m_cerdos'].errors['required']">*Name is required.</div>
+          </div>
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Proteina cruda %:</label> <br>
-            <input  id="proteinacruda" type="text" class="form-control w--md-75">
+            <input  id="proteinacruda" type="number" class="form-control w--md-75"
+            formControlName="proteina_cruda"
+            >
+            <div *ngIf="f['proteina_cruda'].errors" class="alert alert-danger">
+              <div *ngIf="f['proteina_cruda'].errors['required']">*Name is required.</div>
+           </div>
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Fibra cruda %:</label><br>
-            <input  id="fibracruda" type="text" class="form-control w--md-75">
-  
+            <input  id="fibracruda" type="number" class="form-control w--md-75"
+            
+            >
+            <div *ngIf="f['name'].errors" class="alert alert-danger">
+              <div *ngIf="f['name'].errors['required']">*Name is required.</div>
+            </div> 
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Ext etereo %:</label> <br>
             <input  id="extetereo" type="text" class="form-control w--md-75">
+            <div *ngIf="f['name'].errors" class="alert alert-danger">
+              <div *ngIf="f['name'].errors['required']">*Name is required.</div>
+           </div>
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Calcio %:</label><br>
             <input  id="calcio" type="text" class="form-control w--md-75">
+            <div *ngIf="f['name'].errors" class="alert alert-danger">
+              <div *ngIf="f['name'].errors['required']">*Name is required.</div>
+          </div>
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Fosforo Disp %:</label> <br>
-            <input  id="fosforo" type="text" class="form-control w--md-75">
+            <input  id="fosforo" type="number" class="form-control w--md-75">
   
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Sodio %:</label><br>
-            <input  id="sodio" type="text" class="form-control w--md-75">
+            <input  id="sodio" type="number" class="form-control w--md-75">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Ardinina %:</label> <br>
-            <input id="adrinina" type="text" class="form-control w--md-75">
+            <input id="adrinina" type="number" class="form-control w--md-75">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Lisina %:</label><br>
-            <input formControlName="lisina" id="lisina" type="text" class="form-control w--md-75">
+            <input formControlName="lisina" id="lisina" type="number" class="form-control w--md-75">
   
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Meteonina %:</label> <br>
-            <input  id="meteonina" type="text" class="form-control w--md-75">
+            <input  id="meteonina" type="number" class="form-control w--md-75"
+            formControlName="lisina"
+            >
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Triptofano %:</label><br>
-            <input  id="meCis" type="text" class="form-control w--md-75">
+            <input  id="meCis" type="number" class="form-control w--md-75"
+            formControlName=""
+            >
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">met_cis %:</label> <br>
-            <input id="treonina" type="text" class="form-control w--md-75">
+            <input id="treonina" type="number" class="form-control w--md-75"
+            formControlName="met_cis"
+            >
           </div>
   
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">treonina %:</label><br>
-            <input  id="triptofano" type="text" class="form-control w--md-75">
+            <input  id="triptofano" type="number" class="form-control w--md-75"
+            formControlName="treonina"
+            >
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Nutriente</label> <br>
@@ -125,10 +156,10 @@
 
             
           </div>
-          
+          <div class="text-center my-3">
+            <button type="submit " class="btn btn-guardar-registro">Enviar</button>
+          </div>
       </form>
     </div>
-    <div class="text-center my-3">
-      <button type="submit " class="btn btn-guardar-registro">Enviar</button>
-    </div>
+
   </div>
