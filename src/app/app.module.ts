@@ -23,7 +23,6 @@ import { DetallesRequerimientoAnimalComponent } from './views/requerimiento-anim
 import { GestionarComponent } from './views/nutrientes/gestionar/gestionar.component';
 import { RegistroComponent } from './views/nutrientes/registro/registro.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,10 +38,8 @@ import { RegistroComponent } from './views/nutrientes/registro/registro.componen
     NavbarComponent,
     AllusersComponent,
     HomeComponent,
-    AllusersComponent,
     GestionarRequerimientoAnimalComponent,
     DetallesRequerimientoAnimalComponent,
-    ActualizarEspecieComponent,
     GestionarComponent,
     RegistroComponent
   ],
