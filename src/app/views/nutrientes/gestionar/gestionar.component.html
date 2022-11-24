@@ -26,17 +26,16 @@
                   <h1>Gestionar nutrientes</h1>
               </div>
               <!--Contenedor buscar-->
-              <div class="inputWithIcon">
+              <div class="inputWithIcon buscar">
+                 <!-- <i class="bi bi-search"></i> -->
                 <input class="form-control" type="search" placeholder="Buscar">
-                <i class="bi bi-search"></i>
             </div>
             
               <!--Boton Agregar-->
               <div class="add">
                   <!-- Boton: Agregar -->
-                  <button type="button" class="btn btn-success" >
-                    <a [routerLink]="['/nutrientes/registro']" class="link-nutrientes">Agregar nutriente</a>
-                  </button>
+                    <a [routerLink]="['/nutrientes/registro']" class="btn link-nutrientes">Agregar</a>
+                  
              
 
               </div>
@@ -132,11 +131,7 @@
               </tbody>
           </table>
 
-          <div class="d-flex justify-content-between">
-            <!-- <a href="#" routerLink="./"  class="btn btn-primaryt">Volver</a> -->
-            <!-- <button mat-raised-button (click)="goBack()">Volver</button> -->
-            <a routerLink="/nutrientes/registro">agregar nutriente</a>
-          </div>
+          
       </div>
       
 

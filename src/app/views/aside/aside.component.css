@@ -161,3 +161,13 @@ a.article:hover {
         display: none;
     }
 }
+
+.aside_logo{
+    width: 150px;
+    background-color: #39A900;
+}
+
+.sidebar-header{
+    display: flex;
+    justify-content: center;
+}

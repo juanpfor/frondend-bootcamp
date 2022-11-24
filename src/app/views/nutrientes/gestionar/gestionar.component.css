@@ -185,4 +185,13 @@
 
   .link-nutrientes{
     text-decoration: none;
+
+  }
+
+  .add {
+    text-decoration: none;
+  }
+
+  .buscar{
+    display: flex;
   }
