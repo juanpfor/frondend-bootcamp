@@ -16,13 +16,19 @@ import { RegistrarRequerimientoAnimalComponent } from './views/requerimiento-ani
 import { ActualizarRequerimientoAnimalComponent } from './views/requerimiento-animal/actualizar-requerimiento-animal/actualizar-requerimiento-animal.component';
 import { GestionarComponent } from './views/nutrientes/gestionar/gestionar.component';
 import { RegistroComponent } from './views/nutrientes/registro/registro.component';
+import { AdminHomeComponent } from './views/admin-home/admin-home.component';
 const routes: Routes = [
 
 
 
-    // /////////////////////Home///////////////////////
+    // ///////////////////// Admin Home ///////////////////////
 
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '', redirectTo: 'adminHome', pathMatch: 'full' },
+
+  { path: 'adminHome', component: AdminHomeComponent},
+
+    // ///////////////////// Landing ///////////////////////
+
 
   {path: 'landing', component: HomeComponent},
 
