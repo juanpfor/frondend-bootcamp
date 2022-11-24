@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/interfaces/user';
+import { responseApi } from 'src/app/interfaces/responseApi';
+import { User } from 'src/app/interfaces/user.interface';
 import { UserService } from 'src/app/Services/users/user.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { UserService } from 'src/app/Services/users/user.service';
 })
 export class AllusersComponent implements OnInit {
  
-  Users:User[]=[]
+  users:User[]=[]
   constructor(private userService:UserService) { }
 
   ngOnInit(): void {
@@ -17,8 +18,10 @@ export class AllusersComponent implements OnInit {
   }
   getAll():void{
     this.userService.getAll().subscribe(
-      (data:User[])=>{
-        this.Users=data
+      data=>{
+        console.log(data.results);
+        
+        this.users=data.results
       }
     )
     

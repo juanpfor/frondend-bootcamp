@@ -15,6 +15,8 @@ import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/
 import { ListarMunicipioComponent } from './views/Municipios/listar-municipio/listar-municipio.component';
 import { AsideComponent } from './views/aside/aside.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
+import { AllusersComponent } from './views/users/allusers/allusers.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
     ListarMunicipioComponent,
     AsideComponent,
     NavbarComponent,
-    
+    AllusersComponent
   ],
   imports: [
     BrowserModule,
