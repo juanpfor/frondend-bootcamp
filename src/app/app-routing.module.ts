@@ -9,9 +9,31 @@ import { AllusersComponent } from './views/users/allusers/allusers.component';
 import { ListarMunicipioComponent } from './views/Municipios/listar-municipio/listar-municipio.component';
 import { GestionarAlimentoComponent } from './views/alimentos/gestionar-alimento/gestionar-alimento.component';
 import { ActualizarAlimentoComponent } from './views/alimentos/actualizar-alimento/actualizar-alimento.component';
+import { RegistroAlimentoComponent } from './views/alimentos/registro-alimento/registro-alimento.component';
+import { HomeComponent } from './views/home/home.component';
+import { GestionarRequerimientoAnimalComponent } from './views/requerimiento-animal/gestionar-requerimiento-animal/gestionar-requerimiento-animal.component';
+import { RegistrarRequerimientoAnimalComponent } from './views/requerimiento-animal/registrar-requerimiento-animal/registrar-requerimiento-animal.component';
+import { ActualizarRequerimientoAnimalComponent } from './views/requerimiento-animal/actualizar-requerimiento-animal/actualizar-requerimiento-animal.component';
+import { GestionarComponent } from './views/nutrientes/gestionar/gestionar.component';
+import { RegistroComponent } from './views/nutrientes/registro/registro.component';
 const routes: Routes = [
+
+
+
+    // /////////////////////Home///////////////////////
+
   { path: '', redirectTo: '/', pathMatch: 'full' },
+
+  {path: 'landing', component: HomeComponent},
+
+    // /////////////////////Login///////////////////////
+
+
   { path: 'login', component: LoginComponent },
+
+
+    // /////////////////////Dashboard///////////////////////
+
   { path: 'dashboard', component: DashboardComponent, canActivate: [VigilantGuard],
   
   // children: [
@@ -20,20 +42,12 @@ const routes: Routes = [
     //     // component: LoginComponent,
     //   }
     // ]
-  },
-  {
-    path: 'listarEspecie',
-    component: ListarEspecieComponent,
-  },
-  {
-    path: 'actualizarEspecie',
-    component: ActualizarEspecieComponent,
-  },
-  {
-    path: 'listarMunicipios',
-    component: ListarMunicipioComponent,
-  },
-  
+
+
+  },  
+ 
+
+  // /////////////////////Alimentos///////////////////////
   {
     path: 'alimentos',
     component: GestionarAlimentoComponent,
@@ -43,9 +57,75 @@ const routes: Routes = [
     component: ActualizarAlimentoComponent,
   },
   {
-    path: 'Allusers',
+    path: 'alimentos/registro',
+    component: RegistroAlimentoComponent,
+  },
+  
+
+
+  // /////////////////////Especie///////////////////////
+
+
+  {
+    path: 'especie',
+    component: ListarEspecieComponent,
+  },
+  {
+    path: 'especie/actualizar',
+    component: ActualizarEspecieComponent,
+  },
+
+  // /////////////////////Municipios///////////////////////
+  
+  {
+    path: 'municipios',
+    component: ListarMunicipioComponent,
+  },
+
+  // /////////////////////Animal///////////////////////
+
+
+  {
+    path: 'gestionarAnimal',
+    component: GestionarRequerimientoAnimalComponent,
+  },
+  {
+    path: 'gestionarAnimal/registrar',
+    component: RegistrarRequerimientoAnimalComponent,
+  },
+
+  {
+    path: 'gestionarAnimal/actualizar',
+    component: ActualizarRequerimientoAnimalComponent,
+  },
+
+
+  // /////////////////////Nutrientes///////////////////////
+
+
+ {
+    path: 'nutrientes',
+    component: GestionarComponent,
+  },
+
+  {
+    path: 'nutrientes/registro',
+    component: RegistroComponent,
+  },
+
+
+  // /////////////////////Users///////////////////////
+
+  {
+    path: 'usuarios',
     component: AllusersComponent,
   },
+
+
+
+
+
+
 ];
 
 @NgModule({
