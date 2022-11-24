@@ -1,6 +1,8 @@
 export interface User {
-"id_especie": number,
-"nombre_especie":string,
-"createdAt": null,
-"updatedAt": null
+    status: string
+    action: string
+    show: string
+    message: string
+    code: string
+    results?: any
 }

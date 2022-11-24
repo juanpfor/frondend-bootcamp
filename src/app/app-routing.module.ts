@@ -5,6 +5,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { VigilantGuard } from './Guards/vigilant.guard';
 import { ListarEspecieComponent } from './views/Especies/listar-especie/listar-especie.component';
 import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/actualizar-especie.component';
+import { AllusersComponent } from './views/users/allusers/allusers.component';
 const routes: Routes = [
   { path: "", redirectTo: 'login', pathMatch: 'full' },
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: 'actualizarEspecie',
     component: ActualizarEspecieComponent
+  },
+  {
+    path:'Allusers',
+    component:AllusersComponent
   }
 ];
 
