@@ -30,6 +30,7 @@ import { RegistroAlimentoComponent } from './views/alimentos/registro-alimento/r
 import { GestionarZonasComponent } from './views/zonas/gestionar-zonas/gestionar-zonas.component';
 import { RegistrarZonasComponent } from './views/zonas/registrar-zonas/registrar-zonas.component';
 import { RegistroUsersComponent } from './views/users/registro-users/registro-users.component';
+import { ActualizarAlimentoComponent } from './views/alimentos/actualizar-alimento/actualizar-alimento.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { RegistroUsersComponent } from './views/users/registro-users/registro-us
     GestionarZonasComponent,
     RegistrarZonasComponent,
     RegistroUsersComponent,
+    ActualizarAlimentoComponent
   ],
   imports: [
     BrowserModule,
