@@ -17,6 +17,7 @@ import { ActualizarRequerimientoAnimalComponent } from './views/requerimiento-an
 import { GestionarComponent } from './views/nutrientes/gestionar/gestionar.component';
 import { RegistroComponent } from './views/nutrientes/registro/registro.component';
 import { AdminHomeComponent } from './views/admin-home/admin-home.component';
+import { PerfilUsuarioComponent } from './views/perfil-usuario/perfil-usuario.component';
 const routes: Routes = [
 
 
@@ -125,6 +126,12 @@ const routes: Routes = [
   {
     path: 'usuarios',
     component: AllusersComponent,
+  },
+
+
+  {
+    path: 'perfilUsuario',
+    component: PerfilUsuarioComponent,
   },
 
 
