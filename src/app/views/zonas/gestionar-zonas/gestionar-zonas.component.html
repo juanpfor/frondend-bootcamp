@@ -1,0 +1,83 @@
+<!--BODY-->
+<div class="container">
+
+    <!--Encabezado-->
+    <div class="header">
+  
+        <div class="animals-title">
+            <h1>Gestor Zonas</h1>
+        </div>
+        <!--Contenedor buscar-->
+        <div class="inputWithIcon">
+            <input class="form-control" type="search" placeholder="Buscar">
+            <i class="bi bi-search"></i>
+        </div>
+  
+        <!--Boton Agregar-->
+        <div class="add">
+            <!-- Boton: Agregar -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+        Agregar
+      </button>
+            <!-- Modal: Agregar
+            <div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Registrar Animal</h5>
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <label class="text">Especie &nbsp;&nbsp;</label>
+                                    <input class="input" type="text" placeholder="Nombre de la Especie">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <a type="button" class="btn btn-primary" href="registro.component.html">Registrar</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+  
+  <!--Tabla-->
+  <div class="user-table">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col" class="id">Id</th>
+          <th scope="col">Region</th>
+          <th scope="col">Municipios</th>
+          <th scope="col" class="action">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr >
+          <th input type="checkbox"></th>
+          <td></td>
+          <td></td>
+  
+          <td>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                aria-expanded="false">
+                Opciones
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item edit" href="#">Editar</a>
+                <a class="dropdown-item ver" href="#">Ver</a>
+                <a class="dropdown-item delete" href="#">Eliminar</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+  
+      </tbody>
+    </table>
+  </div>
+  </div>

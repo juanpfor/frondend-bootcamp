@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NutrienteService } from 'src/app/Services/nutrientes/nutriente.service';
 
 @Component({
   selector: 'app-gestionar',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GestionarComponent implements OnInit {
 
-  constructor() { }
-
+  listNutrientes?: any[]
+  constructor(private nutienteServes: NutrienteService) { }
+  
   ngOnInit(): void {
+    this.listarNutrientes()
+  }
+  
+  listarNutrientes():void{
+    this.nutienteServes.listarNutrientes().subscribe(data =>{
+      this.listNutrientes = data.results
+      console.log( this.listNutrientes);
+      
+    })
   }
 
 }

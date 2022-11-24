@@ -23,7 +23,7 @@
           <div class="header">
               
               <div class="nutriente-title">
-                  <h1>gestionar nutrientes</h1>
+                  <h1>Gestionar nutrientes</h1>
               </div>
               <!--Contenedor buscar-->
               <div class="inputWithIcon">
@@ -35,7 +35,7 @@
               <div class="add">
                   <!-- Boton: Agregar -->
                   <button type="button" class="btn btn-success" >
-                    <a routerLink="/nutrientes/registro">agregar nutriente</a>
+                    <a [routerLink]="['/nutrientes/registro']" class="link-nutrientes">Agregar nutriente</a>
                   </button>
              
 
@@ -49,7 +49,7 @@
               <thead>
                   <tr>
                       <th scope="col">id</th>
-                      <th scope="col">nutrientes</th>
+                      <th scope="col">Nutrientes</th>
                       <th scope="col" class="action">Actions</th>
                   </tr>
               </thead>

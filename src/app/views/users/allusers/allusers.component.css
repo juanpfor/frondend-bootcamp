@@ -117,7 +117,7 @@ background-color: #f3f4f4;
 .header .add .btn:hover{
     background-color: #47bf0b;
     transform: translateY(-7px);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     padding: 5px;
     box-shadow: 5px 5px 10px 1px rgb(144, 144, 144);
 }
