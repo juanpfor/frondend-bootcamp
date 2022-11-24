@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+.contenedor_registro{
+    font-family: 'Work Sans', sans-serif;
+}
+.nombrefase{
+    color: #39a900;
+    text-decoration: underline #39a900;
+    font-size: 32px;
+} 
+.titulos{
+    color: #908C8C;
+    font-size: 18px;
+}
+.btn-guardar-registro{
+    background-color: #FFCE40;
+    color: white;
+    font-size: 20px;
+}
+.form-control{
+    background-color: #ECECEC;
+    width: 90%;
+}

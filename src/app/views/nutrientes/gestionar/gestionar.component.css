@@ -1,0 +1,184 @@
+:root{
+    --padding: 10px;
+    --bgcolor:
+    #39a900;
+    --hovercolor:
+    rgb(23, 23, 23);
+   
+  }
+  
+  body{
+    background-color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  /*
+        COTENIDO
+  */
+  
+  #contenedor{
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+  }
+  
+  .container{
+    height: 100vh;
+    padding: 15px;
+    padding-top: 40px ;
+    
+  }
+  
+  /* Todos los campos de formulario */
+  body .form-control:focus{
+    color:#212529;
+    background-color:#fff;
+    border-color:#39a900;
+    outline:0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 25%);
+  }
+  
+  body .form-check-input:focus{
+    border-color:#Ff671d;
+    outline:0;
+    box-shadow:0 0 0 .25rem rgba(255, 103, 29, .25)
+  }
+  
+  body .form-check-input:checked{
+    background-color:#Ff671d;
+    border-color:#Ff671d;
+  }
+  
+  
+  
+  
+  /* BODY */
+  
+  /*ENCABEZADO*/
+  .nutriente-title h1{
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    color: #449d75;
+    
+  }
+  
+  .header{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin-left: 400px;
+    
+  }
+  
+  
+  /* Contenedor buscar*/
+  .header .inputwithicon{
+    position: relative;
+  width: 300px;
+  margin-left: 30%;
+  }
+  
+  /* Input buscar */
+  .header .inputwithicon .form-control{
+    box-sizing: border-box;
+  background-color: #f3f4f4;
+  color: #191919;
+  padding: 5 5 5 40px;
+  width: 100%;
+  border-radius: 3px;
+  
+  }
+  
+  /* Icono */
+  .header .inputwithicon .bi{
+  color: #191919;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 12px;
+  top: 10%;
+  transform: translateY(-50%);
+  }
+  
+  
+  /* Boton: Agregar */
+  .header .add .btn{
+    width: 100px;
+    margin-left: 90%;
+    background-color: #FFCE40;
+    border: none;
+    border-radius: 3px;
+    transition: .3s ease all;
+  }
+  
+  .header .add .btn:hover{
+    background-color: #47bf0b;
+    transform: translateY(-5px);
+    letter-spacing: 2px;
+    padding: 5px;
+    box-shadow: 5px 5px 10px 1px rgb(144, 144, 144);
+  }
+  
+  
+  /* TABLA */
+  .table{
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    vertical-align: middle;
+    border: 5px solid #47bf0b;
+  }
+  
+  th,td{
+  width: 100px;
+  word-wrap: break-word;
+  }
+  
+  td{
+    font-size: 18px;
+  }
+  
+  .table thead{
+    background-color: #024b2a;
+    color: #ffffff;
+    height: 50px;
+    vertical-align: middle;
+  
+  }
+  
+  .table thead .radius{
+    width: 10px;
+  }
+  
+  .lab1{
+    width: 130px;
+  }
+  
+  .table .btn{
+    width: 70px;
+    font-size: 12px;
+    background-color: #c3e5b2;
+    color: #000;
+    transition: .3s ease all;
+    margin-right: 5px;
+  }
+  
+  .table .btn:hover{
+    background-color: #275e0b;
+    color: #fff;
+  
+  }
+  
+  .table .action{
+    width: 300px;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd){
+    background-color: #d3f9bf;
+  }
