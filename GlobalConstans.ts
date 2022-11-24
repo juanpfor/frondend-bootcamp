@@ -1,1 +1,1 @@
-export const pathUrlService = "http://192.168.192.57:8057/api/"
+export const pathUrlService = "http://152.200.173.74:8057/api/"

@@ -14,12 +14,12 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     canActivate : [ VigilantGuard ] ,
-    children: [
-      {
-        // path: 'login', childrens
-        // component: LoginComponent,
-      }
-    ]
+    // children: [
+    //   {
+    //     // path: 'login', childrens
+    //     // component: LoginComponent,
+    //   }
+    // ]
   }
 ];
 

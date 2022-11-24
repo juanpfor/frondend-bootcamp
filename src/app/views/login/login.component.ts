@@ -17,14 +17,14 @@ export class LoginComponent implements OnInit {
 
   loginForm = new FormGroup({
     identificacion: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required)
+    pasword: new FormControl('', Validators.required)
   })
   ngOnInit(): void { }
 
   onLogin(form: any) {
-    this.api.logueoService(form).subscribe(data => {
-      console.log(data);
+    console.log(form);
 
+    this.api.logueoService(form).subscribe(data => {
       let dataResponse: any = data;
       if (dataResponse.status == 'success') {
         localStorage.setItem('token', dataResponse.results.token)

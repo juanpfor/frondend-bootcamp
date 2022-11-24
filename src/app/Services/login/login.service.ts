@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { pathUrlService } from '../../../../GlobalConstans';
+import { Observable } from 'rxjs';
 import { responseApi } from '../../interfaces/responseApi';
 
 @Injectable({
@@ -9,14 +9,14 @@ import { responseApi } from '../../interfaces/responseApi';
 })
 export class LoginService {
 
-  constructor (private  htttp : HttpClient) { }
+  constructor (private  http : HttpClient) { }
 
 
   logueoService (form : any) {
 
-    const direction = pathUrlService.concat("alluser")
+    const direction = pathUrlService.concat("login")
 
-    return this.htttp.get(direction , form)
+    return this.http.post(direction , form)
   }
 
 }
