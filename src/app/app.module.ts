@@ -11,7 +11,8 @@ import { FooterComponent } from './component/footer/footer.component'
 import { ViewsComponent } from './views/views.component'
 import { LoginComponent } from './views/login/login.component';
 import { ListarEspecieComponent } from './views/Especies/listar-especie/listar-especie.component';
-import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/actualizar-especie.component'
+import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/actualizar-especie.component';
+import { ListarMunicipioComponent } from './views/Municipios/listar-municipio/listar-municipio.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/
     LoginComponent,
     ListarEspecieComponent,
     ActualizarEspecieComponent,
+    ListarMunicipioComponent,
   ],
   imports: [
     BrowserModule,
