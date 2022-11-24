@@ -7,7 +7,7 @@ import { ListarEspecieComponent } from './views/Especies/listar-especie/listar-e
 import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/actualizar-especie.component';
 import { AllusersComponent } from './views/users/allusers/allusers.component';
 const routes: Routes = [
-  { path: "", redirectTo: 'login', pathMatch: 'full' },
+  { path: "", redirectTo: '/', pathMatch: 'full' },
   {
     path: 'login',
     component: LoginComponent,
