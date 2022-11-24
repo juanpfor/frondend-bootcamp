@@ -1,11 +1,10 @@
-BODY
 <div class="container">
 
     <!--Encabezado-->
     <div class="header">
 
         <div class="animals-title">
-            <h1>Titulo 1 - Plantilla tabla</h1>
+            <h1>Gestionar animal</h1>
         </div>
         <!--Contenedor buscar-->
         <div class="inputWithIcon">
@@ -16,8 +15,8 @@ BODY
         <!--Boton Agregar-->
         <div class="add">
             <!-- Boton: Agregar -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-      Agregar
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" [routerLink]="['/gestionarAnimal/registrar']">
+      Agregar nuevo animal
     </button>
             <!-- Modal: Agregar -->
             <div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -106,10 +105,10 @@ BODY
 
                     <td>
                         <!-- Boton: Editar-->
-                        <button type="button" class="btn btn-secondary">Editar</button>
+                        <button type="button" class="btn btn-secondary" [routerLink]="['/gestionarAnimal/actualizar']">Editar</button>
 
                         <!-- Boton: Ver-->
-                        <button type="button" class="btn btn-secondary">Ver</button>
+                        <button type="button" class="btn btn-secondary" >Ver</button>
 
                         <!--Boton: Eliminar-->
                         <button type="button" class="btn btn-secondary">Eliminar</button>
