@@ -29,6 +29,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
     ListarMunicipioComponent,
     AsideComponent,
     NavbarComponent,
+    
   ],
   imports: [
     BrowserModule,

@@ -42,7 +42,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let u of users">
+                    <tr *ngFor="let u of Users">
                         <td scope="row">{{u.idusuario}}</td>
                         <td>{{u.nombres}}</td>
                         <td>{{u.apellidos}}</td>
@@ -52,17 +52,17 @@
                         <td>{{u.ubicacion}}</td>
                         <td>{{u.foto}}</td>
                         <td>{{u.tipo_usuario}}</td>
-                        <!-- <td>{{u.contraseña}}</td>
+                        <td>{{u.contrasena}}</td>
                         <td>{{u.creado}}</td>
-                        <td>{{u.actualizado}}</td> -->
+                        <td>{{u.actualizado}}</td>
                         <td>
-                            <!-- Boton: Editar-->
+                            
                             <button type="button" class="btn btn-secondary">Editar</button>
                         
-                            <!-- Boton: Ver-->
+                
                             <button type="button" class="btn btn-secondary">Ver</button>
 
-                            <!--Boton: Eliminar-->
+                
                             <button type="button" class="btn btn-secondary">Eliminar</button>
                         </td>
                     </tr>
@@ -71,7 +71,7 @@
         </div>
 
 
-        <!--Bootstrap Javascript-->
+    
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous"></script>
