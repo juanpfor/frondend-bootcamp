@@ -15,11 +15,18 @@ import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/
 import { ListarMunicipioComponent } from './views/Municipios/listar-municipio/listar-municipio.component';
 import {GestionarRequerimientoAnimalComponent} from './views/requerimiento-animal/gestionar-requerimiento-animal/gestionar-requerimiento-animal.component'
 import { AsideComponent } from './views/aside/aside.component';
-import { NavbarComponent } from './component/navbar/navbar.component'
+// import { NavbarComponent } from './component/navbar/navbar.component'
 import { RouterModule } from '@angular/router';
+import { NavbarComponent } from './component/navbar/navbar.component';
+
+import { HomeComponent } from './views/home/home.component';
+import { AllusersComponent } from './views/users/allusers/allusers.component';
 import { DetallesRequerimientoAnimalComponent } from './views/requerimiento-animal/detalles-requerimiento-animal/detalles-requerimiento-animal.component';
 import { GestionarComponent } from './views/nutrientes/gestionar/gestionar.component';
 import { RegistroComponent } from './views/nutrientes/registro/registro.component';
+import { GestionarAlimentoComponent } from './views/alimentos/gestionar-alimento/gestionar-alimento.component';
+import { DetalleAlimentoComponent } from './views/alimentos/detalle-alimento/detalle-alimento.component';
+import { RegistroAlimentoComponent } from './views/alimentos/registro-alimento/registro-alimento.component';
 
 @NgModule({
   declarations: [
@@ -34,11 +41,15 @@ import { RegistroComponent } from './views/nutrientes/registro/registro.componen
     ListarMunicipioComponent,
     AsideComponent,
     NavbarComponent,
+    AllusersComponent,
+    HomeComponent,
     GestionarRequerimientoAnimalComponent,
     DetallesRequerimientoAnimalComponent,
-    ActualizarEspecieComponent,
+    GestionarAlimentoComponent,
     GestionarComponent,
-    RegistroComponent
+    RegistroComponent,
+    DetalleAlimentoComponent,
+    RegistroAlimentoComponent,
   ],
   imports: [
     BrowserModule,
