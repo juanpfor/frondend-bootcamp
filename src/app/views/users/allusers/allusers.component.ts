@@ -13,6 +13,7 @@ export class AllusersComponent implements OnInit {
   constructor(private userService:UserService) { }
 
   ngOnInit(): void {
+    this.getAll()
   }
   getAll():void{
     this.userService.getAll().subscribe(
@@ -20,6 +21,7 @@ export class AllusersComponent implements OnInit {
         this.Users=data
       }
     )
+    
   }
 
 }
