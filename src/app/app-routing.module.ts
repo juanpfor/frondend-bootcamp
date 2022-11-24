@@ -103,12 +103,8 @@ const routes: Routes = [
   // /////////////////////Nutrientes///////////////////////
 
 
-  {
+ {
     path: 'nutrientes',
-    component: GestionarRequerimientoAnimalComponent,
-  },
-  {
-    path: 'nutrientes/gestionar',
     component: GestionarComponent,
   },
 
