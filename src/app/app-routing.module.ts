@@ -24,7 +24,7 @@ const routes: Routes = [
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
 
-  // {path: 'home', component: HomeComponent},
+  {path: 'landing', component: HomeComponent},
 
     // /////////////////////Login///////////////////////
 
@@ -121,7 +121,7 @@ const routes: Routes = [
   // /////////////////////Users///////////////////////
 
   {
-    path: 'Allusers',
+    path: 'usuarios',
     component: AllusersComponent,
   },
 
