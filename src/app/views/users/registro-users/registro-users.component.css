@@ -1,0 +1,26 @@
+.form-container{
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    border: 1px solid #39a900;
+   
+  }
+  input{
+   background-color: #F3F4F4;
+  }
+  .w-lavel{
+   padding:6px;
+   margin-bottom: 8px;
+  } 
+  .titulo{
+    color: #39a900;
+    font-size: 32px;
+  }   
+  
+  .btn-registrar{
+    color: white;
+    background-color: #FFCE40;
+    font-size: 20px;
+  }

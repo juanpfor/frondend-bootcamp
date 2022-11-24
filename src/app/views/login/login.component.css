@@ -1,17 +1,14 @@
-
-/* BASIC */
-
-html {
-  background-color: #56baed;
-}
-
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
+  background-image: url("../../../assets/img/img-web-login.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 a {
-  color: #92badd;
+  color: #ffffff;
   display:inline-block;
   text-decoration: none;
   font-weight: 400;
@@ -27,7 +24,15 @@ h2 {
   color: #cccccc;
 }
 
-
+.formulario__label {
+    display: block;
+    font-weight: 00;
+    padding: 0px;
+    cursor: pointer;
+  color: white;
+text-align: left;
+padding-left:60px ;
+}
 
 /* STRUCTURE */
 
@@ -43,13 +48,15 @@ h2 {
 
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
-  border-radius: 10px 10px 10px 10px;
-  background: #fff;
+  border-radius: 5px;
+  backdrop-filter: blur(15px);
+ background-color: #e0e4e451;
   padding: 30px;
-  width: 90%;
+  width: 420%;
+  margin: 10px;
   max-width: 450px;
   position: relative;
-  padding: 0px;
+
   -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   text-align: center;
@@ -67,35 +74,50 @@ h2 {
 
 
 /* TABS */
-
+h1{
+color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  padding: 0;
+  margin: 20px;
+}
 h2.inactive {
   color: #cccccc;
 }
 
 h2.active {
   color: #0d0d0d;
-  border-bottom: 2px solid #5fbae9;
+  border-bottom: 2px solid #56d836;
 }
 
 
 
 /* FORM TYPOGRAPHY*/
-
+/* cambbio de color del booton  */
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
+  background-color: #ECECEC;
   border: none;
-  color: white;
-  padding: 15px 80px;
+  color: #6F6D6D;
+  padding:    0px ;
+  padding-right: 10px;;
   text-align: center;
+  align-items: center;
   text-decoration: none;
   display: inline-block;
-  text-transform: uppercase;
+  
   font-size: 13px;
-  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  width: 80px;
+  height: 32px;
+  line-height: 1px;
+  margin: 0px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  /* -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4); */
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
-  margin: 5px 20px 40px 20px;
+
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -103,8 +125,9 @@ input[type=button], input[type=submit], input[type=reset]  {
   transition: all 0.3s ease-in-out;
 }
 
+/* hoverr button */
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
+  background-color: #FFCE40;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
@@ -116,16 +139,18 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
 }
 
 input[type=password] {
-  background-color: #f6f6f6;
+  background-color: #ffffff;
   border: none;
   color: #0d0d0d;
+  
   padding: 15px 32px;
   text-align: center;
+
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1px;
   margin: 5px;
-  width: 85%;
+  width: 70%;
   border: 2px solid #f6f6f6;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -138,7 +163,7 @@ input[type=password] {
 
 input[type=password]:focus {
   background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
+  border-bottom: 2px solid #68e95f;
 }
 
 input[type=password]:placeholder {
@@ -146,16 +171,16 @@ input[type=password]:placeholder {
 }
 
 input[type=text] {
-  background-color: #f6f6f6;
+  background-color: #ffffff;
   border: none;
   color: #0d0d0d;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 5px;
-  width: 85%;
+  font-size: 1px;
+  margin: 0px;
+  width: 70%;
   border: 2px solid #f6f6f6;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -168,7 +193,7 @@ input[type=text] {
 
 input[type=text]:focus {
   background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
+  border-bottom: 2px solid #68e95f;
 }
 
 input[type=text]:placeholder {
@@ -266,7 +291,7 @@ input[type=text]:placeholder {
   bottom: -10px;
   width: 0;
   height: 2px;
-  background-color: #56baed;
+  background-color: #56ed5b;
   content: "";
   transition: width 0.2s;
 }
@@ -286,5 +311,4 @@ input[type=text]:placeholder {
 }
 
 #icon {
-  width:60%;
-}
+  width:60%;}

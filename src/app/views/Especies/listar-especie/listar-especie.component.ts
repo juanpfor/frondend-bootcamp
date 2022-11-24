@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EspecieService } from 'src/app/Services/especie/especie.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-listar-especie',

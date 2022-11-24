@@ -14,6 +14,8 @@ import { HomeComponent } from './views/home/home.component';
 import { GestionarRequerimientoAnimalComponent } from './views/requerimiento-animal/gestionar-requerimiento-animal/gestionar-requerimiento-animal.component';
 import { RegistrarRequerimientoAnimalComponent } from './views/requerimiento-animal/registrar-requerimiento-animal/registrar-requerimiento-animal.component';
 import { ActualizarRequerimientoAnimalComponent } from './views/requerimiento-animal/actualizar-requerimiento-animal/actualizar-requerimiento-animal.component';
+import { GestionarComponent } from './views/nutrientes/gestionar/gestionar.component';
+import { RegistroComponent } from './views/nutrientes/registro/registro.component';
 const routes: Routes = [
 
 
@@ -22,7 +24,7 @@ const routes: Routes = [
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
 
-  // {path: 'home', component: HomeComponent},
+  {path: 'landing', component: HomeComponent},
 
     // /////////////////////Login///////////////////////
 
@@ -98,10 +100,24 @@ const routes: Routes = [
   },
 
 
+  // /////////////////////Nutrientes///////////////////////
+
+
+ {
+    path: 'nutrientes',
+    component: GestionarComponent,
+  },
+
+  {
+    path: 'nutrientes/registro',
+    component: RegistroComponent,
+  },
+
+
   // /////////////////////Users///////////////////////
 
   {
-    path: 'Allusers',
+    path: 'usuarios',
     component: AllusersComponent,
   },
 
