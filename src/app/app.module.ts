@@ -17,7 +17,9 @@ import {GestionarRequerimientoAnimalComponent} from './views/requerimiento-anima
 import { AsideComponent } from './views/aside/aside.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { DetallesRequerimientoAnimalComponent } from './Views/requerimiento-animal/detalles-requerimiento-animal/detalles-requerimiento-animal.component'
-import {ActualizarRequerimientoAnimalComponent} from './views/requerimiento-animal/actualizar-requerimiento-animal/actualizar-requerimiento-animal.component'
+import {ActualizarRequerimientoAnimalComponent} from './views/requerimiento-animal/actualizar-requerimiento-animal/actualizar-requerimiento-animal.component';
+import { GestionarComponent } from './views/nutrientes/gestionar/gestionar.component';
+import { RegistroComponent } from './views/nutrientes/registro/registro.component'
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import {ActualizarRequerimientoAnimalComponent} from './views/requerimiento-anim
     NavbarComponent,
     GestionarRequerimientoAnimalComponent,
     DetallesRequerimientoAnimalComponent,
-    ActualizarRequerimientoAnimalComponent
+    ActualizarRequerimientoAnimalComponent,
+    GestionarComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

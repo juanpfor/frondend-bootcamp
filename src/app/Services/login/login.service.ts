@@ -15,7 +15,6 @@ export class LoginService {
   logueoService (form : any) {
 
     const direction = pathUrlService.concat("login")
-
     return this.http.post(direction , form)
   }
 
