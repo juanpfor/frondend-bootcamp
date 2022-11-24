@@ -15,11 +15,11 @@ import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/
 import { ListarMunicipioComponent } from './views/Municipios/listar-municipio/listar-municipio.component';
 import {GestionarRequerimientoAnimalComponent} from './views/requerimiento-animal/gestionar-requerimiento-animal/gestionar-requerimiento-animal.component'
 import { AsideComponent } from './views/aside/aside.component';
-import { NavbarComponent } from './component/navbar/navbar.component';
-import { DetallesRequerimientoAnimalComponent } from './Views/requerimiento-animal/detalles-requerimiento-animal/detalles-requerimiento-animal.component'
-import {ActualizarRequerimientoAnimalComponent} from './views/requerimiento-animal/actualizar-requerimiento-animal/actualizar-requerimiento-animal.component';
+import { NavbarComponent } from './component/navbar/navbar.component'
+import { RouterModule } from '@angular/router';
+import { DetallesRequerimientoAnimalComponent } from './views/requerimiento-animal/detalles-requerimiento-animal/detalles-requerimiento-animal.component';
 import { GestionarComponent } from './views/nutrientes/gestionar/gestionar.component';
-import { RegistroComponent } from './views/nutrientes/registro/registro.component'
+import { RegistroComponent } from './views/nutrientes/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import { RegistroComponent } from './views/nutrientes/registro/registro.componen
     NavbarComponent,
     GestionarRequerimientoAnimalComponent,
     DetallesRequerimientoAnimalComponent,
-    ActualizarRequerimientoAnimalComponent,
+    ActualizarEspecieComponent,
     GestionarComponent,
     RegistroComponent
   ],
@@ -45,7 +45,8 @@ import { RegistroComponent } from './views/nutrientes/registro/registro.componen
     AppRoutingModule,
     ReactiveFormsModule ,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
