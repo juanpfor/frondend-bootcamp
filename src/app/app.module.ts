@@ -15,6 +15,7 @@ import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/
 import { ListarMunicipioComponent } from './views/Municipios/listar-municipio/listar-municipio.component';
 import { AsideComponent } from './views/aside/aside.component';
 import { NavbarComponent } from './component/navbar/navbar.component'
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { NavbarComponent } from './component/navbar/navbar.component'
     AppRoutingModule,
     ReactiveFormsModule ,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
