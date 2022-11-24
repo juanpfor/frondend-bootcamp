@@ -28,33 +28,23 @@
                     <tr>
                         <th class="radius" scope="col">#</th>
                         <th scope="col">nombres</th>
-                        <th scope="col">apellidos</th>
                         <th scope="col">correo</th>
                         <th scope="col">celular</th>
                         <th scope="col">identificacion</th>
-                        <th scope="col">ubicacion</th>
                         <th scope="col">foto</th>
                         <th scope="col">tipo_usuario</th>
-                        <th scope="col">contraseña</th>
-                        <th scope="col">creado</th>
-                        <th scope="col">actualizado</th>
                         <th scope="col">acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let u of Users">
-                        <td scope="row">{{u.idusuario}}</td>
+                    <tr *ngFor="let u of users">
+                        <td scope="row">{{u.id_usuario}}</td>
                         <td>{{u.nombres}}</td>
-                        <td>{{u.apellidos}}</td>
                         <td>{{u.correo}}</td>
                         <td>{{u.celular}}</td>
                         <td>{{u.identificacion}}</td>
-                        <td>{{u.ubicacion}}</td>
                         <td>{{u.foto}}</td>
                         <td>{{u.tipo_usuario}}</td>
-                        <td>{{u.contrasena}}</td>
-                        <td>{{u.creado}}</td>
-                        <td>{{u.actualizado}}</td>
                         <td>
                             
                             <button type="button" class="btn btn-secondary">Editar</button>
@@ -68,13 +58,8 @@
                     </tr>
                 </tbody>
             </table>
+            <!-- {{users}} -->
+            
         </div>
 
 
-    
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-            crossorigin="anonymous"></script>

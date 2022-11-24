@@ -1,0 +1,16 @@
+.navBar{
+    background-color:  #024B2A;;
+}
+
+.nav{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.nav-item{
+    padding-right: 20px;
+}
+
+
+.material-icons.white500 { color: #f7f7f7; }
