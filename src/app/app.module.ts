@@ -13,10 +13,25 @@ import { LoginComponent } from './views/login/login.component';
 import { ListarEspecieComponent } from './views/Especies/listar-especie/listar-especie.component';
 import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/actualizar-especie.component';
 import { ListarMunicipioComponent } from './views/Municipios/listar-municipio/listar-municipio.component';
+import {GestionarRequerimientoAnimalComponent} from './views/requerimiento-animal/gestionar-requerimiento-animal/gestionar-requerimiento-animal.component'
 import { AsideComponent } from './views/aside/aside.component';
+<<<<<<< HEAD
 import { NavbarComponent } from './component/navbar/navbar.component'
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
+=======
+<<<<<<< HEAD
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { AllusersComponent } from './views/users/allusers/allusers.component';
+
+=======
+import { NavbarComponent } from './component/navbar/navbar.component'
+import { RouterModule } from '@angular/router';
+import { DetallesRequerimientoAnimalComponent } from './views/requerimiento-animal/detalles-requerimiento-animal/detalles-requerimiento-animal.component';
+import { GestionarComponent } from './views/nutrientes/gestionar/gestionar.component';
+import { RegistroComponent } from './views/nutrientes/registro/registro.component';
+>>>>>>> a311e1dacfed10e5961a40b86b0f82f3c265d4b7
+>>>>>>> 5bba8ceda0fec2ff1ace7b66ff524f12a834e0f4
 
 @NgModule({
   declarations: [
@@ -31,8 +46,20 @@ import { HomeComponent } from './views/home/home.component';
     ListarMunicipioComponent,
     AsideComponent,
     NavbarComponent,
+<<<<<<< HEAD
     HomeComponent,
     
+=======
+<<<<<<< HEAD
+    AllusersComponent
+=======
+    GestionarRequerimientoAnimalComponent,
+    DetallesRequerimientoAnimalComponent,
+    ActualizarEspecieComponent,
+    GestionarComponent,
+    RegistroComponent
+>>>>>>> a311e1dacfed10e5961a40b86b0f82f3c265d4b7
+>>>>>>> 5bba8ceda0fec2ff1ace7b66ff524f12a834e0f4
   ],
   imports: [
     BrowserModule,
