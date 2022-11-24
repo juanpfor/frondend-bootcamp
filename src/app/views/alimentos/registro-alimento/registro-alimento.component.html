@@ -1,1 +1,134 @@
-<p>registro-alimento works!</p>
+<div class="mt-3 col-9 contenedor_registro">
+    <h4 class="nombrefase text-center py-2">Registro De Alimentos</h4>
+    <div class="page-header">
+  
+      <form>
+        <div class="row mt-3 px-md-3">
+  
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <!-- name -->
+            <label class="h6 titulos">No. requerimiento:</label>
+            <br>
+            <input  id="NoRequerimiento" type="text"
+              class="form-control w--md-75">
+          </div>
+          <!-- job -->
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">Nombre del Alimento</label><br>
+            <input  id="nameFase" type="text" class="form-control w--md-75">
+          </div>
+  
+  
+  
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">Materia Seca %:</label> <br>
+            <input  id="porcentajeMS" type="text" class="form-control w--md-75">
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">EM AVES Kg:</label><br>
+            <input  id="emaves" type="text" class="form-control w--md-75">
+  
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">EM Cerdos Kg:</label><br>
+            <input  id="emceerdos" type="text" class="form-control w--md-75">
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">Proteina cruda %:</label> <br>
+            <input  id="proteinacruda" type="text" class="form-control w--md-75">
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">Fibra cruda %:</label><br>
+            <input  id="fibracruda" type="text" class="form-control w--md-75">
+  
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">Ext etereo %:</label> <br>
+            <input  id="extetereo" type="text" class="form-control w--md-75">
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">Calcio %:</label><br>
+            <input  id="calcio" type="text" class="form-control w--md-75">
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">Fosforo Disp %:</label> <br>
+            <input  id="fosforo" type="text" class="form-control w--md-75">
+  
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">Sodio %:</label><br>
+            <input  id="sodio" type="text" class="form-control w--md-75">
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">Ardinina %:</label> <br>
+            <input id="adrinina" type="text" class="form-control w--md-75">
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">Lisina %:</label><br>
+            <input formControlName="lisina" id="lisina" type="text" class="form-control w--md-75">
+  
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">Meteonina %:</label> <br>
+            <input  id="meteonina" type="text" class="form-control w--md-75">
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">Triptofano %:</label><br>
+            <input  id="meCis" type="text" class="form-control w--md-75">
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">met_cis %:</label> <br>
+            <input id="treonina" type="text" class="form-control w--md-75">
+          </div>
+  
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">treonina %:</label><br>
+            <input  id="triptofano" type="text" class="form-control w--md-75">
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos">Nutriente</label> <br>
+         <select id="" class="form-select  w--md-75 ">
+        <option selected disabled>Seleccione tipo nutricion</option>
+        <option value="">Energia</option>
+        <option value="">Proteina</option>
+        <option value="">Fosforo</option>
+        <option value="">Calcio</option>
+        <option value="">Liquidos</option>
+        <option value="">Aminoacidos</option>
+      </select>
+        </div>
+        <div class="form-group col-12 col-sm-6 col-md-4 ">
+          <label class="h6 titulos">Region</label> <br>
+          <select class="form-select  w--md-75 ">
+              <option selected disabled>Seleccione region</option>
+              <option value="R. sur">R. sur</option>
+              <option value="">Macizo</option>
+              <option value="">Bota caucana</option>
+              <option value="">centro</option>
+              <option value="">Oriente</option>
+              <option value="">Norte</option>
+            </select>
+          </div>
+
+
+
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos"> createdAt:</label> <br>
+            <input   type="date" class="form-control w--md-75">
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-4 ">
+            <label class="h6 titulos"> UpdatedAt:</label> <br>
+            <input type="date" class="form-control w--md-75">
+          </div>
+  
+          
+
+            
+          </div>
+          
+      </form>
+    </div>
+    <div class="text-center my-3">
+      <button type="submit " class="btn btn-guardar-registro">Enviar</button>
+    </div>
+  </div>

@@ -20,6 +20,10 @@ import { RouterModule } from '@angular/router';
 import { DetallesRequerimientoAnimalComponent } from './views/requerimiento-animal/detalles-requerimiento-animal/detalles-requerimiento-animal.component';
 import { GestionarComponent } from './views/nutrientes/gestionar/gestionar.component';
 import { RegistroComponent } from './views/nutrientes/registro/registro.component';
+import { RegistroAlimentoComponent } from './views/alimentos/registro-alimento/registro-alimento.component';
+import { DetalleAlimentoComponent } from './views/alimentos/detalle-alimento/detalle-alimento.component';
+import { GestionarAlimentoComponent } from './views/alimentos/gestionar-alimento/gestionar-alimento.component';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +42,10 @@ import { RegistroComponent } from './views/nutrientes/registro/registro.componen
     DetallesRequerimientoAnimalComponent,
     ActualizarEspecieComponent,
     GestionarComponent,
-    RegistroComponent
+    RegistroComponent,
+    RegistroAlimentoComponent,
+    DetalleAlimentoComponent,
+    GestionarAlimentoComponent
   ],
   imports: [
     BrowserModule,

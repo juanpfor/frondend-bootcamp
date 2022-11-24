@@ -1,3 +1,114 @@
-<p>gestionar-alimento works!</p>
+<!--BODY-->
+<div class="container">
 
-<button router-link ="['alimento/actualizar']">ir a actualizar alimentos</button>
+    <!--Encabezado-->
+    <div class="header">
+  
+        <div class="animals-title">
+            <h1>Gestionar - Alimentos</h1>
+        </div>
+        <!--Contenedor buscar-->
+        <div class="inputWithIcon">
+            <input class="form-control" type="search" placeholder="Buscar">
+            <i class="bi bi-search"></i>
+        </div>
+  
+        <!--Boton Agregar-->
+        <div class="add">
+            <!-- Boton: Agregar -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+      Agregar
+    </button>
+            <!-- Modal: Agregar -->
+            <div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Registrar Animal</h5>
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <label class="text">Especie &nbsp;&nbsp;</label>
+                                    <input class="input" type="text" placeholder="Nombre de la Especie">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <a type="button" class="btn btn-primary" href="registro.component.html">Registrar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!--Tabla-->
+    <div class="user-table">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="radius" scope="col"></th>
+                    <th class="sticky" cope="col">idAlimentos</th>
+                    <th scope="col" >nombre_alimento</th>
+                    <th scope="col" >materia_seca</th>
+                    <th scope="col" >e_m_aves</th>
+                    <th scope="col" >em_cerdos</th>
+                    <th scope="col" >proteina_cruda</th>
+                    <th scope="col" >fibra_cruda</th>
+                    <th scope="col" >ext_etereo</th>
+                    <th scope="col" >calcio</th>
+                    <th scope="col" >fosf_disp</th>
+                    <th scope="col" >sodio</th>
+                    <th scope="col" >arginina</th>
+                    <th scope="col" >lisina</th>
+                    <th scope="col" >metonina</th>
+                    <th scope="col" >triplofano</th>
+                    <th scope="col" >creado</th>
+                    <th scope="col" >actualizado</th>
+                    <th scope="col" >tipo_nutriente_id</th>
+                    <th scope="col" >region_id</th>
+                    <th scope="col" class="action">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row"></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td >
+                      <div class="input-group ">
+                          <select class="form-select select" >
+                            <option class="opt" selected>Seleccionar...</option>
+                            <option class="opt" value="1">Editar</option>
+                            <option class="opt" value="2">ver</option>
+                            <option class="opt" value="3">eliminar</option>
+                          </select>
+                      </div>
+                    </td>
+                </tr>
+  
+  
+            </tbody>
+        </table>
+    </div>
+  </div>
