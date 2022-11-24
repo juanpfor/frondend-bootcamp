@@ -13,8 +13,11 @@ import { LoginComponent } from './views/login/login.component';
 import { ListarEspecieComponent } from './views/Especies/listar-especie/listar-especie.component';
 import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/actualizar-especie.component';
 import { ListarMunicipioComponent } from './views/Municipios/listar-municipio/listar-municipio.component';
+import {GestionarRequerimientoAnimalComponent} from './views/requerimiento-animal/gestionar-requerimiento-animal/gestionar-requerimiento-animal.component'
 import { AsideComponent } from './views/aside/aside.component';
-import { NavbarComponent } from './component/navbar/navbar.component'
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { DetallesRequerimientoAnimalComponent } from './Views/requerimiento-animal/detalles-requerimiento-animal/detalles-requerimiento-animal.component'
+import {ActualizarRequerimientoAnimalComponent} from './views/requerimiento-animal/actualizar-requerimiento-animal/actualizar-requerimiento-animal.component'
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { NavbarComponent } from './component/navbar/navbar.component'
     ListarMunicipioComponent,
     AsideComponent,
     NavbarComponent,
+    GestionarRequerimientoAnimalComponent,
+    DetallesRequerimientoAnimalComponent,
+    ActualizarRequerimientoAnimalComponent
   ],
   imports: [
     BrowserModule,

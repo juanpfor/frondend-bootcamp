@@ -34,7 +34,8 @@ const routes: Routes = [
   {
     path:'Allusers',
     component:AllusersComponent
-  }
+  },
+  
 ];
 
 @NgModule({
