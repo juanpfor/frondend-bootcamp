@@ -13,7 +13,8 @@ import { LoginComponent } from './views/login/login.component';
 import { ListarEspecieComponent } from './views/Especies/listar-especie/listar-especie.component';
 import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/actualizar-especie.component';
 import { ListarMunicipioComponent } from './views/Municipios/listar-municipio/listar-municipio.component';
-import { AsideComponent } from './views/aside/aside.component'
+import { AsideComponent } from './views/aside/aside.component';
+import { NavbarComponent } from './component/navbar/navbar.component'
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AsideComponent } from './views/aside/aside.component'
     ActualizarEspecieComponent,
     ListarMunicipioComponent,
     AsideComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
