@@ -9,7 +9,9 @@ import { DashboardComponent } from './component/dashboard/dashboard.component'
 import { HeaderComponent } from './component/header/header.component'
 import { FooterComponent } from './component/footer/footer.component'
 import { ViewsComponent } from './views/views.component'
-import { LoginComponent } from './views/login/login.component'
+import { LoginComponent } from './views/login/login.component';
+import { ListarEspecieComponent } from './views/Especies/listar-especie/listar-especie.component';
+import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/actualizar-especie.component'
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { LoginComponent } from './views/login/login.component'
     FooterComponent,
     ViewsComponent,
     LoginComponent,
+    ListarEspecieComponent,
+    ActualizarEspecieComponent,
   ],
   imports: [
     BrowserModule,
