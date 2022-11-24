@@ -23,5 +23,8 @@ export class AlimentoService {
   create(municipio:responseApi):Observable<responseApi>{
     return this.httpClient.post<responseApi>(this.post,JSON.stringify(municipio),this.httpOptions)
   }
+  updated(alimento:responseApi) {
+    
+  }
 
 }
