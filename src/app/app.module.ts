@@ -14,12 +14,9 @@ import { ListarEspecieComponent } from './views/Especies/listar-especie/listar-e
 import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/actualizar-especie.component';
 import { ListarMunicipioComponent } from './views/Municipios/listar-municipio/listar-municipio.component';
 import { AsideComponent } from './views/aside/aside.component';
-<<<<<<< HEAD
 import { NavbarComponent } from './component/navbar/navbar.component'
 import { RouterModule } from '@angular/router';
-=======
-import { NavbarComponent } from './component/navbar/navbar.component';
->>>>>>> 6139f5fe9b980042af4a698aaaa76fee8273cb84
+import { HomeComponent } from './views/home/home.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +31,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
     ListarMunicipioComponent,
     AsideComponent,
     NavbarComponent,
+    HomeComponent,
     
   ],
   imports: [
