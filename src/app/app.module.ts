@@ -10,7 +10,8 @@ import { HeaderComponent } from './component/header/header.component'
 import { FooterComponent } from './component/footer/footer.component'
 import { ViewsComponent } from './views/views.component'
 import { LoginComponent } from './views/login/login.component';
-import { AllusersComponent } from './views/users/allusers/allusers.component'
+import { ListarEspecieComponent } from './views/Especies/listar-especie/listar-especie.component';
+import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/actualizar-especie.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AllusersComponent } from './views/users/allusers/allusers.component'
     FooterComponent,
     ViewsComponent,
     LoginComponent,
-    AllusersComponent,
+    ListarEspecieComponent,
+    ActualizarEspecieComponent,
   ],
   imports: [
     BrowserModule,
