@@ -15,8 +15,10 @@ import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/
 import { ListarMunicipioComponent } from './views/Municipios/listar-municipio/listar-municipio.component';
 import {GestionarRequerimientoAnimalComponent} from './views/requerimiento-animal/gestionar-requerimiento-animal/gestionar-requerimiento-animal.component'
 import { AsideComponent } from './views/aside/aside.component';
-import { NavbarComponent } from './component/navbar/navbar.component'
+// import { NavbarComponent } from './component/navbar/navbar.component'
 import { RouterModule } from '@angular/router';
+import { NavbarComponent } from './component/navbar/navbar.component';
+
 import { HomeComponent } from './views/home/home.component';
 import { AllusersComponent } from './views/users/allusers/allusers.component';
 import { DetallesRequerimientoAnimalComponent } from './views/requerimiento-animal/detalles-requerimiento-animal/detalles-requerimiento-animal.component';
