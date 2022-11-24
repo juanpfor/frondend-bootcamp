@@ -1,1 +1,21 @@
-<p>login works!</p>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <div class="fadeIn first">
+      <img src="assets/img/izuku-midoriya-all-for-one_3840x2160_xtrafondos.com.jpg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+     <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+      <input type="text" id="usuario" class="fadeIn second"  placeholder="login" formControlName ="identificacion">
+      <!-- <input type="password" id="password" class="fadeIn third"  placeholder="password" formControlName="password"> -->
+      <div class="input-group">
+        <input id="password" type="Password" Class="fadeIn second" placeholder="password" formControlName="password">
+        <div class="input-group-append">
+              <button id="show_password" class="btn btn-primary" type="button" (click)="showPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+            </div>
+      </div>
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+  </div>
+</div>

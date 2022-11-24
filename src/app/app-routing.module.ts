@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    canActivate : [VigilantGuard ] ,
+    canActivate : [ VigilantGuard ] ,
     children: [
       {
         // path: 'login', childrens
