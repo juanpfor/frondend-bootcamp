@@ -103,7 +103,7 @@ body .form-check-input:checked {
 .header .add .btn:hover {
     background-color: #ffbf00;
     transform: translateY(-7px);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     padding: 5px;
     box-shadow: 5px 5px 10px 1px rgb(144, 144, 144);
 }

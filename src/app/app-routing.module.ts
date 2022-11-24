@@ -71,7 +71,7 @@ const routes: Routes = [
     component: ListarEspecieComponent,
   },
   {
-    path: 'especie/actualizar',
+    path: 'especie/actualizar/:id_especie',
     component: ActualizarEspecieComponent,
   },
 

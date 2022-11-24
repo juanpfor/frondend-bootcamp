@@ -118,9 +118,9 @@
   }
   
   .header .add .btn:hover{
-    background-color: #47bf0b;
+    text-decoration: none;
     transform: translateY(-5px);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     padding: 5px;
     box-shadow: 5px 5px 10px 1px rgb(144, 144, 144);
   }
@@ -181,4 +181,17 @@
   
   .table-striped tbody tr:nth-of-type(odd){
     background-color: #d3f9bf;
+  }
+
+  .link-nutrientes{
+    text-decoration: none;
+
+  }
+
+  .add {
+    text-decoration: none;
+  }
+
+  .buscar{
+    display: flex;
   }
