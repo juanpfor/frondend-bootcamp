@@ -10,8 +10,13 @@ import { User } from 'src/app/interfaces/user';
 })
 export class AlimentoService {
   private Api = pathUrlService.concat("allaliments")
-  constructor(private httpClient:HttpClient) { }
-  getAll():Observable<Alimento[]>{
+  constructor(private httpClient: HttpClient) { }
+
+  getAll(): Observable<Alimento[]> {
     return this.httpClient.get<Alimento[]>(this.Api)
+  }
+
+  getAlimentsByRegionAndNutriente() {
+
   }
 }
