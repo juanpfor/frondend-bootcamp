@@ -66,83 +66,16 @@
                         <td>{{especie.nombre_especie}}</td>
                         <td>
                             <!-- Boton: Editar-->
-                            <button type="button" class="btn btn-secondary" >Editar</button>
+                            <button [routerLink]="['/especie/actualizar',especie.id_especie]" type="button" class="btn btn-secondary" >Editar</button>
                         
                             <!-- Boton: Ver-->
                             <button type="button" class="btn btn-secondary">Ver</button>
 
                             <!--Boton: Eliminar-->
-                            <button type="button" class="btn btn-secondary">Eliminar</button>
+                            <button (click)="EliminarEspecie(especie.id_especie)" type="button" class="btn btn-secondary">Eliminar</button>
                         </td>
                     </tr>
-                    <tr>
-                        <td scope="row"></td>
-                        <td>Información</td>
-                        <td>Información muy larga</td>
-                        <td>Información</td>
-                        <td>Información más larga</td>
-                        <td>
-                            <!-- Boton: Editar-->
-                            <button type="button" class="btn btn-secondary" [routerLink]="['actualizarEspecie']">Editar</button>
-                        
-                            <!-- Boton: Ver-->
-                            <button type="button" class="btn btn-secondary">Ver</button>
-
-                            <!--Boton: Eliminar-->
-                            <button type="button" class="btn btn-secondary">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td scope="row"></td>
-                        <td>Información</td>
-                        <td>Información muy larga</td>
-                        <td>Información</td>
-                        <td>Información más larga</td>
-                        <td>
-                            <!-- Boton: Editar-->
-                            <button type="button" class="btn btn-secondary">Editar</button>
-                        
-                            <!-- Boton: Ver-->
-                            <button type="button" class="btn btn-secondary">Ver</button>
-
-                            <!--Boton: Eliminar-->
-                            <button type="button" class="btn btn-secondary">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td scope="row"></td>
-                        <td>Información</td>
-                        <td>Información muy larga</td>
-                        <td>Información</td>
-                        <td>Información más larga</td>
-                        <td>
-                            <!-- Boton: Editar-->
-                            <button type="button" class="btn btn-secondary">Editar</button>
-                        
-                            <!-- Boton: Ver-->
-                            <button type="button" class="btn btn-secondary">Ver</button>
-
-                            <!--Boton: Eliminar-->
-                            <button type="button" class="btn btn-secondary">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td scope="row"></td>
-                        <td>Información</td>
-                        <td>Información muy larga</td>
-                        <td>Información</td>
-                        <td>Información más larga</td>
-                        <td>
-                            <!-- Boton: Editar-->
-                            <button type="button" class="btn btn-secondary">Editar</button>
-                        
-                            <!-- Boton: Ver-->
-                            <button type="button" class="btn btn-secondary">Ver</button>
-
-                            <!--Boton: Eliminar-->
-                            <button type="button" class="btn btn-secondary">Eliminar</button>
-                        </td>
-                    </tr>
+                   
                     
                         
                     
