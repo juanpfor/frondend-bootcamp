@@ -1,0 +1,15 @@
+.contenedor_registro{
+    max-width: 1571px;
+    margin: 0 auto;
+}
+.nombrefase{
+    color: #39a900;
+    text-decoration: underline #39a900;
+} 
+.titulos{
+    color: #908C8C;
+}
+.btn-guardar-registro{
+    background-color: #FFCE40;
+    color: white;
+}

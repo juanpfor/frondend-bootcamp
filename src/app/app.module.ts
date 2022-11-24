@@ -22,6 +22,14 @@ import { DetallesRequerimientoAnimalComponent } from './views/requerimiento-anim
 import { GestionarComponent } from './views/nutrientes/gestionar/gestionar.component';
 import { RegistroComponent } from './views/nutrientes/registro/registro.component';
 
+// import { NavbarComponent } from './component/navbar/navbar.component'
+
+
+import { HomeComponent } from './views/home/home.component';
+
+import { GestionarAlimentoComponent } from './views/alimentos/gestionar-alimento/gestionar-alimento.component';
+import { DetalleAlimentoComponent } from './views/alimentos/detalle-alimento/detalle-alimento.component';
+import { RegistroAlimentoComponent } from './views/alimentos/registro-alimento/registro-alimento.component';
 
 @NgModule({
   declarations: [
@@ -37,11 +45,14 @@ import { RegistroComponent } from './views/nutrientes/registro/registro.componen
     AsideComponent,
     NavbarComponent,
     AllusersComponent,
+    HomeComponent,
     GestionarRequerimientoAnimalComponent,
     DetallesRequerimientoAnimalComponent,
-    ActualizarEspecieComponent,
+    GestionarAlimentoComponent,
     GestionarComponent,
-    RegistroComponent
+    RegistroComponent,
+    DetalleAlimentoComponent,
+    RegistroAlimentoComponent,
   ],
   imports: [
     BrowserModule,
