@@ -27,6 +27,9 @@ import { RegistroComponent } from './views/nutrientes/registro/registro.componen
 import { GestionarAlimentoComponent } from './views/alimentos/gestionar-alimento/gestionar-alimento.component';
 import { DetalleAlimentoComponent } from './views/alimentos/detalle-alimento/detalle-alimento.component';
 import { RegistroAlimentoComponent } from './views/alimentos/registro-alimento/registro-alimento.component';
+import { GestionarZonasComponent } from './views/zonas/gestionar-zonas/gestionar-zonas.component';
+import { RegistrarZonasComponent } from './views/zonas/registrar-zonas/registrar-zonas.component';
+import { RegistroUsersComponent } from './views/users/registro-users/registro-users.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,9 @@ import { RegistroAlimentoComponent } from './views/alimentos/registro-alimento/r
     RegistroComponent,
     DetalleAlimentoComponent,
     RegistroAlimentoComponent,
+    GestionarZonasComponent,
+    RegistrarZonasComponent,
+    RegistroUsersComponent,
   ],
   imports: [
     BrowserModule,
