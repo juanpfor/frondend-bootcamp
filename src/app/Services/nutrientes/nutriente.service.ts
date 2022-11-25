@@ -11,8 +11,15 @@ export class NutrienteService {
 
   constructor(private http: HttpClient) { }
 
-  listarNutrientes():Observable<responseApi>{
+  listarNutrientes(): Observable<responseApi> {
     let url = 'allnutrientes'
     return this.http.get<responseApi>(pathUrlService + url)
-  } 
+  }
+
+  PostNutrientes(form: any): Observable<responseApi> {
+    let url = 'createtypenutriente/4'
+
+
+    return this.http.post<responseApi>(pathUrlService + url, form)
+  }
 }

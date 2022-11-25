@@ -85,14 +85,13 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
+    border-bottom: 5px white;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    border-bottom: 5px white;
 }
 
 a[data-toggle="collapse"] {
@@ -160,4 +159,14 @@ a.article:hover {
     #sidebarCollapse span {
         display: none;
     }
+}
+
+.aside_logo{
+    width: 150px;
+    background-color: #39A900;
+}
+
+.sidebar-header{
+    display: flex;
+    justify-content: center;
 }

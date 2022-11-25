@@ -1,9 +1,9 @@
 <div class="wrapper">
     <!-- Sidebar  -->
     <nav id="sidebar" class="verde_principal">
-        <div class="sidebar-header">
-            <h3>SEN</h3>
-        </div>
+        <a class="sidebar-header" [routerLink]="['adminHome']">
+            <img src="../../../assets//logos/Logo final-07.png" alt="logo" class="aside_logo">
+        </a>
 
         <ul class="list-unstyled components">
             <li class="">
@@ -12,21 +12,25 @@
             <li>
                 <a [routerLink]="['especie']" class="">Especies</a>
             </li>
-            <li>
-                <a [routerLink]="['municipios']">Municipios</a>
-            </li>
+            <!-- <li>
+                <a [routerLink]="['listarMunicipios']">Municipios</a>
+            </li> -->
             <li>
                 <a [routerLink]="['nutrientes']">Nutrientes</a>
             </li>
             <li>
-                <a [routerLink]="['gestionarAnimal']">Gestionar animal</a>
+                <a [routerLink]="['gestionarAnimal']">Gestionar animal (fase)</a>
             </li>
             <li>
                 <a [routerLink]="['usuarios']">Usuarios</a>
             </li>
+<<<<<<< HEAD
             <li>
               <a [routerLink]="['gestionarAnimal']">Requerimiento Animal</a>
           </li>
+=======
+            
+>>>>>>> 9ec17d074567050dab416e6178980e2381b3bf55
         </ul>
     </nav>
 

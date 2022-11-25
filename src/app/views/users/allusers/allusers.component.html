@@ -4,8 +4,8 @@
             <!--Encabezado-->
             <div class="header">
                 
-                <div class="animals-title">
-                    <h1>Listar </h1>Municipios
+                <div class="animals-title px-3">
+                    <h1>Listar usuarios</h1>
                 </div>
                 <!--Contenedor buscar-->
                 <div class="inputWithIcon">
@@ -16,8 +16,8 @@
                 <!--Boton Agregar-->
                 <div class="add">
                     <!-- Boton: Agregar -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-                        Agregar
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" [routerLink]="['/usuarios/registrar']">
+                        Agregar usuario
                     </button>
                 </div>
             </div>

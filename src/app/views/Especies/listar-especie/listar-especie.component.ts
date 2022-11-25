@@ -17,11 +17,34 @@ export class ListarEspecieComponent implements OnInit {
   ListarEspecies(): void {
     this.especieService.listarEspecies().subscribe(data => {
       this.listEspecies = data.results
-      console.log(this.listEspecies);
-    }
-
-    )
-
-
+    })
+  }
+  EliminarEspecie(id_especie:number){
+    Swal.fire({
+      title:'Eliminar',
+      text:'Estas seguro que quieres eliminar esta especie?',
+      icon:'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Aceptar'
+    }).then((results)=>{
+      if(results.isConfirmed){
+       this.especieService.deleteEspecie(id_especie).subscribe(data=>{
+        if(data.status == 'success'){
+          Swal.fire({
+            title:'Eliminado',
+            text:'Especie eliminada con exito',
+            icon:'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Aceptar'
+          })
+        }
+        this.ListarEspecies()
+       })
+      }
+    })
   }
 }

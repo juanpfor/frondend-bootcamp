@@ -1,3 +1,4 @@
+import { RegistrarEspeciesComponent } from './views/Especies/registrar-especies/registrar-especies.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './views/login/login.component';
@@ -16,13 +17,21 @@ import { RegistrarRequerimientoAnimalComponent } from './views/requerimiento-ani
 import { ActualizarRequerimientoAnimalComponent } from './views/requerimiento-animal/actualizar-requerimiento-animal/actualizar-requerimiento-animal.component';
 import { GestionarComponent } from './views/nutrientes/gestionar/gestionar.component';
 import { RegistroComponent } from './views/nutrientes/registro/registro.component';
+import { AdminHomeComponent } from './views/admin-home/admin-home.component';
+import { PerfilUsuarioComponent } from './views/perfil-usuario/perfil-usuario.component';
+import { RegistroUsersComponent } from './views/users/registro-users/registro-users.component';
 const routes: Routes = [
 
 
 
-    // /////////////////////Home///////////////////////
+    // ///////////////////// Admin Home ///////////////////////
 
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '', redirectTo: 'adminHome', pathMatch: 'full' },
+
+  { path: 'adminHome', component: AdminHomeComponent},
+
+    // ///////////////////// Landing ///////////////////////
+
 
   {path: 'landing', component: HomeComponent},
 
@@ -71,7 +80,11 @@ const routes: Routes = [
     component: ListarEspecieComponent,
   },
   {
-    path: 'especie/actualizar',
+    path: 'especie/registrar',
+    component: RegistrarEspeciesComponent,
+  },
+  {
+    path: 'especie/actualizar/:id_especie',
     component: ActualizarEspecieComponent,
   },
 
@@ -121,6 +134,16 @@ const routes: Routes = [
     component: AllusersComponent,
   },
 
+
+  {
+    path: 'perfilUsuario',
+    component: PerfilUsuarioComponent,
+  },
+ 
+  {
+    path:'usuarios/registrar',
+    component: RegistroUsersComponent
+  }
 
 
 
