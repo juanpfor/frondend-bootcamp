@@ -28,7 +28,10 @@ const routes: Routes = [
 
     // ///////////////////// Admin Home ///////////////////////
 
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'adminHome', pathMatch: 'full' },
+
+  { path: '**', redirectTo: 'adminHome', pathMatch: 'full' },
+
 
   { path: 'adminHome', component: AdminHomeComponent},
 
