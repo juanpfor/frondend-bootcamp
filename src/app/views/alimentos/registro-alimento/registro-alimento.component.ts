@@ -72,7 +72,7 @@ updatedAt:['', Validators.required],
     console.log(this.form.value);
     this.AlimentoService.create(this.form.value).subscribe(res => {
          console.log('Person created successfully!');
-         this.router.navigateByUrl('person/index');
+  
     })
   }
 

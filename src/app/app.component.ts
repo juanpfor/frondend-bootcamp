@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frond-end';
+  token: string | null = null
+  ngOnInit(): void {
+    this.token = localStorage.getItem('token');
+
+    // if (localStorage.getItem('token')) {
+    //   alert("existe token")
+    // }
+   }
 }

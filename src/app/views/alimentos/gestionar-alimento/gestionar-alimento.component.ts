@@ -14,12 +14,12 @@ export class GestionarAlimentoComponent implements OnInit {
   constructor(private AlimentoService:AlimentoService) { }
 
   ngOnInit(): void {
-    this.getAll()
+    // this.getAll()
   }
   getAll():void{
     this.AlimentoService.getAll().subscribe(
       data=>{
-        console.log(data.results);
+        console.log(data);
         this.alimentos = data.results;
 
 
