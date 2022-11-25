@@ -19,12 +19,17 @@ export class AlimentoService {
       'Content-type':'aplication/json'
     })
   }
-  
+
   create(municipio:responseApi):Observable<responseApi>{
     return this.httpClient.post<responseApi>(this.post,JSON.stringify(municipio),this.httpOptions)
   }
   updated(alimento:responseApi) {
-    
+
+  }
+
+  deleteAlimento(id_alimento:number):Observable<responseApi>{
+    let url = 'deletealiment'
+    return this.httpClient.delete<responseApi>(pathUrlService + url + '/' + id_alimento)
   }
 
 }

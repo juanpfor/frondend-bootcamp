@@ -1,4 +1,6 @@
+import { ReqAnimalService } from './../../../Services/reqAlimento/req-animal.service';
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-gestionar-requerimiento-animal',
@@ -6,10 +8,43 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gestionar-requerimiento-animal.component.css']
 })
 export class GestionarRequerimientoAnimalComponent implements OnInit {
-
-  constructor() { }
+  listReqAnimal?: any[]
+  constructor(private reqAnimalService: ReqAnimalService) { }
 
   ngOnInit(): void {
+    this.ListarReqAnimal()
   }
-
+  ListarReqAnimal(): void {
+    this.reqAnimalService.listarReqAnimal().subscribe(data => {
+      this.listReqAnimal = data.results
+    })
+  }
+  EliminarAnimalReq(id_requerimiento_animal:number){
+    Swal.fire({
+      title:'Eliminar',
+      text:'Estas seguro que quieres eliminar esta Fase?',
+      icon:'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Aceptar'
+    }).then((results)=>{
+      if(results.isConfirmed){
+       this.reqAnimalService.deleteAnimalReq(id_requerimiento_animal).subscribe(data=>{
+        if(data.status == 'success'){
+          Swal.fire({
+            title:'Eliminado',
+            text:'Fase eliminada con exito',
+            icon:'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Aceptar'
+          })
+        }
+        this.ListarReqAnimal()
+       })
+      }
+    })
+  }
 }
