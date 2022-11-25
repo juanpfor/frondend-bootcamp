@@ -35,7 +35,7 @@ export class ListarEspecieComponent implements OnInit {
           Swal.fire({
             title:'Eliminado',
             text:'Especie eliminada con exito',
-            icon:'warning',
+            icon:'success',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
