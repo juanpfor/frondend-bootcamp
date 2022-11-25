@@ -24,125 +24,85 @@ import { RegistroUsersComponent } from './views/users/registro-users/registro-us
 
 const routes: Routes = [
 
-
-
-  // ///////////////////// Admin Home ///////////////////////
-
   { path: '', redirectTo: 'landing', pathMatch: 'full' },
-
-  // { path: '**', redirectTo: 'adminHome', pathMatch: 'full' },
-
-
-  { path: 'adminHome', component: AdminHomeComponent },
-
-  // ///////////////////// Landing ///////////////////////
-
 
   { path: 'landing', component: HomeComponent },
 
-  // /////////////////////Login///////////////////////
-
-
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [VigilantGuard] },
 
-
-
-  // /////////////////////Alimentos///////////////////////
   {
-    path: 'alimentos',
-    component: GestionarAlimentoComponent,
+    path: 'dashboard', component: DashboardComponent, canActivate: [VigilantGuard],
+    children: [
+      // { path: '', redirectTo: 'adminHome', pathMatch: 'full' },
+
+      { path: 'adminHome', component: AdminHomeComponent },
+      {
+        path: 'alimentos',
+        component: GestionarAlimentoComponent,
+      },
+      {
+        path: 'alimentos/actualizar',
+        component: ActualizarAlimentoComponent,
+      },
+      {
+        path: 'alimentos/registro',
+        component: RegistroAlimentoComponent,
+      },
+
+      {
+        path: 'especie',
+        component: ListarEspecieComponent,
+      },
+      {
+        path: 'especie/registrar',
+        component: RegistrarEspeciesComponent,
+      },
+      {
+        path: 'especie/actualizar/:id_especie',
+        component: ActualizarEspecieComponent,
+      },
+      {
+        path: 'municipios',
+        component: ListarMunicipioComponent,
+      },
+      {
+        path: 'gestionarAnimal',
+        component: GestionarRequerimientoAnimalComponent,
+      },
+      {
+        path: 'gestionarAnimal/registrar',
+        component: RegistrarRequerimientoAnimalComponent,
+      },
+
+      {
+        path: 'gestionarAnimal/actualizar',
+        component: ActualizarRequerimientoAnimalComponent,
+      },
+      {
+        path: 'nutrientes',
+        component: GestionarComponent,
+      },
+
+      {
+        path: 'nutrientes/registro',
+        component: RegistroComponent,
+      },
+
+      {
+        path: 'usuarios',
+        component: AllusersComponent,
+      },
+      {
+        path: 'perfilUsuario',
+        component: PerfilUsuarioComponent,
+      },
+
+      {
+        path: 'usuarios/registrar',
+        component: RegistroUsersComponent
+      }
+    ]
   },
-  {
-    path: 'alimentos/actualizar',
-    component: ActualizarAlimentoComponent,
-  },
-  {
-    path: 'alimentos/registro',
-    component: RegistroAlimentoComponent,
-  },
-
-
-
-  // /////////////////////Especie///////////////////////
-
-
-  {
-    path: 'especie',
-    component: ListarEspecieComponent,
-  },
-  {
-    path: 'especie/registrar',
-    component: RegistrarEspeciesComponent,
-  },
-  {
-    path: 'especie/actualizar/:id_especie',
-    component: ActualizarEspecieComponent,
-  },
-
-  // /////////////////////Municipios///////////////////////
-
-  {
-    path: 'municipios',
-    component: ListarMunicipioComponent,
-  },
-
-  // /////////////////////Animal///////////////////////
-
-
-  {
-    path: 'gestionarAnimal',
-    component: GestionarRequerimientoAnimalComponent,
-  },
-  {
-    path: 'gestionarAnimal/registrar',
-    component: RegistrarRequerimientoAnimalComponent,
-  },
-
-  {
-    path: 'gestionarAnimal/actualizar',
-    component: ActualizarRequerimientoAnimalComponent,
-  },
-
-
-  // /////////////////////Nutrientes///////////////////////
-
-
-  {
-    path: 'nutrientes',
-    component: GestionarComponent,
-  },
-
-  {
-    path: 'nutrientes/registro',
-    component: RegistroComponent,
-  },
-
-
-  // /////////////////////Users///////////////////////
-
-  {
-    path: 'usuarios',
-    component: AllusersComponent,
-  },
-
-
-  {
-    path: 'perfilUsuario',
-    component: PerfilUsuarioComponent,
-  },
-
-  {
-    path: 'usuarios/registrar',
-    component: RegistroUsersComponent
-  }
-
-  // {
-  //   path:'zonas/registro',
-  //   component: RegistroZonas
-  // }
-
-
 
 ];
 

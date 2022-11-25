@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
         this.cookies.set('token', dataResponse.results.token)
 
 
-        this.router.navigate(['dashboard'])
+        this.router.navigate(['dashboard/adminHome'])
       } else {
         this.erroStatus = true
         this.erroMsg = dataResponse.message
