@@ -17,7 +17,7 @@ export class NutrienteService {
   }
 
   PostNutrientes(form: any): Observable<responseApi> {
-    let url = 'createtypenutriente/4'
+    let url = 'createtypenutriente'
     return this.http.post<responseApi>(pathUrlService + url, form)
   }
 
