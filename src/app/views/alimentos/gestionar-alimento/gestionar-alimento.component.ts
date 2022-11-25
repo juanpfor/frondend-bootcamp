@@ -14,7 +14,7 @@ export class GestionarAlimentoComponent implements OnInit {
   constructor(private AlimentoService:AlimentoService) { }
 
   ngOnInit(): void {
-    // this.getAll()
+    this.getAll()
   }
   getAll():void{
     this.AlimentoService.getAll().subscribe(

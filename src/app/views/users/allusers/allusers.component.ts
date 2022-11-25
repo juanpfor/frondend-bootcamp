@@ -28,6 +28,6 @@ export class AllusersComponent implements OnInit {
 
   }
   registrarUserClick ( ) {
-    this.route.navigate(['/usuarios/registrar'])
+    this.route.navigate(['dashboard/usuarios/registrar'])
   }
 }

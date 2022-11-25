@@ -31,7 +31,7 @@ export class RegistrarEspeciesComponent implements OnInit {
             confirmButtonText: 'Aceptar'
           })
         }
-        this.router.navigate(['especie'])
+        this.router.navigate(['dashboard/nutrientes'])
       });
     } else {
       console.log("Campos Obligatorios");

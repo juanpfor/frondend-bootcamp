@@ -31,7 +31,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
 
   {
-    path: 'dashboard', component: DashboardComponent, canActivate: [VigilantGuard],
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [VigilantGuard],
     children: [
       // { path: '', redirectTo: 'adminHome', pathMatch: 'full' },
 
