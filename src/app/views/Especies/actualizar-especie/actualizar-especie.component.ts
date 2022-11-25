@@ -34,7 +34,7 @@ export class ActualizarEspecieComponent implements OnInit {
     })
   }
   ActualizaEspecie(): void {
-   
+
     this.especie = {
       nombre_especie:this.EspecieForm.get('nombre_especie')?.value
     }

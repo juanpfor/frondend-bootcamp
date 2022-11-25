@@ -9,6 +9,7 @@ import { responseApi } from 'src/app/interfaces/responseApi';
 })
 export class AlimentoService {
   private Api = pathUrlService.concat("allaliments")
+
   private post=pathUrlService.concat("createaliment")
   private put=pathUrlService.concat("updatealiment")
   constructor(private httpClient:HttpClient) { }

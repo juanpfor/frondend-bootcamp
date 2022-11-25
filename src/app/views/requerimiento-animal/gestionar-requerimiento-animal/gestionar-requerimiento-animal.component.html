@@ -15,8 +15,8 @@
         <!--Boton Agregar-->
         <div class="add">
             <!-- Boton: Agregar -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" [routerLink]="['/gestionarAnimal/registrar']">
-      Agregar nuevo animal
+            <button (click)="click()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+      Agregar
     </button>
             <!-- Modal: Agregar -->
             <div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -49,17 +49,17 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th class="radius" scope="col"></th>
-                    <th class="sticky" cope="col">Id</th>
-                    <th scope="col">Nombre fase</th>
-                    <th scope="col">MS %</th>
-                    <th scope="col">EM AVES Kg</th>
-                    <th scope="col">EM AVES Kg</th>
+                    <th scope="col">Nombre</th>
                     <th scope="col">Proteina cruda %</th>
-                    <th scope="col">Fibra cruda %</th>
-                    <th scope="col">Ext etereo %</th>
                     <th scope="col">Calcio %</th>
                     <th scope="col">Fosforo Disp %</th>
+                    <th scope="col">Lisina %</th>
+                    <th scope="col">Metioonina %</th>
+                    <th scope="col">Fibra cruda %</th>
+                    <!-- <th scope="col">MS %</th>
+                    <th scope="col">EM AVES Kg</th>
+                    <th scope="col">EM AVES Kg</th>
+                    <th scope="col">Ext etereo %</th>
                     <th scope="col">Sodio %</th>
                     <th scope="col">Ardinina %</th>
                     <th scope="col">Lisina %</th>
@@ -68,6 +68,7 @@
                     <th scope="col">Treonina %</th>
                     <th scope="col">Triptofano %</th>
                     <th scope="col">Ceniza %</th>
+                    <th scope="col">Codigo de especie</th> -->
                     <th scope="col" class="action">Actions</th>
                 </tr>
             </thead>
@@ -94,7 +95,6 @@
                     <td>{{reqAnimal.ceniza}}</td>
 
                     <td>
-                        <!-- Boton: Editar-->
                         <button type="button" class="btn btn-secondary" [routerLink]="['/gestionarAnimal/actualizar']">Editar</button>
 
                         <!-- Boton: Ver-->

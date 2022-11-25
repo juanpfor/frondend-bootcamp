@@ -2,6 +2,8 @@ import { ReqAnimalService } from './../../../Services/reqAlimento/req-animal.ser
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 
+import { AnimalsService } from "../../../Services/animals/animals.service";
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-gestionar-requerimiento-animal',
   templateUrl: './gestionar-requerimiento-animal.component.html',
@@ -9,7 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class GestionarRequerimientoAnimalComponent implements OnInit {
   listReqAnimal?: any[]
-  constructor(private reqAnimalService: ReqAnimalService) { }
+  constructor(private reqAnimalService: ReqAnimalService , private route : Router) { }
 
   ngOnInit(): void {
     this.ListarReqAnimal()
@@ -47,4 +49,8 @@ export class GestionarRequerimientoAnimalComponent implements OnInit {
       }
     })
   }
+  click() {
+    this.route.navigate([])
+  }
+
 }
