@@ -143,12 +143,11 @@ input[type=password] {
   border: none;
   color: #0d0d0d;
   
-  padding: 15px 32px;
+  padding: 5px 12px;
   text-align: center;
 
   text-decoration: none;
   display: inline-block;
-  font-size: 1px;
   margin: 5px;
   width: 70%;
   border: 2px solid #f6f6f6;
@@ -174,11 +173,10 @@ input[type=text] {
   background-color: #ffffff;
   border: none;
   color: #0d0d0d;
-  padding: 15px 32px;
+  padding: 5px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1px;
   margin: 0px;
   width: 70%;
   border: 2px solid #f6f6f6;
