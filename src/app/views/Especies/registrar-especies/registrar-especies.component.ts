@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { NutrienteService } from '../../../Services/nutrientes/nutriente.service';
+import { EspecieService } from '../../../Services/especie/especie.service';
 import { Router } from "@angular/router";
 import Swal from 'sweetalert2';
 
 
 @Component({
-  selector: 'app-registro',
-  templateUrl: './registro.component.html',
-  styleUrls: ['./registro.component.css'],
+  selector: 'app-registrar-especies',
+  templateUrl: './registrar-especies.component.html',
+  styleUrls: ['./registrar-especies.component.css']
 })
-export class RegistroComponent implements OnInit {
+export class RegistrarEspeciesComponent implements OnInit {
   postFormulario = new FormGroup({
-    nombre_tipo_nutriente: new FormControl('', Validators.required),
+    nombre_especie: new FormControl('', Validators.required),
   });
-  constructor(private apiservice: NutrienteService, private router:Router) {}
+  constructor(private apiespecie: EspecieService, private router:Router) {}
 
   ngOnInit(): void {}
   postForm(form: any) {
     if (this.postFormulario.valid) {
-      this.apiservice.PostNutrientes(form).subscribe((data) => {
+      this.apiespecie.PostEspecies(form).subscribe((data) => {
         if(data.status == 'success'){
           Swal.fire({
             title:'Registrado',
@@ -31,7 +31,7 @@ export class RegistroComponent implements OnInit {
             confirmButtonText: 'Aceptar'
           })
         }
-        this.router.navigate(['nutrientes'])
+        this.router.navigate(['especie'])
       });
     } else {
       console.log("Campos Obligatorios");
@@ -42,7 +42,7 @@ export class RegistroComponent implements OnInit {
         confirmButtonColor: '#3085d6',
           confirmButtonText: 'Aceptar'
       })
-        
+
     }
 
     console.log(form);

@@ -3,7 +3,7 @@
 
             <!--Encabezado-->
             <div class="header">
-                
+
                 <div class="animals-title">
                     <h1>Listar Especie </h1>
                 </div>
@@ -16,7 +16,7 @@
                 <!--Boton Agregar-->
                 <div class="add">
                     <!-- Boton: Agregar -->
-                    <button type="button" class="btn btn-primary" [routerLink]="['/especie/actualizar']">
+                    <button type="button" class="btn btn-primary" routerLink="registrar">
                         Agregar especie
                     </button>
                     <!-- Modal: Agregar -->
@@ -67,7 +67,7 @@
                         <td>
                             <!-- Boton: Editar-->
                             <button [routerLink]="['/especie/actualizar',especie.id_especie]" type="button" class="btn btn-secondary" >Editar</button>
-                        
+
                             <!-- Boton: Ver-->
                             <button type="button" class="btn btn-secondary">Ver</button>
 
@@ -75,10 +75,10 @@
                             <button (click)="EliminarEspecie(especie.id_especie)" type="button" class="btn btn-secondary">Eliminar</button>
                         </td>
                     </tr>
-                   
-                    
-                        
-                    
+
+
+
+
                 </tbody>
             </table>
         </div>
