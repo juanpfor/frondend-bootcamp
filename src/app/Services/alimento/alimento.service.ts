@@ -10,6 +10,7 @@ import { responseApi } from 'src/app/interfaces/responseApi';
 export class AlimentoService {
   private Api = pathUrlService.concat("allaliments")
   private post=pathUrlService.concat("createaliment")
+  private put=pathUrlService.concat("updatealiment")
   constructor(private httpClient:HttpClient) { }
   getAll():Observable<responseApi>{
     return this.httpClient.get<responseApi>(this.Api)
@@ -23,8 +24,9 @@ export class AlimentoService {
   create(municipio:responseApi):Observable<responseApi>{
     return this.httpClient.post<responseApi>(this.post,JSON.stringify(municipio),this.httpOptions)
   }
-  updated(alimento:responseApi) {
-    
+  getAlimentoById(id_alimento:string):Observable<responseApi>{
+    let url = 'oneespecie'
+    return this.httpClient.get<responseApi>(pathUrlService + url + '/' + id_alimento)
   }
 
 }

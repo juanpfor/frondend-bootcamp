@@ -2,102 +2,128 @@
     <h4 class="nombrefase text-center py-2">Actualizacion De <span>"Alimentos"</span></h4>
     <div class="page-header">
   
-      <form>
+      <form [formGroup]="alimentoForm" (ngSubmit)="ActualizarAlimento()">
         <div class="row mt-3 px-md-3">
-  
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <!-- name -->
-            <label class="h6 titulos">No. requerimiento:</label>
-            <br>
-            <input  id="NoRequerimiento" type="number"
-              class="form-control w--md-75">
-          </div>
           <!-- job -->
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Nombre del Alimento</label><br>
-            <input  id="nameFase" type="text" class="form-control w--md-75">
+            <input  id="nameFase" type="text" class="form-control w--md-75"
+            formControlName="nombre_alimento"
+            >
           </div>
   
   
   
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Materia Seca %:</label> <br>
-            <input  id="porcentajeMS" type="number" class="form-control w--md-75">
+            <input  id="porcentajeMS" type="number" class="form-control w--md-75"
+            formControlName="materia_seca"
+            >
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">EM AVES Kg:</label><br>
-            <input  id="emaves" type="number" class="form-control w--md-75">
+            <input  id="emaves" type="number" class="form-control w--md-75"
+            formControlName="e_m_aves"
+            >
   
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">EM Cerdos Kg:</label><br>
-            <input  id="emceerdos" type="number" class="form-control w--md-75">
+            <input  id="emceerdos" type="number" class="form-control w--md-75"
+            formControlName="e_m_cerdos"
+            >
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Proteina cruda %:</label> <br>
-            <input  id="proteinacruda" type="number" class="form-control w--md-75">
+            <input  id="proteinacruda" type="number" class="form-control w--md-75"
+            formControlName="proteina_cruda"
+            >
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Fibra cruda %:</label><br>
-            <input  id="fibracruda" type="number" class="form-control w--md-75">
+            <input  id="fibracruda" type="number" class="form-control w--md-75"
+            formControlName="fibra_cruda"
+            >
   
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Ext etereo %:</label> <br>
-            <input  id="extetereo" type="number" class="form-control w--md-75">
+            <input  id="extetereo" type="number" class="form-control w--md-75"
+            formControlName="ext_etereo"
+            >
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Calcio %:</label><br>
-            <input  id="calcio" type="number" class="form-control w--md-75">
+            <input  id="calcio" type="number" class="form-control w--md-75"
+            formControlName="calcio"
+            >
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Fosforo Disp %:</label> <br>
-            <input  id="fosforo" type="number" class="form-control w--md-75">
+            <input  id="fosforo" type="number" class="form-control w--md-75"
+            formControlName="fosf_disp"
+            >
   
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Sodio %:</label><br>
-            <input  id="sodio" type="number" class="form-control w--md-75">
+            <input  id="sodio" type="number" class="form-control w--md-75"
+            formControlName="sodio"
+            >
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Ardinina %:</label> <br>
-            <input id="adrinina" type="number" class="form-control w--md-75">
+            <input id="adrinina" type="number" class="form-control w--md-75"
+            formControlName="arginina"
+            >
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Lisina %:</label><br>
-            <input  id="lisina" type="number" class="form-control w--md-75">
+            <input  id="lisina" type="number" class="form-control w--md-75"
+            formControlName="lisina"
+            >
   
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Meteonina %:</label> <br>
-            <input  id="meteonina" type="number" class="form-control w--md-75">
+            <input  id="meteonina" type="number" class="form-control w--md-75"
+            formControlName="metionina"
+            >
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Triptofano %:</label><br>
-            <input  id="meCis" type="number" class="form-control w--md-75">
+            <input  id="meCis" type="number" class="form-control w--md-75"
+            formControlName="triptofano"
+            >
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">met_cis %:</label> <br>
-            <input id="treonina" type="number" class="form-control w--md-75">
+            <input id="treonina" type="number" class="form-control w--md-75"
+            formControlName="met_cis"
+            >
           </div>
   
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">treonina %:</label><br>
-            <input  id="triptofano" type="number" class="form-control w--md-75">
+            <input  id="triptofano" type="number" class="form-control w--md-75"
+            formControlName="treonina"
+            >
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Nutriente</label> <br>
-         <select id="" class="form-select  w--md-75 ">
+         <!-- <select id="" class="form-select  w--md-75 "
+         formControlName="tipo_nutriente_id"
+         >
         <option selected disabled>Seleccione tipo nutricion</option>
-        <option value="">Energia</option>
-        <option value="">Proteina</option>
+        <option value="1">Energia</option>
+        <option value="2">Proteina</option>
         <option value="">Fosforo</option>
         <option value="">Calcio</option>
         <option value="">Liquidos</option>
         <option value="">Aminoacidos</option>
-      </select>
+      </select> -->
         </div>
-        <div class="form-group col-12 col-sm-6 col-md-4 ">
+        <!-- <div class="form-group col-12 col-sm-6 col-md-4 ">
           <label class="h6 titulos">Region</label> <br>
           <select class="form-select  w--md-75 ">
               <option selected disabled>Seleccione region</option>
@@ -108,7 +134,7 @@
               <option value="">Oriente</option>
               <option value="">Norte</option>
             </select>
-          </div>
+          </div> -->
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos"> createdAt:</label> <br>
             <input  disabled  type="date" class="form-control w--md-75">
