@@ -41,6 +41,17 @@ export class GestionarComponent implements OnInit {
           Swal.fire({
             title:'Eliminado',
             text:'Nutriente eliminada con exito',
+            icon:'success',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Aceptar'
+          })
+          this.listarNutrientes()
+        }else{
+          Swal.fire({
+            title:'Error',
+            text:'Este nutriente no puede eliminarse',
             icon:'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -48,7 +59,7 @@ export class GestionarComponent implements OnInit {
             confirmButtonText: 'Aceptar'
           })
         }
-        this.listarNutrientes()
+       
        })
       }
     })
