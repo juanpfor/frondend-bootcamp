@@ -1,3 +1,4 @@
+import { RegistrarEspeciesComponent } from './views/Especies/registrar-especies/registrar-especies.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './views/login/login.component';
@@ -42,7 +43,7 @@ const routes: Routes = [
     // /////////////////////Dashboard///////////////////////
 
   { path: 'dashboard', component: DashboardComponent, canActivate: [VigilantGuard],
-  
+
   // children: [
     //   {
     //     // path: 'login', childrens
@@ -51,8 +52,8 @@ const routes: Routes = [
     // ]
 
 
-  },  
- 
+  },
+
 
   // /////////////////////Alimentos///////////////////////
   {
@@ -67,7 +68,7 @@ const routes: Routes = [
     path: 'alimentos/registro',
     component: RegistroAlimentoComponent,
   },
-  
+
 
 
   // /////////////////////Especie///////////////////////
@@ -78,12 +79,16 @@ const routes: Routes = [
     component: ListarEspecieComponent,
   },
   {
+    path: 'especie/registrar',
+    component: RegistrarEspeciesComponent,
+  },
+  {
     path: 'especie/actualizar/:id_especie',
     component: ActualizarEspecieComponent,
   },
 
   // /////////////////////Municipios///////////////////////
-  
+
   {
     path: 'municipios',
     component: ListarMunicipioComponent,

@@ -36,6 +36,7 @@ import { RegistroUsersComponent } from './views/users/registro-users/registro-us
 import { ActualizarAlimentoComponent } from './views/alimentos/actualizar-alimento/actualizar-alimento.component';
 import { AdminHomeComponent } from './views/admin-home/admin-home.component';
 import { PerfilUsuarioComponent } from './views/perfil-usuario/perfil-usuario.component';
+import { RegistrarEspeciesComponent } from './views/Especies/registrar-especies/registrar-especies.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { PerfilUsuarioComponent } from './views/perfil-usuario/perfil-usuario.co
     RegistroUsersComponent,
     ActualizarAlimentoComponent,
     AdminHomeComponent,
-    PerfilUsuarioComponent
+    PerfilUsuarioComponent,
+    RegistrarEspeciesComponent
   ],
   imports: [
     BrowserModule,

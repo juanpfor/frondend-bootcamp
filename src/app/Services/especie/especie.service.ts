@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EspecieService {
-  
+
   constructor(private httpClient:HttpClient) { }
 
 
@@ -33,4 +33,13 @@ export class EspecieService {
     let url = 'updateespecie'
     return this.httpClient.put<responseApi>(pathUrlService + url + '/' + id_especie, especie)
   }
+
+
+
+
+  PostEspecies(form: any): Observable<responseApi> {
+    let url = 'createespecie'
+    return this.httpClient.post<responseApi>(pathUrlService + url, form)
+  }
 }
+

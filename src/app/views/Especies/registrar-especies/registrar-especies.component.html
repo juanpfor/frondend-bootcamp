@@ -1,0 +1,17 @@
+<div class="div-12 p-5">
+  <div class="card w-25 border-bold">
+      <form [formGroup]="postFormulario" (ngSubmit)="postForm(postFormulario.value)">
+          <div class="col-12 mb-2 mt-2">
+              <h2 class="text-center">Registrar Especie</h2>
+          </div>
+          <div class="card-body">
+              <h5 class="card-title">nombre del Especie</h5>
+              <input type="text" class="form-control" formControlName="nombre_especie">
+          </div>
+          <div class="col-12 d-flex justify-content-center mb-2">
+              <button class="verde_principal btn w-50 text-white">Registrar</button>
+          </div>
+      </form>
+  </div>
+</div>
+
