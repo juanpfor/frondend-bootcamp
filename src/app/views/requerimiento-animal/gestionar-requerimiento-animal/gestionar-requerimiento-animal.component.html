@@ -74,25 +74,26 @@
             </thead>
             <tbody>
                 <tr *ngFor="let reqAnimal of listReqAnimal; let i = index">
-                    <td scope="row"></td>
-                    <td>{{i}}</td>
+                    <!-- <td scope="row"></td> -->
+                    <!-- <td>{{i}}</td> -->
                     <td>{{reqAnimal.nombre_fase}}</td>
-                    <td>{{reqAnimal.m_s}}</td>
-                    <td>{{reqAnimal.e_m_ave}}</td>
-                    <td>{{reqAnimal.e_d_cerdo}}</td>
+                    <!-- <td>{{reqAnimal.m_s}}</td> -->
+                     <!-- <td>{{reqAnimal.e_m_ave}}</td> -->
+                    <!-- <td>{{reqAnimal.e_d_cerdo}}</td> -->
                     <td>{{reqAnimal.proteina}}</td>
-                    <td>{{reqAnimal.fibra_cruda}}</td>
-                    <td>{{reqAnimal.ext_etereo}}</td>
+
+                    <!-- <td>{{reqAnimal.ext_etereo}}</td> -->
                     <td>{{reqAnimal.calcio}}</td>
                     <td>{{reqAnimal.fosf_disp}}</td>
-                    <td>{{reqAnimal.sodio}}</td>
-                    <td>{{reqAnimal.arginina}}</td>
-                    <td>{{reqAnimal.lisina}}</td>
+                    <!-- <td>{{reqAnimal.sodio}}</td> -->
+                    <!-- <td>{{reqAnimal.arginina}}</td> -->
                     <td>{{reqAnimal.metionina}}</td>
-                    <td>{{reqAnimal.met_cis}}</td>
-                    <td>{{reqAnimal.treonina}}</td>
-                    <td>{{reqAnimal.triptofano}}</td>
-                    <td>{{reqAnimal.ceniza}}</td>
+                    <td>{{reqAnimal.lisina}}</td>
+                     <td>{{reqAnimal.fibra_cruda}}</td>
+                    <!-- <td>{{reqAnimal.met_cis}}</td> -->
+                    <!-- <td>{{reqAnimal.treonina}}</td> -->
+                    <!-- <td>{{reqAnimal.triptofano}}</td> -->
+                    <!-- <td>{{reqAnimal.ceniza}}</td> -->
 
                     <td>
                         <button type="button" class="btn btn-secondary" [routerLink]="['/gestionarAnimal/actualizar']">Editar</button>
