@@ -8,8 +8,12 @@ import { pathUrlService } from 'GlobalConstans';
 })
 export class UserService {
   private Api = pathUrlService.concat("allusers")
+  private post=pathUrlService.concat("createUser")
   constructor(private httpClient:HttpClient) { }
   getAll():Observable<responseApi>{
     return this.httpClient.get<responseApi>(this.Api)
+  }
+  create(user:responseApi):Observable<responseApi>{
+      return this.httpClient.post<responseApi>(this.post,JSON.stringify(user))
   }
 }
