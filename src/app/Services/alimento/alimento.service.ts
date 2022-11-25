@@ -25,6 +25,15 @@ export class AlimentoService {
   create(municipio:responseApi):Observable<responseApi>{
     return this.httpClient.post<responseApi>(this.post,JSON.stringify(municipio),this.httpOptions)
   }
+  updated(alimento:responseApi) {
+
+  }
+
+  deleteAlimento(id_alimento:number):Observable<responseApi>{
+    let url = 'deletealiment'
+    return this.httpClient.delete<responseApi>(pathUrlService + url + '/' + id_alimento)
+  }
+  
   getAlimentoById(id_alimento:string):Observable<responseApi>{
     let url = 'oneespecie'
     return this.httpClient.get<responseApi>(pathUrlService + url + '/' + id_alimento)

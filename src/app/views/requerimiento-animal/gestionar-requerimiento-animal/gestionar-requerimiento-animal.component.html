@@ -57,14 +57,12 @@
                     <th scope="col">Fibra cruda %</th>
                     <!-- <th scope="col">MS %</th>
                     <th scope="col">EM AVES Kg</th>
-                    <th scope="col">especie id</th>
-                    <th scope="col">Nombre fase</th>
-                    <th scope="col">MS %</th>
                     <th scope="col">EM AVES Kg</th>
                     <th scope="col">Ext etereo %</th>
                     <th scope="col">Sodio %</th>
                     <th scope="col">Ardinina %</th>
-                    <th scope="col">EM AVES Kg</th>
+                    <th scope="col">Lisina %</th>
+                    <th scope="col">Meteonina %</th>
                     <th scope="col">Met+Cis %</th>
                     <th scope="col">Treonina %</th>
                     <th scope="col">Triptofano %</th>
@@ -74,25 +72,36 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let item of animals">
+                <tr *ngFor="let reqAnimal of listReqAnimal; let i = index">
+                    <!-- <td scope="row"></td> -->
+                    <!-- <td>{{i}}</td> -->
+                    <td>{{reqAnimal.nombre_fase}}</td>
+                    <!-- <td>{{reqAnimal.m_s}}</td> -->
+                     <!-- <td>{{reqAnimal.e_m_ave}}</td> -->
+                    <!-- <td>{{reqAnimal.e_d_cerdo}}</td> -->
+                    <td>{{reqAnimal.proteina}}</td>
 
-                    <td>{{item.nombre_fase}}</td>
-                    <td>{{item.proteina}}</td>
-                    <td>{{item.calcio}}</td>
-                    <td>{{item.fosf_disp}}</td>
-                    <td>{{item.lisina}}</td>
-                    <td>{{item.metionina}}</td>
-                    <td>{{item.fibra_cruda}}</td>
+                    <!-- <td>{{reqAnimal.ext_etereo}}</td> -->
+                    <td>{{reqAnimal.calcio}}</td>
+                    <td>{{reqAnimal.fosf_disp}}</td>
+                    <!-- <td>{{reqAnimal.sodio}}</td> -->
+                    <!-- <td>{{reqAnimal.arginina}}</td> -->
+                    <td>{{reqAnimal.metionina}}</td>
+                    <td>{{reqAnimal.lisina}}</td>
+                     <td>{{reqAnimal.fibra_cruda}}</td>
+                    <!-- <td>{{reqAnimal.met_cis}}</td> -->
+                    <!-- <td>{{reqAnimal.treonina}}</td> -->
+                    <!-- <td>{{reqAnimal.triptofano}}</td> -->
+                    <!-- <td>{{reqAnimal.ceniza}}</td> -->
 
                     <td>
-                        <!-- Boton: Editar-->
-                        <button type="button" class="btn btn-secondary" [routerLink]="['gestionarAnimal/actualizar']">Editar</button>
+                        <button type="button" class="btn btn-secondary" [routerLink]="['/gestionarAnimal/actualizar']">Editar</button>
 
                         <!-- Boton: Ver-->
                         <button type="button" class="btn btn-secondary" [routerLink]="['gestionarAnimal']">Ver</button>
 
                         <!--Boton: Eliminar-->
-                        <button type="button" class="btn btn-secondary" (click)="deleteservice()" >Eliminar</button>
+                        <button (click)="EliminarAnimalReq(reqAnimal.id_requerimiento_animal)" type="button" class="btn btn-secondary">Eliminar</button>
                     </td>
                 </tr>
             </tbody>

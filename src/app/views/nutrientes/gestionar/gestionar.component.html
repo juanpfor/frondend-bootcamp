@@ -17,7 +17,7 @@
       <!--Boton Agregar-->
       <div class="add">
           <!-- Boton: Agregar -->
-          <button type="button" class="btn btn-primary" [routerLink]="['/alimentos/registro']">
+          <button type="button" class="btn btn-primary" [routerLink]="['/nutrientes/registro']">
     Agregar nutriente
   </button>
           <!-- Modal: Agregar -->
@@ -49,29 +49,29 @@
   <!--Tabla-->
   <div class="user-table">
       <table class="table table-striped">
-          <thead>
-              <tr>
-                  <th scope="col" >id</th>
-                  <th scope="col" >nutrientes</th>
-                  <th scope="col" class="action">Actions</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr *ngFor="let nutriente of listNutrientes; let i = index">
-                  <td scope="row">{{ i}}</td>
-                  <td>{{nutriente.nombre_tipo_nutriente}}</td>
-                  <td>
-                    <div class="input-group ">
-                        <select class="form-select select" >
-                          <option class="opt" selected>Seleccionar...</option>
-                          <option class="opt" value="1">Editar</option>
-                          <option class="opt" value="2">ver</option>
-                          <option class="opt" value="3">eliminar</option>
-                        </select>
-                    </div>
-                  </td>
-              </tr>
-          </tbody>
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">nutrientes</th>
+            <th scope="col" class="action">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let nutriente of listNutrientes; let i = index">
+            <td>{{ i }}</td>
+            <td>{{ nutriente.nombre_tipo_nutriente }}</td>
+            <td>
+              <!-- Boton: Editar-->
+              <button type="button" class="btn btn-secondary">Editar</button>
+
+              <!-- Boton: Ver-->
+              <button type="button" class="btn btn-secondary">Ver</button>
+
+              <!--Boton: Eliminar-->
+              <button (click)="EliminarNutriente(nutriente.id_tipo_nutriente)" type="button" class="btn btn-secondary">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
       </table>
   </div>
 </div>

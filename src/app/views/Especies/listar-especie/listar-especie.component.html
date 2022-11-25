@@ -16,7 +16,7 @@
         <!--Boton Agregar-->
         <div class="add">
             <!-- Boton: Agregar -->
-            <button type="button" class="btn btn-primary" [routerLink]="['/alimentos/registro']">
+            <button type="button" class="btn btn-primary" [routerLink]="['/especie/registrar']">
       Agregar especie
     </button>
             <!-- Modal: Agregar -->
@@ -60,14 +60,13 @@
                     <td scope="row">{{especie.id_especie}}</td>
                     <td>{{especie.nombre_especie}}</td>
                     <td>
-                      <div class="input-group ">
-                          <select class="form-select select" >
-                            <option class="opt" selected>Seleccionar...</option>
-                            <option [routerLink]="['/especie/actualizar',especie.id_especie]" class="opt" value="1">Editar</option>
-                            <option class="opt" value="2">ver</option>
-                            <option (click)="EliminarEspecie(especie.id_especie)" class="opt" value="3">eliminar</option>
-                          </select>
-                      </div>
+                        <button [routerLink]="['/especie/actualizar/',especie.id_especie]" type="button" class="btn btn-secondary">Editar</button>
+                        
+                
+                        <!-- <button type="button" class="btn btn-secondary">Ver</button> -->
+
+            
+                        <button (click)="EliminarEspecie(especie.id_especie)" type="button" class="btn btn-secondary">Eliminar</button>
                     </td>
                 </tr>
             </tbody>

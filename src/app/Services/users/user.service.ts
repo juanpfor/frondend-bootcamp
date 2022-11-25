@@ -14,6 +14,11 @@ export class UserService {
   getAll():Observable<responseApi>{
     return this.httpClient.get<responseApi>(this.Api)
   }
+
+  PostUser(form: any): Observable<responseApi> {
+    let url = 'createUser'
+    return this.httpClient.post<responseApi>(pathUrlService + url, form)
+  }
   create(user:responseApi):Observable<responseApi>{
       return this.httpClient.post<responseApi>(this.post,JSON.stringify(user))
   }

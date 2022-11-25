@@ -20,13 +20,15 @@ import { RegistroComponent } from './views/nutrientes/registro/registro.componen
 import { AdminHomeComponent } from './views/admin-home/admin-home.component';
 import { PerfilUsuarioComponent } from './views/perfil-usuario/perfil-usuario.component';
 import { RegistroUsersComponent } from './views/users/registro-users/registro-users.component';
+// import { RegistroZonas } from './views/zonas/registrar-zonas/registrar-zonas.component';
+
 const routes: Routes = [
 
 
 
     // ///////////////////// Admin Home ///////////////////////
 
-  { path: '', redirectTo: 'adminHome', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
 
   { path: 'adminHome', component: AdminHomeComponent},
 
@@ -143,8 +145,12 @@ const routes: Routes = [
   {
     path:'usuarios/registrar',
     component: RegistroUsersComponent
-  }
+  },
 
+  // {
+  //   path:'zonas/registro',
+  //   component: RegistroZonas
+  // }
 
 
 
