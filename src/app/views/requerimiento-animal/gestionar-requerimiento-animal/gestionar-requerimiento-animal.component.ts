@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AnimalsService } from "../../../Services/animals/animals.service";
-import { Routes, RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-gestionar-requerimiento-animal',
   templateUrl: './gestionar-requerimiento-animal.component.html',
@@ -10,7 +10,7 @@ export class GestionarRequerimientoAnimalComponent implements OnInit {
 
   animals : any
 
-  constructor(private serviAnimal : AnimalsService ) { }
+  constructor( private route : Router , private serviAnimal : AnimalsService ) { }
 
   ngOnInit() {
     this.listarRequerimientoAnimal()
@@ -22,5 +22,8 @@ export class GestionarRequerimientoAnimalComponent implements OnInit {
       this.animals = data.results
     })
   }
+  click () {this.route.navigate(['gestionarAnimal/registrar'])}
+
+
 
 }

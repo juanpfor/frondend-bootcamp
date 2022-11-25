@@ -1,10 +1,10 @@
 <div class="m-auto mt-3 col-9 contenedor_registro">
     <h4 class="nombrefase text-center py-2">Registro De Fase</h4>
     <div class="page-header">
-  
-      <form  >
+
+      <form [formGroup]="loginRegister"  (submit)="RegisterAnimal(loginRegister.value)">
         <div class="row mt-3 px-md-3">
-  
+
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <!-- name -->
             <label class="h6 titulos">No. requerimiento:</label>
@@ -17,9 +17,9 @@
             <label class="h6 titulos">Nombres de la fase:</label><br>
             <input formControlName="nombre_fase" id="nameFase" type="text" class="form-control w--md-75">
           </div>
-  
-  
-  
+
+
+
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">MS %:</label> <br>
             <input formControlName="m_s" id="porcentajeMS" type="text" class="form-control w--md-75">
@@ -27,7 +27,7 @@
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">EM AVES Kg:</label><br>
             <input formControlName="e_m_ave" id="emaves" type="text" class="form-control w--md-75">
-  
+
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">EM Cerdos Kg:</label><br>
@@ -40,7 +40,7 @@
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Fibra cruda %:</label><br>
             <input formControlName="fibra_cruda" id="fibracruda" type="text" class="form-control w--md-75">
-  
+
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Ext etereo %:</label> <br>
@@ -53,7 +53,7 @@
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Fosforo Disp %:</label> <br>
             <input formControlName="fosforo" id="fosforo" type="text" class="form-control w--md-75">
-  
+
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Sodio %:</label><br>
@@ -66,7 +66,7 @@
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Lisina %:</label><br>
             <input formControlName="lisina" id="lisina" type="text" class="form-control w--md-75">
-  
+
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Meteonina %:</label> <br>
@@ -80,26 +80,25 @@
             <label class="h6 titulos">Treonina %:</label> <br>
             <input formControlName="treonina" id="treonina" type="text" class="form-control w--md-75">
           </div>
-  
+
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Triptofano %:</label><br>
             <input formControlName="triptofano" id="triptofano" type="text" class="form-control w--md-75">
           </div>
-  
+
           <div class="form-group col-12 col-sm-6 col-md-4 ">
             <label class="h6 titulos">Ceniza %:</label> <br>
             <input formControlName="ceniza" id="ceniza" type="text" class="form-control w--md-75">
           </div>
-  
-  
+
+
         </div>
-  
-  
+
+
       </form>
     </div>
     <div class="text-center my-3">
       <button type="submit " class="btn btn-guardar-registro">Ingresar</button>
     </div>
   </div>
-  
-  
+

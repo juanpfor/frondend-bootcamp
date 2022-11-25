@@ -30,6 +30,7 @@ import { GestionarZonasComponent } from './views/zonas/gestionar-zonas/gestionar
 import { RegistrarZonasComponent } from './views/zonas/registrar-zonas/registrar-zonas.component';
 import { RegistroUsersComponent } from './views/users/registro-users/registro-users.component';
 import { ActualizarAlimentoComponent } from './views/alimentos/actualizar-alimento/actualizar-alimento.component';
+import { RegistrarRequerimientoAnimalComponent } from './views/requerimiento-animal/registrar-requerimiento-animal/registrar-requerimiento-animal.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ActualizarAlimentoComponent } from './views/alimentos/actualizar-alimen
     ListarMunicipioComponent,
     AsideComponent,
     NavbarComponent,
-    GestionarRequerimientoAnimalComponent
+    GestionarRequerimientoAnimalComponent,
+    RegistrarRequerimientoAnimalComponent
   ],
   imports: [
     BrowserModule,
