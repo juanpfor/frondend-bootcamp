@@ -1,3 +1,4 @@
-<app-aside></app-aside>
-
+<!-- {{this.token | json}} -->
+<app-aside *ngIf="token"></app-aside>
+<app-login *ngIf="!token"></app-login>
 

@@ -22,21 +22,21 @@
               class="fadeIn second"
               placeholder="login"
               formControlName="identificacion"
-            />  
-            <br><br>   
+            />
+            <br><br>
             <label for="correo" class="formulario__label">Contraseña</label>
-            
+
             <input
             id="password"
             type="password"
             Class="fadeIn second"
             placeholder="password"
             formControlName="pasword"
-          />   
-          <br><br>  
-            <input class="fadeIn fourth" value="  ingresar"
+          />
+          <br><br>
+            <input class="" value="ingresar"
             type="button"
-            (click)="showPassword()" />
+            (click)="onLogin(loginForm.value)" />
           </form>
         </div>
       </div>

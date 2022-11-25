@@ -7,22 +7,18 @@ import { responseApi } from 'src/app/interfaces/responseApi';
 @Injectable({
   providedIn: 'root'
 })
-export class NutrienteService {
+export class ReqAnimalService {
 
   constructor(private http: HttpClient) { }
 
-  listarNutrientes(): Observable<responseApi> {
-    let url = 'allnutrientes'
+  listarReqAnimal(): Observable<responseApi> {
+    let url = 'allreqanimals'
     return this.http.get<responseApi>(pathUrlService + url)
   }
 
-  PostNutrientes(form: any): Observable<responseApi> {
-    let url = 'createtypenutriente/4'
-    return this.http.post<responseApi>(pathUrlService + url, form)
-  }
-
-  deleteNutrientes(id_tipo_nutriente:number):Observable<responseApi>{
-    let url = 'deletetypenutriente'
+  deleteAnimalReq(id_tipo_nutriente:number):Observable<responseApi>{
+    let url = 'deletealiment'
     return this.http.delete<responseApi>(pathUrlService + url + '/' + id_tipo_nutriente)
   }
+
 }

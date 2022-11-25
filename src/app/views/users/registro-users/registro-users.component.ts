@@ -1,51 +1,56 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/Services/users/user.service';
-import { Router } from '@angular/router';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../../../Services/users/user.service';
+import { Router } from "@angular/router";
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-registro-users',
   templateUrl: './registro-users.component.html',
   styleUrls: ['./registro-users.component.css']
 })
 export class RegistroUsersComponent implements OnInit {
- form:FormGroup=new FormGroup({
-  celular:new FormControl(''),
-  contrasena:new FormControl(''),
-  correo:new  FormControl(''), 
-  foto:new FormControl(''),
-  id_usuario:new FormControl(''),
-  identificacion:new FormControl(''),
-  nombres:new FormControl(''),
-  region_id:new FormControl(''),
-  tipo_usuario:new FormControl('')
- })
-  constructor(public userService:UserService,
-              private Router:Router,
-              private formBuilder:FormBuilder
-    ) { }
+  postFormulario = new FormGroup({
+    nombres: new FormControl('', Validators.required),
+    apellidos: new FormControl('', Validators.required),
+    correo: new FormControl('', Validators.required),
+    celular: new FormControl('', Validators.required),
+    identificacion: new FormControl('', Validators.required),
+    tipo_usuario: new FormControl('', Validators.required),
+    contraseña: new FormControl('', Validators.required),
+    Region_id: new FormControl('', Validators.required)
+  });
+  constructor(private apiUser: UserService, private router:Router) {}
 
-  ngOnInit(): void {
-   this.form=this.formBuilder.group({
-    celular:['', Validators.required],
-    contrasena:['', Validators.required],
-    correo:['', Validators.required],
-    foto:['', Validators.required],
-    id_usuario:['', Validators.required],
-    identificacion:['', Validators.required],
-    nombres:['', Validators.required],
-    region_id:['', Validators.required],
-    tipo_usuario:['', Validators.required],
-   })
-  }
-  get f(){
-    return this.form.controls;
-  }
+  ngOnInit(): void {}
+  postForm(form: any) {
+    if (this.postFormulario.valid) {
+      this.apiUser.PostUser(form).subscribe((data) => {
+        if(data.status == 'success'){
+          Swal.fire({
+            title:'Registrado',
+            text:'Usuario registrada con exito',
+            icon:'success',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Aceptar'
+          })
+        }
+        this.router.navigate(['nutrientes'])
+      });
+    } else {
+      console.log("Campos Obligatorios");
+      Swal.fire({
+        title:'Error',
+        text:'Campos obligattorios',
+        icon:'warning',
+        confirmButtonColor: '#3085d6',
+          confirmButtonText: 'Aceptar'
+      })
 
-  submit(){
-    console.log(this.form.value);
-    this.userService.create(this.form.value).subscribe(res => {
-         console.log('Person created successfully!');
-      
-    })
+    }
+
+    console.log(form);
   }
 }

@@ -1,4 +1,7 @@
+import { ReqAnimalService } from './../../../Services/reqAlimento/req-animal.service';
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
+
 import { AnimalsService } from "../../../Services/animals/animals.service";
 import { Router } from '@angular/router';
 @Component({
@@ -7,23 +10,47 @@ import { Router } from '@angular/router';
   styleUrls: ['./gestionar-requerimiento-animal.component.css']
 })
 export class GestionarRequerimientoAnimalComponent implements OnInit {
+  listReqAnimal?: any[]
+  constructor(private reqAnimalService: ReqAnimalService , private route : Router) { }
 
-  animals : any
-
-  constructor( private route : Router , private serviAnimal : AnimalsService ) { }
-
-  ngOnInit() {
-    this.listarRequerimientoAnimal()
+  ngOnInit(): void {
+    this.ListarReqAnimal()
   }
-
-  listarRequerimientoAnimal() {
-    this.serviAnimal.getAnimals().subscribe(data => {
-      console.log(data.results);
-      this.animals = data.results
+  ListarReqAnimal(): void {
+    this.reqAnimalService.listarReqAnimal().subscribe(data => {
+      this.listReqAnimal = data.results
     })
   }
-  click () {this.route.navigate(['gestionarAnimal/registrar'])}
-
-
+  EliminarAnimalReq(id_requerimiento_animal:number){
+    Swal.fire({
+      title:'Eliminar',
+      text:'Estas seguro que quieres eliminar esta Fase?',
+      icon:'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Aceptar'
+    }).then((results)=>{
+      if(results.isConfirmed){
+       this.reqAnimalService.deleteAnimalReq(id_requerimiento_animal).subscribe(data=>{
+        if(data.status == 'success'){
+          Swal.fire({
+            title:'Eliminado',
+            text:'Fase eliminada con exito',
+            icon:'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Aceptar'
+          })
+        }
+        this.ListarReqAnimal()
+       })
+      }
+    })
+  }
+  click() {
+    this.route.navigate([])
+  }
 
 }

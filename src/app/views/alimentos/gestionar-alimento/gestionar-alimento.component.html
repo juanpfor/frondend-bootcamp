@@ -3,7 +3,7 @@
 
     <!--Encabezado-->
     <div class="header">
-  
+
         <div class="animals-title">
             <h1>Gestionar - Alimentos</h1>
         </div>
@@ -12,7 +12,7 @@
             <input class="form-control" type="search" placeholder="Buscar">
             <i class="bi bi-search"></i>
         </div>
-  
+
         <!--Boton Agregar-->
         <div class="add">
             <!-- Boton: Agregar -->
@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-  
+
     <!--Tabla-->
     <div class="user-table">
         <table class="table table-striped">
@@ -62,13 +62,14 @@
                     <td>{{a.Regione.nombre_region}}</td>
                     <td>{{a.tiponutriente.nombre_tipo_nutriente}}</td>
                     <td>
-                        <button type="button" class="btn btn-secondary">Editar</button>
-                        
-                
-                        <button type="button" class="btn btn-secondary">Ver</button>
-
-            
-                        <button type="button" class="btn btn-secondary">Eliminar</button>
+                      <div class="input-group ">
+                          <select class="form-select select" >
+                            <option class="opt" selected>Seleccionar...</option>
+                            <option class="opt" value="1">Editar</option>
+                            <option class="opt" value="2">ver</option>
+                            <option (click)="EliminarAlimento(a.id_alimento)" class="opt" value="3">eliminar</option>
+                          </select>
+                      </div>
                     </td>
                 </tr>
             </tbody>

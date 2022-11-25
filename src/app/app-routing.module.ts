@@ -28,7 +28,7 @@ const routes: Routes = [
 
     // ///////////////////// Admin Home ///////////////////////
 
-  { path: '', redirectTo: 'adminHome', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
 
   { path: 'adminHome', component: AdminHomeComponent},
 
@@ -141,7 +141,7 @@ const routes: Routes = [
     path: 'perfilUsuario',
     component: PerfilUsuarioComponent,
   },
- 
+
   {
     path:'usuarios/registrar',
     component: RegistroUsersComponent

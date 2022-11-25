@@ -49,6 +49,31 @@
   <!--Tabla-->
   <div class="user-table">
       <table class="table table-striped">
+<<<<<<< HEAD
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">nutrientes</th>
+            <th scope="col" class="action">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let nutriente of listNutrientes; let i = index">
+            <td>{{ i }}</td>
+            <td>{{ nutriente.nombre_tipo_nutriente }}</td>
+            <td>
+              <!-- Boton: Editar-->
+              <button type="button" class="btn btn-secondary">Editar</button>
+
+              <!-- Boton: Ver-->
+              <button type="button" class="btn btn-secondary">Ver</button>
+
+              <!--Boton: Eliminar-->
+              <button (click)="EliminarNutriente(nutriente.id_tipo_nutriente)" type="button" class="btn btn-secondary">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+=======
           <thead>
               <tr>
                   <th scope="col" >id</th>
@@ -67,6 +92,7 @@
                   </td>
               </tr>
           </tbody>
+>>>>>>> 1d0063a54d8eba27c4ae541e0b83fe2db18bbd08
       </table>
   </div>
 </div>
