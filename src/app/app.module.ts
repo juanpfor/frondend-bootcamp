@@ -15,7 +15,14 @@ import { ActualizarEspecieComponent } from './views/Especies/actualizar-especie/
 import { ListarMunicipioComponent } from './views/Municipios/listar-municipio/listar-municipio.component';
 import {GestionarRequerimientoAnimalComponent} from './views/requerimiento-animal/gestionar-requerimiento-animal/gestionar-requerimiento-animal.component'
 import { AsideComponent } from './views/aside/aside.component';
+<<<<<<< HEAD
+import { NavbarComponent } from './component/navbar/navbar.component'
+import { RouterModule } from '@angular/router';
+// import { NavbarComponent } from './component/navbar/navbar.component'
+import { HomeComponent } from './views/home/home.component';
+=======
 import { NavbarComponent } from './component/navbar/navbar.component';
+>>>>>>> 9ec17d074567050dab416e6178980e2381b3bf55
 import { AllusersComponent } from './views/users/allusers/allusers.component';
 import { RouterModule } from '@angular/router';
 import { DetallesRequerimientoAnimalComponent } from './views/requerimiento-animal/detalles-requerimiento-animal/detalles-requerimiento-animal.component';
@@ -34,9 +41,13 @@ import { GestionarZonasComponent } from './views/zonas/gestionar-zonas/gestionar
 import { RegistrarZonasComponent } from './views/zonas/registrar-zonas/registrar-zonas.component';
 import { RegistroUsersComponent } from './views/users/registro-users/registro-users.component';
 import { ActualizarAlimentoComponent } from './views/alimentos/actualizar-alimento/actualizar-alimento.component';
+<<<<<<< HEAD
+import { RegistrarRequerimientoAnimalComponent } from './views/requerimiento-animal/registrar-requerimiento-animal/registrar-requerimiento-animal.component';
+=======
 import { AdminHomeComponent } from './views/admin-home/admin-home.component';
 import { PerfilUsuarioComponent } from './views/perfil-usuario/perfil-usuario.component';
 import { RegistrarEspeciesComponent } from './views/Especies/registrar-especies/registrar-especies.component';
+>>>>>>> 9ec17d074567050dab416e6178980e2381b3bf55
 
 @NgModule({
   declarations: [
@@ -51,9 +62,10 @@ import { RegistrarEspeciesComponent } from './views/Especies/registrar-especies/
     ListarMunicipioComponent,
     AsideComponent,
     NavbarComponent,
-    AllusersComponent,
-    HomeComponent,
     GestionarRequerimientoAnimalComponent,
+<<<<<<< HEAD
+    RegistrarRequerimientoAnimalComponent
+=======
     DetallesRequerimientoAnimalComponent,
     GestionarAlimentoComponent,
     GestionarComponent,
@@ -67,6 +79,7 @@ import { RegistrarEspeciesComponent } from './views/Especies/registrar-especies/
     AdminHomeComponent,
     PerfilUsuarioComponent,
     RegistrarEspeciesComponent
+>>>>>>> 9ec17d074567050dab416e6178980e2381b3bf55
   ],
   imports: [
     BrowserModule,

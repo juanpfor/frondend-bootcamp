@@ -9,6 +9,7 @@ import { responseApi } from 'src/app/interfaces/responseApi';
 })
 export class AlimentoService {
   private Api = pathUrlService.concat("allaliments")
+
   private post=pathUrlService.concat("createaliment")
   private put=pathUrlService.concat("updatealiment")
   constructor(private httpClient:HttpClient) { }
@@ -20,7 +21,7 @@ export class AlimentoService {
       'Content-type':'aplication/json'
     })
   }
-  
+
   create(municipio:responseApi):Observable<responseApi>{
     return this.httpClient.post<responseApi>(this.post,JSON.stringify(municipio),this.httpOptions)
   }

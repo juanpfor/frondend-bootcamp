@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms'
+import { Router } from '@angular/router'
+import { CookieService } from 'ngx-cookie-service'
 
 @Component({
   selector: 'app-registrar-requerimiento-animal',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrarRequerimientoAnimalComponent implements OnInit {
 
+  loginRegister = new FormGroup({
+    identificacion: new FormControl('', Validators.required),
+    pasword: new FormControl('', Validators.required)
+  })
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  RegisterAnimal(form : any) {
+
   }
 
 }
