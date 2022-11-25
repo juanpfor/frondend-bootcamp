@@ -26,39 +26,26 @@ const routes: Routes = [
 
 
 
-    // ///////////////////// Admin Home ///////////////////////
+  // ///////////////////// Admin Home ///////////////////////
 
-  { path: '', redirectTo: 'adminHome', pathMatch: 'full' },
+  { path: '', redirectTo: 'landing', pathMatch: 'full' },
 
-  { path: '**', redirectTo: 'adminHome', pathMatch: 'full' },
-
-
-  { path: 'adminHome', component: AdminHomeComponent},
-
-    // ///////////////////// Landing ///////////////////////
+  // { path: '**', redirectTo: 'adminHome', pathMatch: 'full' },
 
 
-  {path: 'landing', component: HomeComponent},
+  { path: 'adminHome', component: AdminHomeComponent },
 
-    // /////////////////////Login///////////////////////
+  // ///////////////////// Landing ///////////////////////
+
+
+  { path: 'landing', component: HomeComponent },
+
+  // /////////////////////Login///////////////////////
 
 
   { path: 'login', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [VigilantGuard] },
 
-
-    // /////////////////////Dashboard///////////////////////
-
-  { path: 'dashboard', component: DashboardComponent, canActivate: [VigilantGuard],
-
-  // children: [
-    //   {
-    //     // path: 'login', childrens
-    //     // component: LoginComponent,
-    //   }
-    // ]
-
-
-  },
 
 
   // /////////////////////Alimentos///////////////////////
@@ -121,7 +108,7 @@ const routes: Routes = [
   // /////////////////////Nutrientes///////////////////////
 
 
- {
+  {
     path: 'nutrientes',
     component: GestionarComponent,
   },
@@ -146,9 +133,9 @@ const routes: Routes = [
   },
 
   {
-    path:'usuarios/registrar',
+    path: 'usuarios/registrar',
     component: RegistroUsersComponent
-  },
+  }
 
   // {
   //   path:'zonas/registro',
@@ -163,4 +150,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

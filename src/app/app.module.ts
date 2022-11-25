@@ -39,6 +39,8 @@ import { PerfilUsuarioComponent } from './views/perfil-usuario/perfil-usuario.co
 import { RegistrarEspeciesComponent } from './views/Especies/registrar-especies/registrar-especies.component';
 import { DetallesRequerimientoAnimalComponent } from './views/requerimiento-animal/detalles-requerimiento-animal/detalles-requerimiento-animal.component';
 
+import { HomeComponent } from './views/home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +70,8 @@ import { DetallesRequerimientoAnimalComponent } from './views/requerimiento-anim
     PerfilUsuarioComponent,
     RegistrarEspeciesComponent,
     RegistrarRequerimientoAnimalComponent ,
-    AllusersComponent
+    AllusersComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
