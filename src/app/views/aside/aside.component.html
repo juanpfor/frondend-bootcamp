@@ -24,6 +24,9 @@
             <li>
                 <a [routerLink]="['usuarios']">Usuarios</a>
             </li>
+            <li>
+              <a [routerLink]="['gestionarAnimal']">Requerimiento Animal</a>
+          </li>
         </ul>
     </nav>
 
@@ -31,7 +34,7 @@
     <div id="content">
         <app-navbar></app-navbar>
         <router-outlet></router-outlet>
-        
+
     </div>
     <script>
         $(document).ready(function () {

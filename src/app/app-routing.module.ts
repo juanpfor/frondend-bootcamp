@@ -35,7 +35,7 @@ const routes: Routes = [
     // /////////////////////Dashboard///////////////////////
 
   { path: 'dashboard', component: DashboardComponent, canActivate: [VigilantGuard],
-  
+
   // children: [
     //   {
     //     // path: 'login', childrens
@@ -44,8 +44,8 @@ const routes: Routes = [
     // ]
 
 
-  },  
- 
+  },
+
 
   // /////////////////////Alimentos///////////////////////
   {
@@ -60,7 +60,7 @@ const routes: Routes = [
     path: 'alimentos/registro',
     component: RegistroAlimentoComponent,
   },
-  
+
 
 
   // /////////////////////Especie///////////////////////
@@ -76,7 +76,7 @@ const routes: Routes = [
   },
 
   // /////////////////////Municipios///////////////////////
-  
+
   {
     path: 'municipios',
     component: ListarMunicipioComponent,
@@ -120,7 +120,6 @@ const routes: Routes = [
     path: 'usuarios',
     component: AllusersComponent,
   },
-
 
 
 

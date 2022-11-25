@@ -9,6 +9,7 @@ import { pathUrlService } from 'GlobalConstans';
 export class UserService {
   private Api = pathUrlService.concat("allusers")
   constructor(private httpClient:HttpClient) { }
+
   getAll():Observable<responseApi>{
     return this.httpClient.get<responseApi>(this.Api)
   }

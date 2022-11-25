@@ -44,6 +44,7 @@ import { ActualizarAlimentoComponent } from './views/alimentos/actualizar-alimen
     ListarMunicipioComponent,
     AsideComponent,
     NavbarComponent,
+    GestionarRequerimientoAnimalComponent
   ],
   imports: [
     BrowserModule,
