@@ -139,7 +139,7 @@ const routes: Routes = [
     path: 'perfilUsuario',
     component: PerfilUsuarioComponent,
   },
- 
+
   {
     path:'usuarios/registrar',
     component: RegistroUsersComponent

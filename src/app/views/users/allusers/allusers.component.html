@@ -3,7 +3,7 @@
 
             <!--Encabezado-->
             <div class="header">
-                
+
                 <div class="animals-title px-3">
                     <h1>Listar usuarios</h1>
                 </div>
@@ -16,7 +16,7 @@
                 <!--Boton Agregar-->
                 <div class="add">
                     <!-- Boton: Agregar -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" [routerLink]="['/usuarios/registrar']">
+                    <button (click)="registrarUserClick()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" >
                         Agregar usuario
                     </button>
                 </div>
@@ -46,20 +46,20 @@
                         <td>{{u.foto}}</td>
                         <td>{{u.tipo_usuario}}</td>
                         <td>
-                            
+
                             <button type="button" class="btn btn-secondary">Editar</button>
-                        
-                
+
+
                             <button type="button" class="btn btn-secondary">Ver</button>
 
-                
+
                             <button type="button" class="btn btn-secondary">Eliminar</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
             <!-- {{users}} -->
-            
+
         </div>
 
 

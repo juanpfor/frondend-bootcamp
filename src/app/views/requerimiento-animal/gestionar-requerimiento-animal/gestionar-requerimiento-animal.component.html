@@ -1,5 +1,4 @@
 <div class="container">
-
     <!--Encabezado-->
     <div class="header">
 
@@ -87,17 +86,13 @@
 
                     <td>
                         <!-- Boton: Editar-->
-<<<<<<< HEAD
-                        <button type="button" class="btn btn-secondary">Editar</button>
-=======
-                        <button type="button" class="btn btn-secondary" [routerLink]="['/gestionarAnimal/actualizar']">Editar</button>
+                        <button type="button" class="btn btn-secondary" [routerLink]="['gestionarAnimal/actualizar']">Editar</button>
 
->>>>>>> 9ec17d074567050dab416e6178980e2381b3bf55
                         <!-- Boton: Ver-->
-                        <button type="button" class="btn btn-secondary" >Ver</button>
+                        <button type="button" class="btn btn-secondary" [routerLink]="['gestionarAnimal']">Ver</button>
 
                         <!--Boton: Eliminar-->
-                        <button type="button" class="btn btn-secondary">Eliminar</button>
+                        <button type="button" class="btn btn-secondary" (click)="deleteservice()" >Eliminar</button>
                     </td>
                 </tr>
             </tbody>

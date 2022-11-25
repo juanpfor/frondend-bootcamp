@@ -24,6 +24,8 @@ export class GestionarRequerimientoAnimalComponent implements OnInit {
   }
   click () {this.route.navigate(['gestionarAnimal/registrar'])}
 
+  deleteservice () {}
+
 
 
 }

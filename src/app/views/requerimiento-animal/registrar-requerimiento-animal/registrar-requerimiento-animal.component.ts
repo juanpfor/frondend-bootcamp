@@ -20,7 +20,7 @@ export class RegistrarRequerimientoAnimalComponent implements OnInit {
   ngOnInit(): void { }
 
   RegisterAnimal(form : any) {
-
+    console.log(form);
   }
 
 }
