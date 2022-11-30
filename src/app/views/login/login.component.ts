@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { Router } from '@angular/router'
 import { LoginService } from '../../Services/login/login.service'
 import { CookieService } from 'ngx-cookie-service'
+import Swal  from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -19,24 +20,35 @@ export class LoginComponent implements OnInit {
     identificacion: new FormControl('', Validators.required),
     pasword: new FormControl('', Validators.required)
   })
-  ngOnInit(): void {
-   }
+  ngOnInit(): void { }
 
   onLogin(form: any) {
-
-    this.api.logueoService(form).subscribe(data => {
-      let dataResponse: any = data;
-      if (dataResponse.status == 'success') {
-        localStorage.setItem('token', dataResponse.results.token)
-        this.cookies.set('token', dataResponse.results.token)
-
-
-        this.router.navigate(['dashboard/adminHome'])
-      } else {
-        this.erroStatus = true
-        this.erroMsg = dataResponse.message
-      }
-    })
+    if (this.loginForm.valid) {
+      this.api.logueoService(form).subscribe(data => {
+        let dataResponse: any = data;
+        if (dataResponse.status == 'success') {
+          localStorage.setItem('token', dataResponse.results.token)
+          this.cookies.set('token', dataResponse.results.token)
+          this.router.navigate(['dashboard/adminHome'])
+        } else {
+          Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: data.message ,
+            showConfirmButton: false,
+            timer: 1000
+          })
+        }
+      })
+    }else{
+      Swal.fire({
+        position: 'center',
+        icon: 'info',
+        title: "todos los campos son obligatorios" ,
+        showConfirmButton: false,
+        timer: 1000
+      })
+    }
   }
   showPassword() {//ocualtar password
     const change = document.getElementById('password') as HTMLInputElement
@@ -45,5 +57,9 @@ export class LoginComponent implements OnInit {
     } else {
       change.type = 'password'
     }
+  }
+
+  clickLogin () {
+
   }
 }

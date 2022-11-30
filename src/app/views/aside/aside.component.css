@@ -4,7 +4,7 @@
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
-    
+
     font-family: 'Work Sans', sans-serif;
     background: #fafafa;
 }
@@ -70,7 +70,6 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    
 }
 #sidebar ul p {
     color: #fff;

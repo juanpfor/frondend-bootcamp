@@ -12,10 +12,11 @@ export class LoginService {
   constructor (private  http : HttpClient) { }
 
 
-  logueoService (form : any) {
+  logueoService (form : any) : Observable<responseApi> {
 
     const direction = pathUrlService.concat("login")
-    return this.http.post(direction , form)
+
+    return this.http.post<responseApi>(direction , form)
   }
 
 }

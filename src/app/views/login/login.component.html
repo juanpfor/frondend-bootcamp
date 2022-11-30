@@ -14,7 +14,7 @@
             <h1>Iniciar Sesión</h1>
           </div>
           <br>
-          <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)" >
+          <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
             <label for="correo" class="formulario__label">Correo Electrónico</label>
             <input
               type="text"
@@ -35,8 +35,7 @@
           />
           <br><br>
             <input class="" value="ingresar"
-            type="button"
-            (click)="onLogin(loginForm.value)" />
+            type="submit"/>
           </form>
         </div>
       </div>
