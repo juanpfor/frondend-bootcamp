@@ -16,12 +16,11 @@ export interface Alimento {
     triptofano: string,
     met_cis: string,
     treonina: string,
-    tipo_nutriente_id: string,
+    tipo_nutriente_id: string | number,
     region_id: string,
     createdAt: string,
     updatedAt: string,
-    // Regione?: Regione,
-    // tipoNutriente?: tiponutriente
+    tiponutriente?: any
 }
 
 export interface Regione {

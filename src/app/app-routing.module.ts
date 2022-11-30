@@ -43,7 +43,7 @@ const routes: Routes = [
         component: GestionarAlimentoComponent,
       },
       {
-        path: 'alimentos/actualizar',
+        path: 'alimentos/actualizar/:id',
         component: ActualizarAlimentoComponent,
       },
       {

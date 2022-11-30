@@ -10,25 +10,22 @@ import Swal from 'sweetalert2';
 })
 export class GestionarAlimentoComponent implements OnInit {
 
-  alimentos: any[] = []
-  constructor(private AlimentoService:AlimentoService) { }
+  alimentos: Alimento[] = [];
+  constructor(private AlimentoService:AlimentoService ) { }
 
   ngOnInit(): void {
     this.getAll()
   }
   getAll():void{
-    this.AlimentoService.getAll().subscribe(
-      data=>{
+    this.AlimentoService.getAll().subscribe(data=>{
         console.log(data);
         this.alimentos = data.results;
-
-
       }
     )
 
   }
 
-  EliminarAlimento(id_alimento:number){
+  EliminarAlimento(id_alimento:string|number){
     Swal.fire({
       title:'Eliminar',
       text:'Estas seguro que quieres eliminar este Alimento?',

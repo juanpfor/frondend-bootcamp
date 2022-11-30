@@ -47,32 +47,27 @@
 
     <!--Tabla-->
     <div class="user-table">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col" >Alimento</th>
-                    <th scope="col" >Tipo de nutriente</th>
-                    <th scope="col" >Región</th>
-                    <th scope="col" class="action">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let a of alimentos">
-                    <td scope="row">{{a.nombre_alimento}}</td>
-                    <td>{{a.Regione.nombre_region}}</td>
-                    <td>{{a.tiponutriente.nombre_tipo_nutriente}}</td>
-                    <td>
-                      <div class="input-group ">
-                          <select class="form-select select" >
-                            <option class="opt" selected>Seleccionar...</option>
-                            <option class="opt" value="1">Editar</option>
-                            <option class="opt" value="2">ver</option>
-                            <option (click)="EliminarAlimento(a.id_alimento)" class="opt" value="3">eliminar</option>
-                          </select>
-                      </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th scope="col" >Id especie</th>
+                  <th scope="col" >Nombre de la Especie</th>
+                  <th scope="col" class="action">Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let aliment of alimentos">
+                  <td scope="row">{{aliment.nombre_alimento}}</td>
+                  <td>{{aliment.tiponutriente.nombre_tipo_nutriente}}</td>
+                  <td>
+                      <button [routerLink]="['actualizar/',aliment.id_alimentos]" type="button" class="btn btn-secondary">Editar</button>
+
+                      <button type="button" class="btn btn-secondary">Ver</button>
+
+                      <button (click)="EliminarAlimento(aliment.id_alimentos)" type="button" class="btn btn-secondary">Eliminar</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
     </div>
   </div>
