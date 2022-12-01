@@ -19,31 +19,29 @@ export class ListarEspecieComponent implements OnInit {
       this.listEspecies = data.results
     })
   }
-  EliminarEspecie(id_especie:number){
+  EliminarEspecie(id_especie: number) {
     Swal.fire({
-      title:'Eliminar',
-      text:'Estas seguro que quieres eliminar esta especie?',
-      icon:'warning',
+      title: 'Eliminar',
+      text: 'Estas seguro que quieres eliminar esta especie?',
+      icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
       confirmButtonText: 'Aceptar'
-    }).then((results)=>{
-      if(results.isConfirmed){
-       this.especieService.deleteEspecie(id_especie).subscribe(data=>{
-        if(data.status == 'success'){
-          Swal.fire({
-            title:'Eliminado',
-            text:'Especie eliminada con exito',
-            icon:'success',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Aceptar'
-          })
-        }
-        this.ListarEspecies()
-       })
+    }).then((results) => {
+      if (results.isConfirmed) {
+        this.especieService.deleteEspecie(id_especie).subscribe(data => {
+          if (data.status == 'success') {
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: 'especie eliminada con exito',
+              showConfirmButton: false,
+              timer: 1500
+            })
+          }
+          this.ListarEspecies()
+        })
       }
     })
   }

@@ -31,7 +31,7 @@ export class RegistroComponent implements OnInit {
             confirmButtonText: 'Aceptar'
           })
         }
-        this.router.navigate(['nutrientes'])
+        this.router.navigate(['dashboard/nutrientes'])
       });
     } else {
       console.log("Campos Obligatorios");
@@ -42,7 +42,7 @@ export class RegistroComponent implements OnInit {
         confirmButtonColor: '#3085d6',
           confirmButtonText: 'Aceptar'
       })
-        
+
     }
 
     console.log(form);

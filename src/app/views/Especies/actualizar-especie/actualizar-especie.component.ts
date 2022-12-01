@@ -50,7 +50,7 @@ export class ActualizarEspecieComponent implements OnInit {
           // cancelButtonColor: '#d33',
           confirmButtonText: 'Aceptar'
         })
-        this.route.navigate(['/especie'])
+        this.route.navigate(['dashboard/especie'])
       }
     })
 

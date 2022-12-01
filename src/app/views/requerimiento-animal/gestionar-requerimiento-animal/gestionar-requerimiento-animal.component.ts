@@ -10,10 +10,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./gestionar-requerimiento-animal.component.css']
 })
 export class GestionarRequerimientoAnimalComponent implements OnInit {
+  alimentoAnimalId : any
   listReqAnimal?: any[]
-  constructor(private reqAnimalService: ReqAnimalService , private route : Router) { }
+  constructor(
+    private reqAnimalService: ReqAnimalService ,
+    private route : Router,
+    ) { }
 
   ngOnInit(): void {
+    console.log(this.alimentoAnimalId);
+
     this.ListarReqAnimal()
   }
   ListarReqAnimal(): void {

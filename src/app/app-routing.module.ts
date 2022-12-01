@@ -77,7 +77,7 @@ const routes: Routes = [
       },
 
       {
-        path: 'gestionarAnimal/actualizar',
+        path: 'gestionarAnimal/actualizar/:id',
         component: ActualizarRequerimientoAnimalComponent,
       },
       {
