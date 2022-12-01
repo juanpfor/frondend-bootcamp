@@ -39,12 +39,10 @@ export class GestionarAlimentoComponent implements OnInit {
        this.AlimentoService.deleteAlimento(id_alimento).subscribe(data=>{
         if(data.status == 'success'){
           Swal.fire({
-            title:'Eliminado',
-            text:'Alimento eliminada con exito',
-            icon:'warning',
-            showCancelButton: true,
+            title: 'Actualizado',
+            text: 'alimento eliminado con exito',
+            icon: 'success',
             confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
             confirmButtonText: 'Aceptar'
           })
         }

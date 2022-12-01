@@ -11,7 +11,7 @@ export class AlimentoService {
   Api = pathUrlService.concat("allaliments")
 
   private post=pathUrlService.concat("createaliment")
-  private put=pathUrlService.concat("updatealiment")
+
   constructor(private httpClient:HttpClient) { }
 
   getAll():Observable<responseApi>{
@@ -23,10 +23,15 @@ export class AlimentoService {
     })
   }
 
-  create(municipio:responseApi):Observable<responseApi>{
-    return this.httpClient.post<responseApi>(this.post,JSON.stringify(municipio),this.httpOptions)
+  create(form : any):Observable<responseApi>{
+
+    return this.httpClient.post<responseApi>(this.post, form )
   }
-  updated(alimento:responseApi) {
+  updated(form : any , id : any  ) :Observable<responseApi> {
+
+    const direction = pathUrlService.concat(`updatealiment/${id}`)
+
+    return this.httpClient.put<responseApi>( direction, form )
 
   }
 
@@ -36,8 +41,19 @@ export class AlimentoService {
   }
 
   getAlimentoById(id_alimento:string):Observable<responseApi>{
-    let url = 'oneespecie'
-    return this.httpClient.get<responseApi>(pathUrlService + url + '/' + id_alimento)
+    const direction = pathUrlService.concat(`onealiment/${id_alimento}`)
+    return this.httpClient.get<responseApi>(direction)
   }
 
+  getRegiones () : Observable<responseApi> {
+    const uriPaht  =  pathUrlService.concat("allregiones")
+
+    return this.httpClient.get<responseApi>(uriPaht)
+  }
+
+  getTipoNutriente () : Observable<responseApi> {
+    const uriPaht  =  pathUrlService.concat("allnutrientes")
+
+    return this.httpClient.get<responseApi>(uriPaht)
+}
 }

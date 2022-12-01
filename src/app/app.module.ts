@@ -45,8 +45,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
+import {  MatIconModule } from "@angular/material/icon";
 
-import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -78,7 +80,7 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     RegistrarEspeciesComponent,
     RegistrarRequerimientoAnimalComponent ,
     AllusersComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -91,7 +93,8 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     MatSelectModule,
     MatInputModule,
     MatFormFieldModule,
-    NgMultiSelectDropDownModule.forRoot()
+    FontAwesomeModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
