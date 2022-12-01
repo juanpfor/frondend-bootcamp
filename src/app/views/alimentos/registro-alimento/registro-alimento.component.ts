@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlimentoService } from 'src/app/Services/alimento/alimento.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import  Swal  from 'sweetalert2';
 @Component({
   selector: 'app-registro-alimento',
   templateUrl: './registro-alimento.component.html',
@@ -9,11 +10,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class RegistroAlimentoComponent implements OnInit {
 
-  toppings = new FormControl('');
-  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
 
-
-  form: FormGroup = new FormGroup({
+  form : FormGroup = new FormGroup({
     nombre_alimento: new FormControl('', Validators.required),
     materia_seca: new FormControl('', Validators.required),
     e_m_aves: new FormControl('', Validators.required),
@@ -43,21 +41,35 @@ export class RegistroAlimentoComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  onItemSelect(item: any) {
-    console.log(item);
-  }
-  onSelectAll(items: any) {
-    console.log(items);
-  }
 
   get f() {
     return this.form.controls;
   }
 
-  submit() {
+  submit(form: any) {
     console.log(this.form.value);
-    this.AlimentoService.create(this.form.value).subscribe(res => {
+    this.AlimentoService.create(form).subscribe(data => {
+
+      if (data.status === 'success') {
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: "el alimento fue creado con éxito ",
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }else{
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: data.message,
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }
+
       console.log('Person created successfully!');
+
 
     })
   }
