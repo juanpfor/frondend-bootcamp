@@ -63,7 +63,6 @@ export class RegistroAlimentoComponent implements OnInit {
   submit(form: any) {
     if (this.form.valid) {
       this.AlimentoService.create(form).subscribe(data => {
-
         if (data.status === 'success') {
           Swal.fire({
             position: 'center',
@@ -72,6 +71,7 @@ export class RegistroAlimentoComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500
           })
+          this.router.navigate(['dashboard/alimentos'])
         }else{
           Swal.fire({
             position: 'center',

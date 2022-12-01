@@ -42,7 +42,7 @@ export class GestionarAlimentoComponent implements OnInit {
             title: 'Actualizado',
             text: 'alimento eliminado con exito',
             icon: 'success',
-            confirmButtonColor: '#3085d6',
+            timer : 1000,
             confirmButtonText: 'Aceptar'
           })
         }
