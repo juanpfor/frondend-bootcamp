@@ -57,8 +57,6 @@ export class UpdateuserComponent implements OnInit {
           // "contrasena": data.results.contrasena,
           "region_id": data.results.region_id,
         })
-        console.log(data.results.Regione.nombre_region);
-
       }
     })
   }

@@ -34,7 +34,6 @@ export class RegistroComponent implements OnInit {
         this.router.navigate(['dashboard/nutrientes'])
       });
     } else {
-      console.log("Campos Obligatorios");
       Swal.fire({
         title:'Error',
         text:'Campos obligattorios',
@@ -44,7 +43,5 @@ export class RegistroComponent implements OnInit {
       })
 
     }
-
-    console.log(form);
   }
 }

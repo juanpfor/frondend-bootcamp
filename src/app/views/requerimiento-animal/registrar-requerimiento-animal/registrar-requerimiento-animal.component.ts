@@ -52,12 +52,10 @@ export class RegistrarRequerimientoAnimalComponent implements OnInit {
    }
 
   RegisterAnimal(form : any) {
-    console.log(form);
   }
 
   getEspecies() {
     this.serviceespecie.listarEspecies().subscribe(data => {
-      console.log(data.results);
 
       this.listespecies = data.results
     })

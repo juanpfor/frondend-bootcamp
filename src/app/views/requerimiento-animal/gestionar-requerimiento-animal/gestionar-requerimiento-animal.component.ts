@@ -21,7 +21,6 @@ export class GestionarRequerimientoAnimalComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    console.log(this.alimentoAnimalId);
 
     this.ListarReqAnimal()
   }

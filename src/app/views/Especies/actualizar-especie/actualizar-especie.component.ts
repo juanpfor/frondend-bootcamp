@@ -38,7 +38,6 @@ export class ActualizarEspecieComponent implements OnInit {
     this.especie = {
       nombre_especie:this.EspecieForm.get('nombre_especie')?.value
     }
-    console.log(this.especie);
     this.especieService.actualizarEspecie(this.id, this.especie).subscribe(data => {
       if (data.status == 'success') {
         Swal.fire({

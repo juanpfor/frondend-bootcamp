@@ -52,7 +52,6 @@ export class RegistroUsersComponent implements OnInit {
         this.router.navigate(['nutrientes'])
       });
     } else {
-      console.log("Campos Obligatorios");
       Swal.fire({
         title: 'Error',
         text: 'Campos obligattorios',
@@ -60,15 +59,11 @@ export class RegistroUsersComponent implements OnInit {
         confirmButtonColor: '#3085d6',
         confirmButtonText: 'Aceptar'
       })
-
     }
-
-    console.log(form);
   }
 
   createUser(form: any) {
 
-    console.log(form);
 
     if (this.formUser.valid) {
       this.apiUser.PostUser(form).subscribe(data => {

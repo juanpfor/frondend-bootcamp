@@ -64,7 +64,6 @@ export class ActualizarRequerimientoAnimalComponent implements OnInit {
   getReqAnimalById(id: any) {
 
     this.reqanimalService.getReqAnimalByID(id).subscribe(data => {
-      console.log(data.results);
 
       this.reqAnimal = data.results
 

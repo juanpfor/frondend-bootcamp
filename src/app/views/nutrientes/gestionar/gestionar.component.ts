@@ -19,8 +19,6 @@ export class GestionarComponent implements OnInit {
   listarNutrientes():void{
     this.nutienteServes.listarNutrientes().subscribe(data =>{
       this.listNutrientes = data.results
-      console.log( this.listNutrientes);
-
     })
 
   }
@@ -59,7 +57,7 @@ export class GestionarComponent implements OnInit {
             confirmButtonText: 'Aceptar'
           })
         }
-       
+
        })
       }
     })

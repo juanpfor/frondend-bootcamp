@@ -21,7 +21,6 @@ export class GestionarAlimentoComponent implements OnInit {
   }
   getAll():void{
     this.AlimentoService.getAll().subscribe(data=>{
-        console.log(data);
         this.alimentos = data.results;
       }
     )

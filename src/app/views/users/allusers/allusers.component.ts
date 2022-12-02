@@ -26,7 +26,6 @@ export class AllusersComponent implements OnInit {
   getAll(): void {
     this.userService.getAll().subscribe(
       data => {
-        console.log(data.results);
 
         this.users = data.results
       }

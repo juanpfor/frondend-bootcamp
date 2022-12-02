@@ -34,7 +34,6 @@ export class RegistrarEspeciesComponent implements OnInit {
         this.router.navigate(['dashboard/especie'])
       });
     } else {
-      console.log("Campos Obligatorios");
       Swal.fire({
         title:'Error',
         text:'Campos obligattorios',
@@ -42,9 +41,6 @@ export class RegistrarEspeciesComponent implements OnInit {
         confirmButtonColor: '#3085d6',
           confirmButtonText: 'Aceptar'
       })
-
     }
-
-    console.log(form);
   }
 }
