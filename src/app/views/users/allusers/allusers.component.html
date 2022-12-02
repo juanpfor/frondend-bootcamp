@@ -49,10 +49,10 @@
                             <button type="button" class="btn btn-secondary" [routerLink]="['updated/' , u.id_usuario ]"> Editar </button>
 
 
-                            <button type="button" class="btn btn-secondary">Ver</button>
+                            <!-- <button type="button" class="btn btn-secondary">Ver</button> -->
 
 
-                            <button type="button" class="btn btn-secondary">Eliminar</button>
+                            <button type="button" class="btn btn-secondary" (click)="deleteUser(u.id_usuario)">Eliminar</button>
                         </td>
                     </tr>
                 </tbody>

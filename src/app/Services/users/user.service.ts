@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient,HttpHeaders} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { responseApi } from 'src/app/interfaces/responseApi';
 import { Observable } from 'rxjs';
 import { pathUrlService } from 'GlobalConstans';
@@ -8,10 +8,10 @@ import { pathUrlService } from 'GlobalConstans';
 })
 export class UserService {
   private Api = pathUrlService.concat("allusers")
-  private post=pathUrlService.concat("createUser")
-  constructor(private httpClient:HttpClient) { }
+  private post = pathUrlService.concat("createUser")
+  constructor(private httpClient: HttpClient) { }
 
-  getAll():Observable<responseApi>{
+  getAll(): Observable<responseApi> {
     return this.httpClient.get<responseApi>(this.Api)
   }
 
@@ -22,11 +22,11 @@ export class UserService {
     return this.httpClient.post<responseApi>(direction, form)
   }
 
-  create(user:responseApi):Observable<responseApi>{
-      return this.httpClient.post<responseApi>(this.post,JSON.stringify(user))
+  create(user: responseApi): Observable<responseApi> {
+    return this.httpClient.post<responseApi>(this.post, JSON.stringify(user))
   }
 
-  getUserByID (id : string | number) : Observable<responseApi> {
+  getUserByID(id: string | number): Observable<responseApi> {
 
     const direction = pathUrlService.concat(`viewUser/${id}`)
 
@@ -34,11 +34,16 @@ export class UserService {
 
   }
 
-  updateUser (form : any , id : number | string ): Observable<responseApi> {
+  updateUser(form: any, id: number | string): Observable<responseApi> {
 
     const direction = pathUrlService.concat(`updateUser/${id}`)
 
-    return this.httpClient.put<responseApi>(direction , form)
+    return this.httpClient.put<responseApi>(direction, form)
+  }
 
+  deleteUser (id : number | string): Observable<responseApi> {
+    const direction = pathUrlService.concat(`deleteUser/${id}`)
+
+    return this.httpClient.delete<responseApi>(direction)
   }
 }

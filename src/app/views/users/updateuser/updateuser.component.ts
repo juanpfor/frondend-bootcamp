@@ -14,16 +14,16 @@ import Swal from 'sweetalert2';
 export class UpdateuserComponent implements OnInit {
 
   userID: any
-  userData : any = []
-  listRegiones : any = []
+  userData: any = []
+  listRegiones: any = []
 
-  formUser : FormGroup = new FormGroup({
+  formUser: FormGroup = new FormGroup({
     nombres: new FormControl('', Validators.required),
     apellidos: new FormControl('', Validators.required),
     correo: new FormControl('', Validators.required),
     celular: new FormControl('', Validators.required),
     identificacion: new FormControl('', Validators.required),
-    foto: new FormControl('', Validators.required),
+    // foto: new FormControl('', Validators.required),
     tipo_usuario: new FormControl('', Validators.required),
     // contrasena: new FormControl('', Validators.required),
     region_id: new FormControl('', Validators.required),
@@ -42,30 +42,31 @@ export class UpdateuserComponent implements OnInit {
     this.getAllRegiones()
   }
 
-  getUserById (id : string | number) {
+  getUserById(id: string | number) {
     this.userService.getUserByID(id).subscribe(data => {
-        this.userData = data.results
-        if (data.status === 'success') {
-            this.formUser.setValue({
-              "nombres": data.results.nombres,
-              "apellidos": data.results.celular,
-              "correo": data.results.correo,
-              "celular": data.results.celular,
-              "identificacion": data.results.identificacion,
-              "foto": data.results.foto,
-              "tipo_usuario": data.results.tipo_usuario,
-              // "contrasena": data.results.contrasena,
-              "region_id": data.results.region_id,
-            })
-            console.log(data.results.Regione.nombre_region);
+      this.userData = data.results
+      if (data.status === 'success') {
+        this.formUser.setValue({
+          "nombres": data.results.nombres,
+          "apellidos": data.results.celular,
+          "correo": data.results.correo,
+          "celular": data.results.celular,
+          "identificacion": data.results.identificacion,
+          // "foto": data.results.foto,
+          "tipo_usuario": data.results.tipo_usuario,
+          // "contrasena": data.results.contrasena,
+          "region_id": data.results.region_id,
+        })
+        console.log(data.results.Regione.nombre_region);
 
-        }
+      }
     })
   }
 
-  updateUser( form : any  ) {
-    this.userService.updateUser(form , this.userID ).subscribe(data => {
-      if (this.formUser.valid) {
+  updateUser(form: any) {
+    if (this.formUser.valid) {
+      this.userService.updateUser(form, this.userID).subscribe(data => {
+
         if (data.status == 'success') {
           Swal.fire({
             title: 'Actualizado',
@@ -75,7 +76,7 @@ export class UpdateuserComponent implements OnInit {
             confirmButtonText: 'Aceptar'
           })
           this.route.navigate(['dashboard/usuarios'])
-        }else {
+        } else {
           Swal.fire({
             position: 'center',
             icon: 'error',
@@ -84,21 +85,21 @@ export class UpdateuserComponent implements OnInit {
             timer: 1500
           })
         }
-      }else {
-        Swal.fire({
-          position: 'center',
-          icon: 'info',
-          title:  "todos los campos son obligatorios ",
-          showConfirmButton: false,
-          timer: 1500
-        })
-      }
-    })
+      })
+    } else {
+      Swal.fire({
+        position: 'center',
+        icon: 'info',
+        title: "todos los campos son obligatorios ",
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }
   }
 
-  getAllRegiones () {
-      this.alimentoService.getRegiones().subscribe(data => {
-          this.listRegiones = data.results
-      })
+  getAllRegiones() {
+    this.alimentoService.getRegiones().subscribe(data => {
+      this.listRegiones = data.results
+    })
   }
 }

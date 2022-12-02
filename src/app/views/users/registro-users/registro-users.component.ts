@@ -22,8 +22,8 @@ export class RegistroUsersComponent implements OnInit {
     celular: new FormControl('', Validators.required),
     identificacion: new FormControl('', Validators.required),
     tipo_usuario: new FormControl('', Validators.required),
-    contraseña: new FormControl('', Validators.required),
-    Region_id: new FormControl('', Validators.required)
+    contrasena: new FormControl('', Validators.required),
+    region_id: new FormControl('', Validators.required)
   });
   constructor(
     private apiUser: UserService,
@@ -67,6 +67,9 @@ export class RegistroUsersComponent implements OnInit {
   }
 
   createUser(form: any) {
+
+    console.log(form);
+
     if (this.formUser.valid) {
       this.apiUser.PostUser(form).subscribe(data => {
         if (data.status == 'success') {
