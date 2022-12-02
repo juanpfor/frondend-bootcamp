@@ -20,5 +20,16 @@ export class ReqAnimalService {
     let url = 'deletealiment'
     return this.http.delete<responseApi>(pathUrlService + url + '/' + id_tipo_nutriente)
   }
+  getReqAnimalByID (id : number | string ):Observable<responseApi> {
+    const direction = pathUrlService.concat(`oneanimals/${id}`)
+    return this.http.get<responseApi>(direction)
+  }
+  updateReqAnimal (form : any , id : number | string ) :Observable<responseApi>{
+    const direction = pathUrlService.concat(`update_req_animal/${id}`)
+
+    return this.http.put<responseApi>(direction , form)
+
+
+  }
 
 }

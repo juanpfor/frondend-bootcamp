@@ -48,6 +48,7 @@ import { MatSelectModule } from "@angular/material/select";
 import {  MatIconModule } from "@angular/material/icon";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UpdateuserComponent } from './views/users/updateuser/updateuser.component';
+import { ActualizarRequerimientoAnimalComponent } from './views/requerimiento-animal/actualizar-requerimiento-animal/actualizar-requerimiento-animal.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { UpdateuserComponent } from './views/users/updateuser/updateuser.compone
     AllusersComponent,
     HomeComponent,
     UpdateuserComponent,
+    ActualizarRequerimientoAnimalComponent,
   ],
   imports: [
     BrowserModule,
