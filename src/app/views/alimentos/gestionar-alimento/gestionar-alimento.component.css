@@ -3,7 +3,7 @@
     --bgcolor: #39a900;
     --hovercolor: rgb(23, 23, 23);
   }
-  
+
   body {
     background-color: rgb(255, 255, 255);
     font-family: 'Work Sans', sans-serif;
@@ -14,21 +14,21 @@
   /*
   COTENIDO
   */
-  
+
   #contenedor {
     min-height: 100vh;
     display: grid;
     place-content: center;
     text-align: center;
   }
-  
+
   .container {
     height: 100vh;
     padding: 20px;
     padding-top: 60px;
   }
   /* Todos los campos de formulario */
-  
+
   body .form-control:focus {
     color: #212529;
     background-color: #fff;
@@ -36,24 +36,24 @@
     outline: 0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 25%);
   }
-  
+
   body .form-check-input:focus {
     border-color: #Ff671d;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(255, 103, 29, .25)
   }
-  
+
   body .form-check-input:checked {
     background-color: #Ff671d;
     border-color: #Ff671d;
   }
   /* BODY */
   /*ENCABEZADO*/
-  
+
   .animals-title h1 {
     font-size: 25px;
   }
-  
+
   .header {
     display: flex;
     flex-direction: row;
@@ -61,14 +61,14 @@
     vertical-align: middle;
   }
   /* Contenedor buscar*/
-  
+
   .header .inputWithIcon {
     position: relative;
     width: 370px;
     margin-left: 30%;
   }
   /* Input buscar */
-  
+
   .header .inputWithIcon .form-control {
     box-sizing: border-box;
     background-color: #f3f4f4;
@@ -78,7 +78,7 @@
     border-radius: 3px;
   }
   /* Icono */
-  
+
   .header .inputWithIcon .bi {
     color: #191919;
     position: absolute;
@@ -89,7 +89,7 @@
     transform: translateY(-50%);
   }
   /* Boton: Agregar */
-  
+
   .header .add .btn {
     vertical-align: middle;
     width: 100px;
@@ -98,8 +98,9 @@
     border-radius: 2px;
     margin-left: 50%;
     transition: .3s ease all;
+
   }
-  
+
   .header .add .btn:hover {
     background-color: #ffbf00;
     transform: translateY(-7px);
@@ -108,13 +109,13 @@
     box-shadow: 5px 5px 10px 1px rgb(144, 144, 144);
   }
   /* TABLA */
-  
+
   .user-table {
     overflow-x: scroll;
     width: 100%;
     align-items: center;
   }
-  
+
   .table {
     width: 100%;
     margin-top: 40px;
@@ -122,26 +123,26 @@
     box-shadow: 10px -10px 20px #00000029;
     opacity: 1;
   }
-  
+
   td {
     font-size: 18px;
   }
-  
+
   .table thead {
     background-color: #39A900;
     color: #ffffff;
     height: 75px;
     vertical-align: middle;
   }
-  
+
   .table thead .radius {
     width: 10px;
   }
-  
+
   .lab1 {
     width: 130px;
   }
-  
+
   .table .btn {
     width: 70px;
     font-size: 12px;
@@ -149,20 +150,20 @@
     color: #000;
     transition: .3s ease all;
   }
-  
+
   .table .btn:hover {
     background-color: #39a900;
     color: #fff;
   }
-  
+
   .table .action {
     width: 300px;
   }
-  
+
   .table-striped tbody tr:nth-of-type(odd) {
     background-color: #D3F9BF;
   }
-  
+
   .user-table .btn {
     margin: 5px;
   }

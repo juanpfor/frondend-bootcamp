@@ -81,8 +81,7 @@ export class RegistroUsersComponent implements OnInit {
             position: 'center',
             icon: 'error',
             title: data.message,
-            showConfirmButton: false,
-            timer: 1500
+            showConfirmButton: true,
           })
         }
       })
