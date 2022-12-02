@@ -13,6 +13,8 @@ import Swal from 'sweetalert2';
 export class AllusersComponent implements OnInit {
 
   users: User[] = []
+  pageActual: number = 1;
+  pages: number = 8;
   constructor(
     private userService: UserService,
     private route: Router

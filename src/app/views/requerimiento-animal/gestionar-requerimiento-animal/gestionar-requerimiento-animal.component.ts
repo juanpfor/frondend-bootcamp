@@ -11,7 +11,10 @@ import { Router } from '@angular/router';
 })
 export class GestionarRequerimientoAnimalComponent implements OnInit {
   alimentoAnimalId : any
-  listReqAnimal?: any[]
+  listReqAnimal: any
+  pageActual: number = 1;
+  pages: number = 8;
+
   constructor(
     private reqAnimalService: ReqAnimalService ,
     private route : Router,
@@ -27,7 +30,7 @@ export class GestionarRequerimientoAnimalComponent implements OnInit {
       this.listReqAnimal = data.results
     })
   }
-  EliminarAnimalReq(id_requerimiento_animal:number){
+  EliminarAnimalReq(id :  any){
     Swal.fire({
       title:'Eliminar',
       text:'Estas seguro que quieres eliminar esta Fase?',
@@ -38,16 +41,14 @@ export class GestionarRequerimientoAnimalComponent implements OnInit {
       confirmButtonText: 'Aceptar'
     }).then((results)=>{
       if(results.isConfirmed){
-       this.reqAnimalService.deleteAnimalReq(id_requerimiento_animal).subscribe(data=>{
+       this.reqAnimalService.deleteAnimalReq(id).subscribe(data=>{
         if(data.status == 'success'){
           Swal.fire({
-            title:'Eliminado',
-            text:'Fase eliminada con exito',
-            icon:'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Aceptar'
+            position: 'center',
+            icon: 'success',
+            title: 'Req alimento eliminado con exito',
+            showConfirmButton: false,
+            timer: 1500
           })
         }
         this.ListarReqAnimal()
@@ -56,7 +57,7 @@ export class GestionarRequerimientoAnimalComponent implements OnInit {
     })
   }
   click() {
-    this.route.navigate([])
+    this.route.navigate(['dashboard/gestionarAnimal/registrar'])
   }
 
 }

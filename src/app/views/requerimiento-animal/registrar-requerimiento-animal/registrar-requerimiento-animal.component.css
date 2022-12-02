@@ -5,9 +5,9 @@
 }
 .nombrefase{
     color: #39a900;
-    text-decoration: underline #39a900;
+    /* text-decoration: underline #39a900; */
     font-size: 32px;
-} 
+}
 .titulos{
     color: #908C8C;
     font-size: 18px;

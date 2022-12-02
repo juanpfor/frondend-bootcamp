@@ -92,7 +92,6 @@ export class ActualizarRequerimientoAnimalComponent implements OnInit {
   }
 
   updateRequiredAnimal(form: any) {
-    console.log(form);
 
     if (this.formRequerimientoAnimal.valid) {
       this.reqanimalService.updateReqAnimal(form, this.reqanimalID).subscribe(data => {
@@ -105,7 +104,7 @@ export class ActualizarRequerimientoAnimalComponent implements OnInit {
             confirmButtonText: 'Aceptar'
           })
           this.route.navigate(['dashboard/gestionarAnimal'])
-        }else {
+        } else {
           Swal.fire({
             position: 'center',
             icon: 'error',
@@ -115,11 +114,11 @@ export class ActualizarRequerimientoAnimalComponent implements OnInit {
           })
         }
       })
-    }else{
+    } else {
       Swal.fire({
         position: 'center',
         icon: 'warning',
-        title:  "todos los campos son obligatorios ",
+        title: "todos los campos son obligatorios ",
         showConfirmButton: false,
         timer: 1500
       })

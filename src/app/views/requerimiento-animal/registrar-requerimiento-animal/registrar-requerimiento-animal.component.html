@@ -2,103 +2,306 @@
     <h4 class="nombrefase text-center py-2">Registro De Fase</h4>
     <div class="page-header">
 
-      <form [formGroup]="loginRegister"  (submit)="RegisterAnimal(loginRegister.value)">
+      <form [formGroup]="formRequerimientoAnimal" (ngSubmit)="createReqAnimal(formRequerimientoAnimal.value)">
         <div class="row mt-3 px-md-3">
 
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <!-- name -->
-            <label class="h6 titulos">No. requerimiento:</label>
-            <br>
-            <input formControlName="idRequerimiento_animal" id="NoRequerimiento" type="text"
-              class="form-control w--md-75">
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>nombre_fase</mat-label>
+              <input  id="nombre_fase"
+                      type="text"
+                      matInput formControlName="nombre_fase"
+                      placeholder="nombre_fase">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('nombre_fase') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                nombre_fase <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
           </div>
-          <!-- job -->
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">Nombres de la fase:</label><br>
-            <input formControlName="nombre_fase" id="nameFase" type="text" class="form-control w--md-75">
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>m_s</mat-label>
+              <input  id="m_s"
+                      type="number"
+                      matInput formControlName="m_s"
+                      placeholder="m_s">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('m_s') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                m_s <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
           </div>
 
 
-
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">MS %:</label> <br>
-            <input formControlName="m_s" id="porcentajeMS" type="text" class="form-control w--md-75">
-          </div>
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">EM AVES Kg:</label><br>
-            <input formControlName="e_m_ave" id="emaves" type="text" class="form-control w--md-75">
-
-          </div>
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">EM Cerdos Kg:</label><br>
-            <input formControlName="e_d_cerdo" id="emceerdos" type="text" class="form-control w--md-75">
-          </div>
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">Proteina cruda %:</label> <br>
-            <input formControlName="proteina" id="proteinacruda" type="text" class="form-control w--md-75">
-          </div>
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">Fibra cruda %:</label><br>
-            <input formControlName="fibra_cruda" id="fibracruda" type="text" class="form-control w--md-75">
-
-          </div>
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">Ext etereo %:</label> <br>
-            <input formControlName="ext_etereo" id="extetereo" type="text" class="form-control w--md-75">
-          </div>
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">Calcio %:</label><br>
-            <input formControlName="calcio" id="calcio" type="text" class="form-control w--md-75">
-          </div>
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">Fosforo Disp %:</label> <br>
-            <input formControlName="fosforo" id="fosforo" type="text" class="form-control w--md-75">
-
-          </div>
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">Sodio %:</label><br>
-            <input formControlName="sodio" id="sodio" type="text" class="form-control w--md-75">
-          </div>
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">Ardinina %:</label> <br>
-            <input formControlName="adrinina" id="adrinina" type="text" class="form-control w--md-75">
-          </div>
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">Lisina %:</label><br>
-            <input formControlName="lisina" id="lisina" type="text" class="form-control w--md-75">
-
-          </div>
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">Meteonina %:</label> <br>
-            <input formControlName="metronina" id="meteonina" type="text" class="form-control w--md-75">
-          </div>
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">Met+Cis %:</label><br>
-            <input formControlName="met_cis" id="meCis" type="text" class="form-control w--md-75">
-          </div>
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">Treonina %:</label> <br>
-            <input formControlName="treonina" id="treonina" type="text" class="form-control w--md-75">
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>e_m_ave</mat-label>
+              <input  id="e_m_ave"
+                      type="number"
+                      matInput formControlName="e_m_ave"
+                      placeholder="e_m_ave">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('e_m_ave') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                e_m_ave <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
           </div>
 
-          <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">Triptofano %:</label><br>
-            <input formControlName="triptofano" id="triptofano" type="text" class="form-control w--md-75">
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>e_d_cerdo</mat-label>
+              <input  id="e_d_cerdo"
+                      type="number"
+                      matInput formControlName="e_d_cerdo"
+                      placeholder="e_d_cerdo">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('e_d_cerdo') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                e_d_cerdo <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>proteina</mat-label>
+              <input  id="m_s"
+                      type="number"
+                      matInput formControlName="proteina"
+                      placeholder="proteina">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('proteina') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                proteina <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>fibra_cruda</mat-label>
+              <input  id="fibra_cruda"
+                      type="number"
+                      matInput formControlName="fibra_cruda"
+                      placeholder="fibra_cruda">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('fibra_cruda') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                fibra_cruda <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>ext_etereo</mat-label>
+              <input  id="ext_etereo"
+                      type="number"
+                      matInput formControlName="ext_etereo"
+                      placeholder="ext_etereo">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('ext_etereo') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                ext_etereo <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>calcio</mat-label>
+              <input  id="calcio"
+                      type="number"
+                      matInput formControlName="calcio"
+                      placeholder="calcio">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('calcio') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                calcio <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>fosf_disp</mat-label>
+              <input  id="fosf_disp"
+                      type="number"
+                      matInput formControlName="fosf_disp"
+                      placeholder="fosf_disp">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('fosf_disp') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                fosf_disp <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>sodio</mat-label>
+              <input  id="sodio"
+                      type="number"
+                      matInput formControlName="sodio"
+                      placeholder="sodio">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('sodio') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                sodio <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>arginina</mat-label>
+              <input  id="arginina"
+                      type="number"
+                      matInput formControlName="arginina"
+                      placeholder="arginina">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('arginina') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                arginina <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>lisina</mat-label>
+              <input  id="lisina"
+                      type="number"
+                      matInput formControlName="lisina"
+                      placeholder="lisina">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('lisina') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                lisina <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>metionina</mat-label>
+              <input  id="metionina"
+                      type="number"
+                      matInput formControlName="metionina"
+                      placeholder="metionina">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('metionina') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                metionina <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>met_cis</mat-label>
+              <input  id="met_cis"
+                      type="number"
+                      matInput formControlName="met_cis"
+                      placeholder="met_cis">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('met_cis') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                met_cis <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>triptofano</mat-label>
+              <input  id="triptofano"
+                      type="number"
+                      matInput formControlName="triptofano"
+                      placeholder="triptofano">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('triptofano') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                triptofano <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>ceniza</mat-label>
+              <input  id="ceniza"
+                      type="number"
+                      matInput formControlName="ceniza"
+                      placeholder="ceniza">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('ceniza') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                ceniza <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <mat-form-field class="example-full-width">
+              <mat-label>treonina</mat-label>
+              <input  id="treonina"
+                      type="number"
+                      matInput formControlName="treonina"
+                      placeholder="treonina">
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('treonina') && !formRequerimientoAnimal.hasError('required')">
+                por favor registra el
+              </mat-error>
+              <mat-error *ngIf="formRequerimientoAnimal.hasError('required')">
+                treonina <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-4 ">
-            <label class="h6 titulos">Ceniza %:</label> <br>
-            <input formControlName="ceniza" id="ceniza" type="text" class="form-control w--md-75">
+            <mat-form-field appearance="fill">
+              <mat-label> especies </mat-label>
+              <mat-select formControlName="especie_id" >
+                <mat-option *ngFor="let esp of listespecies" [value]="esp.id_especie">{{esp.nombre_especie}}</mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
-
 
         </div>
-
-
+        <div class="text-center my-3">
+          <button type="submit " class="btn btn-guardar-registro">create</button>
+        </div>
       </form>
-    </div>
-    <div class="text-center my-3">
-      <button type="submit " class="btn btn-guardar-registro">Ingresar</button>
-    </div>
   </div>
 

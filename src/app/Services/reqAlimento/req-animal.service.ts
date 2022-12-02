@@ -16,9 +16,9 @@ export class ReqAnimalService {
     return this.http.get<responseApi>(pathUrlService + url)
   }
 
-  deleteAnimalReq(id_tipo_nutriente:number):Observable<responseApi>{
-    let url = 'deletealiment'
-    return this.http.delete<responseApi>(pathUrlService + url + '/' + id_tipo_nutriente)
+  deleteAnimalReq(id :number):Observable<responseApi>{
+    const direction = pathUrlService.concat(`delete_req_animal/${id}`)
+    return this.http.delete<responseApi>(direction)
   }
   getReqAnimalByID (id : number | string ):Observable<responseApi> {
     const direction = pathUrlService.concat(`oneanimals/${id}`)
@@ -26,10 +26,11 @@ export class ReqAnimalService {
   }
   updateReqAnimal (form : any , id : number | string ) :Observable<responseApi>{
     const direction = pathUrlService.concat(`update_req_animal/${id}`)
-
     return this.http.put<responseApi>(direction , form)
-
-
+  }
+  createReAnimal (form : any ) :Observable<responseApi>{
+    const direction = pathUrlService.concat(`create_req_animal`)
+    return this.http.post<responseApi>(direction , form)
   }
 
 }

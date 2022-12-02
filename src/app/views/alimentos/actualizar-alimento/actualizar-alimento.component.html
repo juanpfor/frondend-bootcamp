@@ -308,7 +308,7 @@
           <mat-form-field appearance="fill">
             <mat-label>Choose an option</mat-label>
             <mat-select formControlName="tipo_nutriente_id" >
-              <mat-option [value]="aliment.tiponutriente.nombre_tipo_nutriente" *ngFor="let tiponutriente of tiponutriente" [value]="tiponutriente.id_tipo_nutriente">{{tiponutriente.nombre_tipo_nutriente}}</mat-option>
+              <mat-option *ngFor="let tiponutriente of tiponutriente" [value]="tiponutriente.id_tipo_nutriente">{{tiponutriente.nombre_tipo_nutriente}}</mat-option>
             </mat-select>
           </mat-form-field>
         </div>

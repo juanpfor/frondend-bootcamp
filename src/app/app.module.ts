@@ -50,6 +50,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UpdateuserComponent } from './views/users/updateuser/updateuser.component';
 import { ActualizarRequerimientoAnimalComponent } from './views/requerimiento-animal/actualizar-requerimiento-animal/actualizar-requerimiento-animal.component';
 
+import {NgxPaginationModule} from 'ngx-pagination';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -96,7 +99,8 @@ import { ActualizarRequerimientoAnimalComponent } from './views/requerimiento-an
     MatInputModule,
     MatFormFieldModule,
     FontAwesomeModule,
-    MatIconModule
+    MatIconModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

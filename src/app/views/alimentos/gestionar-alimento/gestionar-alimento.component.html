@@ -56,7 +56,8 @@
               </tr>
           </thead>
           <tbody>
-              <tr *ngFor="let aliment of alimentos">
+              <tr *ngFor="let aliment of alimentos
+              | paginate: { itemsPerPage: pages, currentPage: pageActual }">
                   <td scope="row">{{aliment.nombre_alimento}}</td>
                   <td>{{aliment.tiponutriente.nombre_tipo_nutriente}}</td>
                   <td>
@@ -69,5 +70,10 @@
               </tr>
           </tbody>
       </table>
+      <pagination-controls
+                (pageChange)="pageActual = $event"
+                previousLabel="Anterior  "
+                nextLabel="Siguiente"
+              ></pagination-controls>
     </div>
   </div>

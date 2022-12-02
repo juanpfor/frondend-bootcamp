@@ -11,6 +11,9 @@ import Swal from 'sweetalert2';
 export class GestionarAlimentoComponent implements OnInit {
 
   alimentos: Alimento[] = [];
+  pageActual: number = 1;
+  pages: number = 8;
+
   constructor(private AlimentoService:AlimentoService ) { }
 
   ngOnInit(): void {

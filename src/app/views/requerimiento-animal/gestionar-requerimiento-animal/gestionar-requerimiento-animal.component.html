@@ -1,84 +1,142 @@
 <div class="container">
-    <!--Encabezado-->
-    <div class="header">
+  <!--Encabezado-->
+  <div class="header">
+    <div class="animals-title">
+      <h1>Gestionar animal</h1>
+    </div>
+    <!--Contenedor buscar-->
+    <div class="inputWithIcon">
+      <input class="form-control" type="search" placeholder="Buscar" />
+      <i class="bi bi-search"></i>
+    </div>
 
-        <div class="animals-title">
-            <h1>Gestionar animal</h1>
-        </div>
-        <!--Contenedor buscar-->
-        <div class="inputWithIcon">
-            <input class="form-control" type="search" placeholder="Buscar">
-            <i class="bi bi-search"></i>
-        </div>
-
-        <!--Boton Agregar-->
-        <div class="add">
-            <!-- Boton: Agregar -->
-            <button (click)="click()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-      Agregar
-    </button>
-            <!-- Modal: Agregar -->
-            <div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Registrar Animal</h5>
-                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col text-center">
-                                    <label class="text">Especie &nbsp;&nbsp;</label>
-                                    <input class="input" type="text" placeholder="Nombre de la Especie">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <a type="button" class="btn btn-primary" href="registro.component.html">Registrar</a>
-                        </div>
-                    </div>
-                </div>
+    <!--Boton Agregar-->
+    <div class="add">
+      <!-- Boton: Agregar -->
+      <button
+        (click)="click()"
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#staticBackdrop"
+      >
+        Agregar
+      </button>
+      <!-- Modal: Agregar -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">
+                Registrar Animal
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col text-center">
+                  <label class="text">Especie &nbsp;&nbsp;</label>
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="Nombre de la Especie"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Cancelar
+              </button>
+              <a
+                type="button"
+                class="btn btn-primary"
+                href="registro.component.html"
+                >Registrar</a
+              >
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
-    <!--Tabla-->
-    <div class="user-table">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Proteina cruda %</th>
-                    <th scope="col">Calcio %</th>
-                    <th scope="col">Fosforo Disp %</th>
-                    <th scope="col">Lisina %</th>
-                    <th scope="col">Metioonina %</th>
-                    <th scope="col">Fibra cruda %</th>
-                    <th scope="col" class="action">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let reqAnimal of listReqAnimal; let i = index">
-                    <td>{{reqAnimal.nombre_fase}}</td>
-                    <td>{{reqAnimal.proteina}}</td>
+  <!--Tabla-->
+  <div class="user-table">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Proteina cruda %</th>
+          <th scope="col">Calcio %</th>
+          <th scope="col">Fosforo Disp %</th>
+          <th scope="col">Lisina %</th>
+          <th scope="col">Metioonina %</th>
+          <th scope="col">Fibra cruda %</th>
+          <th scope="col" class="action">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let reqAnimal of listReqAnimal
+              | paginate : { itemsPerPage: pages, currentPage: pageActual }
+          "
+        >
+          <td>{{ reqAnimal.nombre_fase }}</td>
+          <td>{{ reqAnimal.proteina }}</td>
 
-                    <td>{{reqAnimal.calcio}}</td>
-                    <td>{{reqAnimal.fosf_disp}}</td>
-                    <td>{{reqAnimal.metionina}}</td>
-                    <td>{{reqAnimal.lisina}}</td>
-                     <td>{{reqAnimal.fibra_cruda}}</td>
+          <td>{{ reqAnimal.calcio }}</td>
+          <td>{{ reqAnimal.fosf_disp }}</td>
+          <td>{{ reqAnimal.metionina }}</td>
+          <td>{{ reqAnimal.lisina }}</td>
+          <td>{{ reqAnimal.fibra_cruda }}</td>
 
-                    <td>
-                        <button type="button" class="btn btn-secondary" [routerLink]="['actualizar/', reqAnimal.id_requerimiento_animal]" >Editar</button>
-                        <!-- Boton: Ver-->
-                        <button type="button" class="btn btn-secondary" [routerLink]="['dashboard/gestionarAnimal']">Ver</button>
+          <td>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              [routerLink]="['actualizar/', reqAnimal.id_requerimiento_animal]"
+            >
+              Editar
+            </button>
 
-                        <!--Boton: Eliminar-->
-                        <button (click)="EliminarAnimalReq(reqAnimal.id_requerimiento_animal)" type="button" class="btn btn-secondary">Eliminar</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+            <!-- Boton: Ver-->
+            <!-- <button type="button" class="btn btn-secondary" [routerLink]="['dashboard/gestionarAnimal']">Ver</button> -->
+
+            <!--Boton: Eliminar-->
+            <button
+              (click)="EliminarAnimalReq(reqAnimal.id_requerimiento_animal)"
+              type="button"
+              class="btn btn-secondary"
+            >
+              Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <pagination-controls
+      (pageChange)="pageActual = $event"
+      previousLabel="Anterior  "
+      nextLabel="Siguiente"
+    ></pagination-controls>
+  </div>
 </div>

@@ -8,7 +8,9 @@ import Swal from 'sweetalert2';
   styleUrls: ['./listar-especie.component.css']
 })
 export class ListarEspecieComponent implements OnInit {
-  listEspecies?: any[]
+  listEspecies: any
+  pageActual: number = 1;
+  pages: number = 8;
   constructor(private especieService: EspecieService) { }
 
   ngOnInit(): void {
