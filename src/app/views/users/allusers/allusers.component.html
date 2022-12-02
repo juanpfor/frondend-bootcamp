@@ -31,7 +31,7 @@
                         <th scope="col">correo</th>
                         <th scope="col">celular</th>
                         <th scope="col">identificacion</th>
-                        <th scope="col">foto</th>
+                        <!-- <th scope="col">foto</th> -->
                         <th scope="col">tipo_usuario</th>
                         <th scope="col">acciones</th>
                     </tr>
@@ -43,11 +43,10 @@
                         <td>{{u.correo}}</td>
                         <td>{{u.celular}}</td>
                         <td>{{u.identificacion}}</td>
-                        <td>{{u.foto}}</td>
+                        <!-- <td>{{u.foto}}</td> -->
                         <td>{{u.tipo_usuario}}</td>
                         <td>
-
-                            <button type="button" class="btn btn-secondary">Editar</button>
+                            <button type="button" class="btn btn-secondary" [routerLink]="['updated/' , u.id_usuario ]"> Editar </button>
 
 
                             <button type="button" class="btn btn-secondary">Ver</button>

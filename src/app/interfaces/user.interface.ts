@@ -6,6 +6,7 @@ export interface User {
     id_usuario: any
     identificacion: any
     nombres: any
+    apellidos: any
     region_id: any
     tipo_usuario: any
 }

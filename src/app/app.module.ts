@@ -46,9 +46,8 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
 import {  MatIconModule } from "@angular/material/icon";
-
-
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { UpdateuserComponent } from './views/users/updateuser/updateuser.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +80,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     RegistrarRequerimientoAnimalComponent ,
     AllusersComponent,
     HomeComponent,
+    UpdateuserComponent,
   ],
   imports: [
     BrowserModule,

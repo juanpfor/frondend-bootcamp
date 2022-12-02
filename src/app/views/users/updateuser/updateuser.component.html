@@ -1,7 +1,7 @@
 <div class="m-auto mt-3 col-9 contenedor_registro">
-  <h4 class="nombrefase text-center py-2">Registrar Usuario</h4>
+  <h4 class="nombrefase text-center py-2">Actualizar Usuario : {{userData.nombres}}</h4>
   <div class="page-header">
-    <form [formGroup]="formUser" (submit)="createUser(formUser.value)" >
+    <form [formGroup]="formUser" (submit)="updateUser(formUser.value)" >
       <div class="row mt-3 px-md-3">
         <div class="form-group col-12 col-sm-6 col-md-4">
           <!-- name -->
@@ -48,7 +48,7 @@
           <input
             formControlName="identificacion"
             id="emceerdos"
-            type="number"
+            type="text"
             class="form-control w--md-75"
           />
         </div>
@@ -70,20 +70,20 @@
             class="form-control w--md-75"
           />
         </div>
-        <div class="form-group col-12 col-sm-6 col-md-4">
-          <label class="h6 titulos">contraseña</label> <br />
+        <!-- <div class="form-group col-12 col-sm-6 col-md-4">
+          <label class="h6 titulos">contrasena</label> <br />
           <input
             formControlName="contrasena"
             id="extetereo"
             type="text"
             class="form-control w--md-75"
           />
-        </div>
+        </div> -->
          <div class="form-group col-12 col-sm-6 col-md-4 mt-3">
             <mat-form-field appearance="fill">
-              <mat-label>regiones</mat-label>
+              <mat-label>{{userData.Regione.nombre_region}}</mat-label>
               <mat-select formControlName="region_id" >
-                <mat-option *ngFor="let reg of listRegiones" [value]="reg.id_region">{{reg.nombre_region}}</mat-option>
+                <mat-option [value]="userData.Regione.nombre_region" *ngFor="let reg of listRegiones" [value]="reg.id_region">{{reg.nombre_region}}</mat-option>
               </mat-select>
             </mat-form-field>
         </div>

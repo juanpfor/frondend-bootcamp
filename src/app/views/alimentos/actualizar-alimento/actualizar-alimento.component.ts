@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { AlimentoService } from 'src/app/Services/alimento/alimento.service';
 import { Alimento } from 'src/app/interfaces/alimento';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-actualizar-alimento',
@@ -93,8 +93,6 @@ export class ActualizarAlimentoComponent implements OnInit {
   }
 
   ActualizarAlimento(form : any ) {
-
-    console.log(form);
 
     this.alimentoService.updated(form , this.alimentoID).subscribe(data => {
 

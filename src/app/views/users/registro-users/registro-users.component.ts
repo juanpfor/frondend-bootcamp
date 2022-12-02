@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../../Services/users/user.service';
-import { Router } from "@angular/router";
+import { AlimentoService } from '../../../Services/alimento/alimento.service';
+import { Router, ActivatedRoute } from "@angular/router";
 import Swal from 'sweetalert2';
 
 @Component({
@@ -10,7 +11,11 @@ import Swal from 'sweetalert2';
   styleUrls: ['./registro-users.component.css']
 })
 export class RegistroUsersComponent implements OnInit {
-  postFormulario = new FormGroup({
+
+  listRegiones: any
+  userID: any
+
+  formUser = new FormGroup({
     nombres: new FormControl('', Validators.required),
     apellidos: new FormControl('', Validators.required),
     correo: new FormControl('', Validators.required),
@@ -20,17 +25,24 @@ export class RegistroUsersComponent implements OnInit {
     contraseña: new FormControl('', Validators.required),
     Region_id: new FormControl('', Validators.required)
   });
-  constructor(private apiUser: UserService, private router:Router) {}
+  constructor(
+    private apiUser: UserService,
+    private alimentoService: AlimentoService,
+    private router: Router,
+    private activeroute: ActivatedRoute,
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.getAllRegiones()
+  }
   postForm(form: any) {
-    if (this.postFormulario.valid) {
+    if (this.formUser.valid) {
       this.apiUser.PostUser(form).subscribe((data) => {
-        if(data.status == 'success'){
+        if (data.status == 'success') {
           Swal.fire({
-            title:'Registrado',
-            text:'Usuario registrada con exito',
-            icon:'success',
+            title: 'Registrado',
+            text: 'Usuario registrada con exito',
+            icon: 'success',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
@@ -42,15 +54,54 @@ export class RegistroUsersComponent implements OnInit {
     } else {
       console.log("Campos Obligatorios");
       Swal.fire({
-        title:'Error',
-        text:'Campos obligattorios',
-        icon:'warning',
+        title: 'Error',
+        text: 'Campos obligattorios',
+        icon: 'warning',
         confirmButtonColor: '#3085d6',
-          confirmButtonText: 'Aceptar'
+        confirmButtonText: 'Aceptar'
       })
 
     }
 
     console.log(form);
+  }
+
+  createUser(form: any) {
+    if (this.formUser.valid) {
+      this.apiUser.PostUser(form).subscribe(data => {
+        if (data.status == 'success') {
+          Swal.fire({
+            title: 'Creado',
+            text: 'usuario creado con exito',
+            icon: 'success',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Aceptar'
+          })
+          this.router.navigate(['dashboard/usuarios'])
+        } else {
+          Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: data.message,
+            showConfirmButton: false,
+            timer: 1500
+          })
+        }
+      })
+    } else {
+      Swal.fire({
+        position: 'center',
+        icon: 'info',
+        title: "todos los campos son obligatorios ",
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }
+  }
+
+  getAllRegiones() {
+    this.alimentoService.getRegiones().subscribe(data => {
+      this.listRegiones = data.results
+    })
   }
 }

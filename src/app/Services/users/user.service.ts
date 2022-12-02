@@ -16,10 +16,29 @@ export class UserService {
   }
 
   PostUser(form: any): Observable<responseApi> {
-    let url = 'createUser'
-    return this.httpClient.post<responseApi>(pathUrlService + url, form)
+
+    const direction = pathUrlService.concat(`createUser`)
+
+    return this.httpClient.post<responseApi>(direction, form)
   }
+
   create(user:responseApi):Observable<responseApi>{
       return this.httpClient.post<responseApi>(this.post,JSON.stringify(user))
+  }
+
+  getUserByID (id : string | number) : Observable<responseApi> {
+
+    const direction = pathUrlService.concat(`viewUser/${id}`)
+
+    return this.httpClient.get<responseApi>(direction)
+
+  }
+
+  updateUser (form : any , id : number | string ): Observable<responseApi> {
+
+    const direction = pathUrlService.concat(`updateUser/${id}`)
+
+    return this.httpClient.put<responseApi>(direction , form)
+
   }
 }
