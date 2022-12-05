@@ -21,6 +21,7 @@ import { AdminHomeComponent } from './views/admin-home/admin-home.component';
 import { PerfilUsuarioComponent } from './views/perfil-usuario/perfil-usuario.component';
 import { RegistroUsersComponent } from './views/users/registro-users/registro-users.component';
 import { UpdateuserComponent } from "./views/users/updateuser/updateuser.component";
+import { GestionarPreparacionesComponent } from "./views/preparacione/gestionar-preparaciones/gestionar-preparaciones.component";
 
 const routes: Routes = [
 
@@ -102,10 +103,14 @@ const routes: Routes = [
         path: 'perfilUsuario',
         component: PerfilUsuarioComponent,
       },
-
       {
         path: 'usuarios/registrar',
         component: RegistroUsersComponent
+      },
+      {
+        path : 'mispreparacione',
+        component : GestionarPreparacionesComponent ,
+        canActivate : [VigilantGuard]
       },
     ]
   },

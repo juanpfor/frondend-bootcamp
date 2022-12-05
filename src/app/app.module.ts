@@ -51,6 +51,7 @@ import { UpdateuserComponent } from './views/users/updateuser/updateuser.compone
 import { ActualizarRequerimientoAnimalComponent } from './views/requerimiento-animal/actualizar-requerimiento-animal/actualizar-requerimiento-animal.component';
 
 import {NgxPaginationModule} from 'ngx-pagination';
+import { GestionarPreparacionesComponent } from './views/preparacione/gestionar-preparaciones/gestionar-preparaciones.component';
 
 
 @NgModule({
@@ -86,6 +87,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     HomeComponent,
     UpdateuserComponent,
     ActualizarRequerimientoAnimalComponent,
+    GestionarPreparacionesComponent,
   ],
   imports: [
     BrowserModule,

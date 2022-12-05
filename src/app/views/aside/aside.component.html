@@ -1,46 +1,43 @@
 <div class="wrapper">
-    <!-- Sidebar  -->
-    <nav id="sidebar" class="verde_principal">
-        <a class="sidebar-header" [routerLink]="['dashboard/adminHome']">
-            <img src="../../../assets//logos/Logo final-07.png" alt="logo" class="aside_logo">
-        </a>
+  <!-- Sidebar  -->
+  <nav id="sidebar" class="verde_principal">
+    <a class="sidebar-header" [routerLink]="['dashboard/adminHome']">
+      <img
+        src="../../../assets//logos/Logo final-07.png"
+        alt="logo"
+        class="aside_logo"
+      />
+    </a>
 
-        <ul class="list-unstyled components">
-            <li class="">
-                <a routerLink="alimentos" class="" >Alimentos</a>
-            </li>
-            <li>
-                <a [routerLink]="['especie']" class="">Especies</a>
-            </li>
-            <!-- <li>
-                <a [routerLink]="['dashboard/'listarMunicipios']">Municipios</a>
-            </li> -->
-            <!-- <li>
-                <a [routerLink]="['nutrientes']">Nutrientes</a>
-            </li> -->
-            <!-- <li>
-                <a [routerLink]="['dashboard/'gestionarAnimal']">Gestionar animal (fase)</a>
-            </li> -->
-            <li>
-                <a [routerLink]="['usuarios']">Usuarios</a>
-            </li>
-            <li>
-              <a [routerLink]="['gestionarAnimal']">Requerimiento Animal</a>
-          </li>
-        </ul>
-    </nav>
+    <ul class="list-unstyled components">
+      <li class="">
+        <a routerLink="alimentos" class="">Alimentos</a>
+      </li>
+      <li>
+        <a [routerLink]="['especie']" class="">Especies</a>
+      </li>
+      <li>
+        <a [routerLink]="['usuarios']">Usuarios</a>
+      </li>
+      <li>
+        <a [routerLink]="['gestionarAnimal']">Requerimiento Animal</a>
+      </li>
+      <li>
+        <a [routerLink]="['mispreparacione']">Mis Preparaciones</a>
+      </li>
+    </ul>
+  </nav>
 
-    <!-- Page Content  -->
-    <div id="content">
-        <app-navbar></app-navbar>
-        <router-outlet></router-outlet>
-
-    </div>
-    <script>
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
-    </script>
+  <!-- Page Content  -->
+  <div id="content">
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $("#sidebarCollapse").on("click", function () {
+        $("#sidebar").toggleClass("active");
+      });
+    });
+  </script>
 </div>

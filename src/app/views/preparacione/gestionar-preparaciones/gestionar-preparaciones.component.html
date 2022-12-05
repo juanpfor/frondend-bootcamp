@@ -1,0 +1,48 @@
+
+        <div class="container">
+          <!--Encabezado-->
+          <div class="header">
+
+              <div class="animals-title px-3">
+                  <h1>Mis preparaciones </h1>
+              </div>
+              <!--Contenedor buscar-->
+              <div class="inputWithIcon">
+                  <input class="form-control" type="search" placeholder="Buscar">
+                  <i class="bi bi-search"></i>
+              </div>
+          </div>
+          <!--Tabla-->
+          <table class="table table-striped">
+              <thead>
+                  <tr>
+                      <th class="radius" scope="col">#</th>
+                      <th scope="col">cantidad producto</th>
+                      <th scope="col">precio del producto</th>
+                      <th scope="col">requrimiento animal</th>
+                      <th scope="col">acciones</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let u of preparaciones
+                  | paginate: { itemsPerPage: pages, currentPage: pageActual }">
+                      <td scope="row">{{u.id_preparacion}}</td>
+                      <td>{{u.cantidad_produccion}}</td>
+                      <td>{{u.precio_produccion}}</td>
+                      <td>{{u.RequerimientosAnimale.nombre_fase}}</td>
+                      <td>
+                          <button type="button" class="btn btn-secondary" [routerLink]="['updated/' , u.id_preparacion ]"> Ver detalle </button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+          <pagination-controls
+              (pageChange)="pageActual = $event"
+              previousLabel="Anterior  "
+              nextLabel="Siguiente"
+            ></pagination-controls>
+          <!-- {{users}} -->
+
+      </div>
+
+

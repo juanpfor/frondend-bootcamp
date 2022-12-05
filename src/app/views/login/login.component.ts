@@ -12,7 +12,11 @@ import Swal  from 'sweetalert2';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private api: LoginService, private router: Router, private cookies: CookieService) { }
+  constructor(
+    private api: LoginService,
+    private router: Router,
+    private cookies: CookieService
+    ) { }
   erroStatus: boolean = false
   erroMsg: any = ""
 
@@ -20,15 +24,16 @@ export class LoginComponent implements OnInit {
     identificacion: new FormControl('', Validators.required),
     pasword: new FormControl('', Validators.required)
   })
-  ngOnInit(): void { }
+  ngOnInit() {
+    this.guard()
+   }
 
   onLogin(form: any) {
     if (this.loginForm.valid) {
       this.api.logueoService(form).subscribe(data => {
         let dataResponse: any = data;
         if (dataResponse.status == 'success') {
-          localStorage.setItem('token', dataResponse.results.token)
-          this.cookies.set('token', dataResponse.results.token)
+          this.setDataUserLocalStorage(data)
           this.router.navigate(['dashboard/adminHome'])
         } else {
           Swal.fire({
@@ -59,7 +64,18 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  clickLogin () {
+  guard () {
+    const token = localStorage.getItem('token')
 
+    token == null || '' ? this.router.navigate(['login']) : this.router.navigate(['dashboard/adminHome'])
+  }
+
+  setDataUserLocalStorage (data : any) {
+    localStorage.setItem('token', data.results.token)
+    this.cookies.set('token', data.results.token)
+    localStorage.setItem('id_user', data.results.userForToken.id)
+    this.cookies.set('id_user', data.results.userForToken.id)
+    localStorage.setItem('region_id', data.results.userForToken.region_id)
+    this.cookies.set('region_id', data.results.userForToken.region_id)
   }
 }

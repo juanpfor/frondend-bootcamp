@@ -4,12 +4,9 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="nav navbar-nav ml-auto">
-              <li class="nav-item active link">
-                  <a [routerLink]="['dashboard/perfilUsuario']" class="link_to_user">
-                    <span class="material-icons white500" >person_outline</span>                  </a>
-              </li>
+
               <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a [routerLink]="['login']" (click)="logout()">
 
                     <span class="material-icons white500">logout</span>
 
