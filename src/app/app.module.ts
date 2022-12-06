@@ -53,6 +53,8 @@ import { ActualizarRequerimientoAnimalComponent } from './views/requerimiento-an
 import {NgxPaginationModule} from 'ngx-pagination';
 import { GestionarPreparacionesComponent } from './views/preparacione/gestionar-preparaciones/gestionar-preparaciones.component';
 import { DetailPreparacionesComponent } from './views/preparacione/detail-preparaciones/detail-preparaciones.component';
+import { LocalizedString } from '@angular/compiler';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -106,7 +108,9 @@ import { DetailPreparacionesComponent } from './views/preparacione/detail-prepar
     MatIconModule,
     NgxPaginationModule
   ],
-  providers: [],
+  providers: [
+    {provide : LocationStrategy, useClass : HashLocationStrategy}//este provider evita el error 404 not foud al rvargar la pagina en produccion
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
