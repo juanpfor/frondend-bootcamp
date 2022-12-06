@@ -18,4 +18,10 @@ export class PreparacionesService {
     const direction = pathUrlService.concat(`preparacionbyuser/${id}`)
     return this.httt.get<responseApi>(direction)
   }
+
+  getAllPreparacionesalimentos ():Observable<responseApi> {
+    const direction = pathUrlService.concat(`allpreparacionesalimentos`)
+    return this.httt.get<responseApi>(direction)
+  }
+
 }

@@ -1,6 +1,7 @@
 import { PreparacionesService } from './../../../Services/preparaciones/preparaciones.service';
 import { Component, OnInit } from '@angular/core';
 import { Preparaciones } from '../../../interfaces/preparaciones';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-gestionar-preparaciones',

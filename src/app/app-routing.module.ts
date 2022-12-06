@@ -22,6 +22,7 @@ import { PerfilUsuarioComponent } from './views/perfil-usuario/perfil-usuario.co
 import { RegistroUsersComponent } from './views/users/registro-users/registro-users.component';
 import { UpdateuserComponent } from "./views/users/updateuser/updateuser.component";
 import { GestionarPreparacionesComponent } from "./views/preparacione/gestionar-preparaciones/gestionar-preparaciones.component";
+import { DetailPreparacionesComponent } from "./views/preparacione/detail-preparaciones/detail-preparaciones.component";
 
 const routes: Routes = [
 
@@ -110,6 +111,11 @@ const routes: Routes = [
       {
         path : 'mispreparacione',
         component : GestionarPreparacionesComponent ,
+        canActivate : [VigilantGuard]
+      },
+      {
+        path : 'detail-preparaciones/:id',
+        component : DetailPreparacionesComponent ,
         canActivate : [VigilantGuard]
       },
     ]

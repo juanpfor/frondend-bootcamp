@@ -52,6 +52,7 @@ import { ActualizarRequerimientoAnimalComponent } from './views/requerimiento-an
 
 import {NgxPaginationModule} from 'ngx-pagination';
 import { GestionarPreparacionesComponent } from './views/preparacione/gestionar-preparaciones/gestionar-preparaciones.component';
+import { DetailPreparacionesComponent } from './views/preparacione/detail-preparaciones/detail-preparaciones.component';
 
 
 @NgModule({
@@ -88,6 +89,7 @@ import { GestionarPreparacionesComponent } from './views/preparacione/gestionar-
     UpdateuserComponent,
     ActualizarRequerimientoAnimalComponent,
     GestionarPreparacionesComponent,
+    DetailPreparacionesComponent,
   ],
   imports: [
     BrowserModule,

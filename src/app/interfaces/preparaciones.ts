@@ -6,4 +6,5 @@ export interface Preparaciones {
   requerimiento_animal_id : string | number
   RequerimientosAnimale? : any
   User ? : any
+  createdAt : any
 }
