@@ -9,7 +9,7 @@
           <!--Tabla-->
           <div class="row mt-3 px-md-3">
           <!-- <div class="form-group col-12 col-sm-6 col-md-4"> -->
-          <table class="table table-striped" *ngIf="alimentos != null ||alimentos != [] ">
+          <table class="table table-striped">
               <thead>
                   <tr>
                       <th class="radius" scope="col">alimentos usados</th>
@@ -22,16 +22,28 @@
                   </tr>
               </thead>
               <tbody>
-                  <tr *ngFor="let u of alimentosfiltrados
+                  <tr class="mb-2" *ngFor="let aliment of alimentosfiltrados[0].PreparacionesAlimentos
                   | paginate: { itemsPerPage: pages, currentPage: pageActual }">
-                      <td scope="row">{{u[0].nombre_alimento}}</td>
-                      <td scope="row">{{u[0].proteina_cruda}}</td>
-                      <td scope="row">{{u[0].e_m_cerdos}}</td>
-                      <td scope="row">{{u[0].fosf_disp}}</td>
-                      <td scope="row">{{u[0].fibra_cruda}}</td>
-                      <td scope="row">{{u[0].lisina}}</td>
-                      <td scope="row">{{u[0].metionina}}</td>
+                      <td scope="row">{{aliment.Alimento.nombre_alimento}}</td>
+                      <td scope="row">{{aliment.cantidad_proteina}}</td>
+                      <td scope="row">{{aliment.cantidad_energia}}</td>
+                      <td scope="row">{{aliment.cantidad_fosforo}}</td>
+                      <td scope="row">{{aliment.cantidad_fibra}}</td>
+                      <td scope="row">{{aliment.cantidad_lisina}}</td>
+                      <td scope="row">{{aliment.cantidad_metionina}}</td>
                   </tr>
+                  <!-- <tr>
+                    <td scope="row">Balance</td>
+                    <td scope="row">fasd</td>
+                    <td scope="row">fasd</td>
+                    <td scope="row">fasd</td>
+                    <td scope="row">fasd</td>
+                    <td scope="row">fsd</td>
+                    <td scope="row">fasd</td>
+                </tr>
+                <tr>
+                    <td scope="row">Total</td>
+                </tr> -->
               </tbody>
           </table>
           <pagination-controls
@@ -40,7 +52,7 @@
               nextLabel="Siguiente"
             ></pagination-controls>
 
-            <table class="table table-striped" *ngIf="alimentos.length == 0">
+            <!-- <table class="table table-striped" *ngIf="alimentosfiltrados.length == 0">
               <thead>
                   <tr>
 
@@ -49,7 +61,7 @@
               <tbody>
                  <h1>no se en cuentran datos </h1>
               </tbody>
-          </table>
+          </table> -->
         </div>
       <!-- </div> -->
 

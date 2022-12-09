@@ -24,4 +24,5 @@ export class PreparacionesService {
     return this.httt.get<responseApi>(direction)
   }
 
+
 }

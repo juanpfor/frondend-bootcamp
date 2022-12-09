@@ -109,7 +109,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     NgxPaginationModule
   ],
   providers: [
-    {provide : LocationStrategy, useClass : HashLocationStrategy}//este provider evita el error 404 not foud al rvargar la pagina en produccion
+    {provide : LocationStrategy, useClass : HashLocationStrategy }
+    //este provider evita el error 404 not foud al rvargar la pagina en produccion
   ],
   bootstrap: [AppComponent]
 })

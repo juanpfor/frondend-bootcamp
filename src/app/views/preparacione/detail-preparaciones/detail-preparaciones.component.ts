@@ -12,16 +12,15 @@ import { PreparacionesService } from '../../../Services/preparaciones/preparacio
 })
 export class DetailPreparacionesComponent implements OnInit {
 
-  puserId: any = localStorage.getItem('id_user')
+  userID: any = localStorage.getItem('id_user')
   preparaciones: Preparaciones[] = [];
   nameUser: string = ''
 
   preparacionID: any
 
   alimentos: Alimento[] = []
-  alimentosfiltrados: any[] = []
+  alimentosfiltrados: any
 
-  preparacionesAlimentos: any[] = [];
 
   pageActual: number = 1;
   pages: number = 8;
@@ -35,43 +34,19 @@ export class DetailPreparacionesComponent implements OnInit {
 
   async ngOnInit() {
     this.preparacionID = this.activeroute.snapshot.paramMap.get('id')
-    await this.getAllAliments()
-    await this.getAllPreparacionAlimentos()
+    this.getAlimentos(this.userID)
   }
 
-  async getAllAliments() {
-    await this.services.getAll().subscribe(alimets => {
-      this.alimentos = alimets.results
-    })
-  }
-  async getAllPreparacionAlimentos () {
-    await this.servicesPreparacionesAlimentos.getAllPreparacionesalimentos().subscribe(data => {
-      this.preparacionesAlimentos = this.filterPreparacionByID(data.results)
-      console.log(this.alimentos);
-      console.log(this.preparacionesAlimentos);
+  getAlimentos(id : number | string) {
+      this.servicesPreparacionesAlimentos.getPreparacionByIdUser(id).subscribe(
+        alimentos => {
+          this.alimentosfiltrados = alimentos.results.filter((data : any) =>
+          data.id_preparacion == this.preparacionID)
+          this.alimentos = alimentos.results
+          console.log(this.alimentosfiltrados[0]);
 
-      this.nameAlimetsByID(this.preparacionesAlimentos, this.alimentos)
-
-    })
-  }
-  filterPreparacionByID(data: any[]) {
-    const alimentos = data.filter(aliment => aliment.preparacion_id == this.preparacionID)
-    return alimentos
+        }
+      )
   }
 
-  async nameAlimetsByID(listpreparaciones: any[], allAlimentos: any[]) {
-    let localarray
-    let listalimensts: any[] = []
-    for (let aliment of listpreparaciones) {
-      localarray = await allAlimentos.filter(data => data.id_alimentos == aliment.alimento_id)
-
-      if (localarray != null || localarray != '') {
-        listalimensts.push(localarray)
-      }
-    }
-
-    this.alimentosfiltrados = listalimensts
-    console.log(this.alimentosfiltrados);
-
-  }
 }
